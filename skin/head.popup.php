@@ -82,9 +82,6 @@ var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
 <? if ($is_admin) { echo "var g4_admin = '{$g4['admin']}';"; } ?>
 </script>
 <!---script src="../design/inc/png.js"></script---->
-<script type="text/javascript" src="<?=$g4['path']?>/js/common.js"></script>
-<script type="text/javascript" src="<?=$g4[path]?>/js/b4.common.js"></script> 
-<script type="text/javascript" src="<?=$g4['path']?>/js/ajax.js"></script>
 </head>
 <? if ($is_admin) {?>
 <body topmargin="0" leftmargin="0" <?=isset($g4['body_script']) ? $g4['body_script'] : "";?> style="overflow-x:hidden">

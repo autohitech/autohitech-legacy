@@ -270,11 +270,16 @@ function order_select($fld, $sel="")
     return $s;
 }
 
-// 접근 권한 검사
+// 접근 권한 검사 (localhost 제한 및 알림 제거)
+$is_localhost = ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1' || strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
+
+if (!$is_localhost) {
+    goto_url($g4['path']);
+}
+
 if (!$member['mb_id'])
 {
-    //alert("로그인 하십시오.", "$g4[bbs_path]/login.php?url=" . urlencode("$_SERVER[PHP_SELF]?w=$w&mb_id=$mb_id"));
-    alert("로그인 하십시오.", "$g4[bbs_path]/login.php?url=" . urlencode("$_SERVER[PHP_SELF]?$_SERVER[QUERY_STRING]"));
+    goto_url("$g4[bbs_path]/login.php?url=" . urlencode("$_SERVER[PHP_SELF]?$_SERVER[QUERY_STRING]"));
 }
 else if ($is_admin != "super") 
 {

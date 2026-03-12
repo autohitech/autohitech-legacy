@@ -13,7 +13,6 @@ if ($g4['https_url']) {
 
 
 ?>
-<script type="text/javascript" src="<?=$g4[path]?>/js/capslock.js"></script>
 <script type="text/javascript">
 // 엠파스 로긴 참고
 var bReset = true;

@@ -79,8 +79,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
       </form></td>
   </tr>
 </table>
-<script type="text/javascript" src="<?=$g4[path]?>/js/md5.js"></script>
-<script type="text/javascript" src="<?="$g4[path]/js/jquery.kcaptcha.js"?>"></script>
 <script type="text/javascript">
 with (document.fmemoform) {
     if (me_recv_mb_id.value == "")

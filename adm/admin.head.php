@@ -140,8 +140,6 @@ function textarea_size(fld, size)
 }
 </script>
 
-<script language="javascript" src="<?=$g4['path']?>/js/common.js"></script>
-<script language="javascript" src="<?=$g4['path']?>/js/sideview.js"></script>
 <!-- Google Charts Loader -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">

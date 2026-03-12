@@ -1,10 +1,14 @@
-# 🚀 Autohitech Legacy System (Modernized)
+# 🚀 Autohitech Legacy System (Archived for Reference)
 
 ![PHP](https://img.shields.io/badge/PHP-5.6-777BB4?style=flat-square&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Framework](https://img.shields.io/badge/Framework-Gnuboard%204-red?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Legacy%20Archive-orange?style=flat-square&logo=github)
+![Status](https://img.shields.io/badge/Status-Archived-red?style=flat-square&logo=github)
+
+> [!CAUTION]
+> **이 프로젝트는 더 이상 유지보수되지 않는 아카이브 상태입니다.**  
+> 본 프로젝트는 레거시 그누보드 4(G4) 시스템의 현대화 과정과 구조를 보존하기 위한 용도로 관리됩니다. 향후 최신 기술 스택(Next.js, FastAPI 등)을 기반으로 홈페이지를 새롭게 제작할 때, 기존 데이터 구조 및 비즈니스 로직 참고용으로만 사용하시기 바랍니다.
 
 오토하이테크의 레거시 그누보드 4 시스템을 현대적인 도커 환경으로 복구하고 최적화한 프로젝트입니다.
 

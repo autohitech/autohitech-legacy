@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* ★Layout / Start★ */
 /***** Function / Start *****/
 .AL   {float:left;}
@@ -7,7 +7,13 @@
 .bold {font-weight:bold;}
 /***** Function / End *****/
 /***** Header / Start *****/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 #headerWrap {
+    flex-shrink: 0;
     overflow:visible;
     position:relative;
     margin-bottom:-30px;
@@ -24,57 +30,45 @@ header #header {
     overflow:visible;
 }
 #logo {float:left; width:230px; padding-top:30px;}
-.tophome {float:right; margin-top:10px; width:402px; height:17px;}
-.tophome li {height:17px; float:left; overflow:hidden;}
-.searchL  {width:5px; background:url('../img/bg_searchL01.gif') left top no-repeat;}
-.searchM  {top:0;width:100px; height:17px; background:url('../img/bg_searchM01.gif') left top repeat-x;}
-.searchR  {top:0;width:20px; height:17px; }
-.searchTt {width:100px; height:17px; background-color:transparent; color:#333; font-size:11px; line-height:11px; font-weight:bold; border:0; font-family:돋움, Dotum, 굴림, Gulim, Verdana, Arial, Tahoma, Helvetica, sans-serif;}
+.tophome {float:right; margin-top:10px; width:auto; height:20px;}
+.tophome li {height:20px; float:left; overflow:hidden; display:flex; align-items:center;}
+.searchL  {width:5px; height:17px; background:url('../img/bg_searchL01.gif') left center no-repeat;}
+.searchM  {width:100px; height:17px; background:url('../img/bg_searchM01.gif') left center repeat-x;}
+.searchR  {width:20px; height:17px; }
+.searchTt {width:100px; height:17px; background-color:transparent; color:#333; font-size:11px; line-height:17px; font-weight:bold; border:0; margin:0; padding:0 2px; vertical-align:middle; font-family:돋움, Dotum, 굴림, Gulim, Verdana, Arial, Tahoma, Helvetica, sans-serif;}
 /***** Header / End *****/
 /***** Top Menu / Start *****/
 /* Top Menu */
-ul#topnav li a            {text-decoration:none;}
-ul#topnav li span         {float:left; position:absolute; margin-left:-20px; padding-top:8px;}
+ul#topnav {list-style:none; margin:0; padding:0; height:40px;}
+ul#topnav li              {float:left; position:relative; overflow:visible; height:40px;}
+ul#topnav li a            {text-decoration:none; display:block; height:100%;}
+ul#topnav li span         {display:none; position:absolute; left:0; top:40px; z-index:9999; white-space:nowrap;}
 ul#topnav li span a:hover {text-decoration:underline;}
+
 #topMenuWrap {
     width:980px;
     margin:0 auto;
     height:80px;
     overflow:visible;
 }
-#topMenu              {float:left; width:750px; height:78px;}
-#topMenu .menuT       {float:left; margin:15px 0px 0px 70px; top: 40px; width:750px; height:15px;}
-#topMenu .menuT ul    {}
-#topMenu .menuT li    {float:left; height:15px; overflow:hidden;}
-#topMenu .menuT ul li .m01 {}
-#topMenu .menuT ul li .m02 {}
-#topMenu .menuT ul li .m03 {}
-#topMenu .menuT ul li .m04 {}
-#topMenu .menuT ul li .m05 {}
-#topMenu .menuT ul li .m06 {}
-#topMenu .menuT ul li .m07 {}
-#topMenu .menuT ul li .m08 {}
-/* Sub Menu */
-#topMenu .subS01       {float:left; display:none;}
-#topMenu .subS01 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS02       {float:left; display:none;}
-#topMenu .subS02 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS03       {float:left; display:none;}
-#topMenu .subS03 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS04       {float:left; display:none;}
-#topMenu .subS04 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS05       {float:left; display:none;}
-#topMenu .subS05 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS06       {float:left; display:none;}
-#topMenu .subS06 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS07       {float:left; display:none;}
-#topMenu .subS07 ul li {float:left; overflow:hidden; height:30px;}
-#topMenu .subS08       {float:left; display:none;}
-#topMenu .subS08 ul li {float:left; overflow:hidden; height:30px;}
+#topMenu              {float:left; width:750px; height:80px; overflow:visible;}
+#topMenu .menuT       {float:left; margin:15px 0px 0px 70px; width:750px; overflow:visible; position:relative;}
+
+/* Sub Menu Containers - Removed white background/border per request */
+#topMenu .subS01, #topMenu .subS02, #topMenu .subS03, #topMenu .subS04, 
+#topMenu .subS05, #topMenu .subS06, #topMenu .subS07, #topMenu .subS08 {
+    display:block;
+    padding:0;
+    margin:0;
+}
+#topMenu .menuT ul li span ul {list-style:none; margin:0; padding:0; display:flex;}
+#topMenu .menuT ul li span ul li {float:left; overflow:visible; height:30px;}
+
 /***** Top Menu / End *****/
 /***** Sub Layout / Start *****/
 /***** Sub Visual / Start *****/
 #subWrap {
+    flex-shrink: 0;
     position:relative;
     width:100%;
     height:155px;
@@ -103,6 +97,7 @@ ul#topnav li span a:hover {text-decoration:underline;}
 /***** Left Menu / End *****/
 /***** Content / Start *****/
 #contWrap {
+    flex-grow: 1;
     position:relative;
     padding-bottom:0px;
     width:100%;
@@ -183,7 +178,7 @@ div.bar_bk {
 /***** Sub Layout / End *****/
 /***** Footer / Start *****/
 #footer {
-    float:left;
+    flex-shrink: 0;
     position:relative;
     width:100%;
     height:100px;
@@ -197,37 +192,25 @@ div.bar_bk {
 .copymenu li {float:left; overflow:hidden; height:10px;}
 .copyaddress {}
 /***** Footer / End *****/
-/***** Footer / Start *****/
-/***** Footer / End *****/
 /***** Quick / Start *****/
 #quickR {
-    width:25px;
-    height:97px;
-background:url('../img/bg_quick01.gif') center top repeat-x;}
-#quickR p {overflow:hidden; margin-top:35px; height:27px;}
+    position: absolute;
+    right: 20px;
+    top: 400px;
+    width: 25px;
+    height: 97px;
+    background: url('../img/bg_quick01.gif') center top repeat-x;
+    z-index: 10000;
+}
+#quickR:hover {
+    opacity: 0.8;
+}
+#quickR p {
+    overflow: hidden;
+    margin-top: 35px;
+    height: 54px; /* Adjusting for top button height */
+    text-align: center;
+}
 /***** Quick / End *****/
+.b_font a { cursor: pointer; }
 /* ★Layout / End★ */
-
-/* =========================================
-   ARCHIVED / COMMENTED CODE
-   ========================================= */
-
-/* #con_fix01 {position:absolute; overflow:hidden; top:30px; left:0px;}
-	#con_fix02 {position:absolute; overflow:hidden; top:23px; left:750px;}
-	#con_fix03 {position:absolute; overflow:hidden; top:50px; left:697px;} */
-
-/* .navi ul  {float:left; text-align:left; padding-left:25px; background:url('../img/navi_home01.gif') 0 0 no-repeat;} */
-
-/* #footer {
-	position:relative;
-	width:100%;
-	height:160px;
-	margin:0 auto;
-	margin-top:60px;
-	background:url('../img/bg_copy01.gif') center top repeat-x;
-	z-index:500;
-	}
-	.copybox     {margin:0 auto; padding-top:82px; width:980px;}
-	.copymenu    {padding-bottom:10px; width:173px; height:10px;}
-	.copymenu li {float:left; overflow:hidden; height:10px;}		
-	.copyaddress {padding-bottom:18px;} */

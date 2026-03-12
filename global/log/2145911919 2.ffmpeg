@@ -1,47 +1,0 @@
-FFmpeg version SVN-r26402, Copyright (c) 2000-2011 the FFmpeg developers
-  built on May  3 2012 20:29:12 with gcc 4.1.2 20080704 (Red Hat 4.1.2-50)
-  configuration: --enable-libfaac --enable-gpl --enable-nonfree --enable-postproc --enable-avfilter --enable-pthreads --enable-libxvid --enable-libx264 --enable-libmp3lame --disable-ffserver --disable-ffplay --enable-libtheora --enable-libvorbis --disable-ffplay --enable-shared
-  libavutil     50.36. 0 / 50.36. 0
-  libavcore      0.16. 1 /  0.16. 1
-  libavcodec    52.108. 0 / 52.108. 0
-  libavformat   52.93. 0 / 52.93. 0
-  libavdevice   52. 2. 3 / 52. 2. 3
-  libavfilter    1.74. 0 /  1.74. 0
-  libswscale     0.12. 0 /  0.12. 0
-  libpostproc   51. 2. 0 / 51. 2. 0
-
-Seems stream 0 codec frame rate differs from container frame rate: 6000.00 (6000/1) -> 30.00 (30/1)
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/www/engart/www/data/moviefile/tmp_file/136633411268.mov':
-  Metadata:
-    major_brand     : qt  
-    minor_version   : 537331968
-    compatible_brands: qt  CAEP
-    creation_time   : 2013-02-09 18:13:51
-  Duration: 00:00:27.56, start: 0.000000, bitrate: 28411 kb/s
-    Stream #0.0(eng): Video: h264, yuvj420p, 1280x720, 27703 kb/s, 30 fps, 30 tbr, 3k tbn, 6k tbc
-    Metadata:
-      creation_time   : 2013-02-09 18:13:51
-    Stream #0.1(eng): Audio: pcm_s16le, 44100 Hz, 1 channels, s16, 705 kb/s
-    Metadata:
-      creation_time   : 2013-02-09 18:13:51
-[buffer @ 0x8bbde20] w:1280 h:720 pixfmt:yuvj420p
-[scale @ 0x8bbe1f0] w:1280 h:720 fmt:yuvj420p -> w:320 h:240 fmt:yuv420p flags:0xa0000004
-Output #0, flv, to '/www/engart/www/data/moviefile/tmp_file/136633411268.flv':
-  Metadata:
-    major_brand     : qt  
-    minor_version   : 537331968
-    compatible_brands: qt  CAEP
-    creation_time   : 2013-02-09 18:13:51
-    encoder         : Lavf52.93.0
-    Stream #0.0(eng): Video: flv, yuv420p, 320x240, q=2-31, 200 kb/s, 1k tbn, 30 tbc
-    Metadata:
-      creation_time   : 2013-02-09 18:13:51
-    Stream #0.1(eng): Audio: libmp3lame, 44100 Hz, 1 channels, s16, 64 kb/s
-    Metadata:
-      creation_time   : 2013-02-09 18:13:51
-Stream mapping:
-  Stream #0.0 -> #0.0
-  Stream #0.1 -> #0.1
-Press [q] to stop encoding
-frame=   21 fps=  0 q=0.0 size=     397kB time=0.70 bitrate=4649.6kbits/s    frame=   43 fps= 42 q=0.0 size=     788kB time=1.43 bitrate=4503.2kbits/s    frame=   64 fps= 42 q=0.0 size=    1183kB time=2.13 bitrate=4543.3kbits/s    frame=   86 fps= 42 q=0.0 size=    1615kB time=2.87 bitrate=4613.4kbits/s    frame=  107 fps= 42 q=0.0 size=    2014kB time=3.57 bitrate=4624.9kbits/s    frame=  129 fps= 42 q=0.0 size=    2453kB time=4.30 bitrate=4673.6kbits/s    frame=  150 fps= 42 q=0.0 size=    2868kB time=5.00 bitrate=4699.4kbits/s    frame=  171 fps= 42 q=0.0 size=    3290kB time=5.70 bitrate=4727.9kbits/s    frame=  192 fps= 42 q=0.0 size=    3668kB time=6.40 bitrate=4694.8kbits/s    frame=  213 fps= 42 q=0.0 size=    4063kB time=7.10 bitrate=4687.5kbits/s    frame=  235 fps= 42 q=0.0 size=    4487kB time=7.83 bitrate=4692.8kbits/s    frame=  256 fps= 42 q=0.0 size=    4868kB time=8.53 bitrate=4673.1kbits/s    frame=  277 fps= 42 q=0.0 size=    5269kB time=9.23 bitrate=4674.9kbits/s    frame=  299 fps= 42 q=0.0 size=    5614kB time=9.87 bitrate=4657.7kbits/s    frame=  320 fps= 42 q=0.0 size=    6043kB time=10.67 bitrate=4641.0kbits/s    frame=  341 fps= 42 q=0.0 size=    6412kB time=11.37 bitrate=4621.2kbits/s    frame=  362 fps= 42 q=0.0 size=    6802kB time=12.07 bitrate=4617.5kbits/s    frame=  384 fps= 42 q=0.0 size=    7173kB time=12.80 bitrate=4590.6kbits/s    frame=  406 fps= 42 q=0.0 size=    7602kB time=13.53 bitrate=4601.9kbits/s    frame=  428 fps= 42 q=0.0 size=    7991kB time=14.27 bitrate=4588.1kbits/s    frame=  450 fps= 42 q=0.0 size=    8340kB time=14.89 bitrate=4588.2kbits/s    frame=  471 fps= 42 q=0.0 size=    8797kB time=15.70 bitrate=4590.0kbits/s    frame=  493 fps= 42 q=0.0 size=    9206kB time=16.43 bitrate=4589.1kbits/s    frame=  515 fps= 42 q=0.0 size=    9560kB time=17.17 bitrate=4561.9kbits/s    frame=  538 fps= 42 q=0.0 size=    9958kB time=17.89 bitrate=4558.9kbits/s    frame=  560 fps= 42 q=0.0 size=   10365kB time=18.67 bitrate=4548.5kbits/s    frame=  582 fps= 42 q=0.0 size=   10772kB time=19.40 bitrate=4548.7kbits/s    frame=  603 fps= 42 q=0.0 size=   11144kB time=20.10 bitrate=4541.9kbits/s    frame=  625 fps= 42 q=0.0 size=   11552kB time=20.83 bitrate=4542.5kbits/s    frame=  646 fps= 42 q=0.0 size=   11912kB time=21.53 bitrate=4531.7kbits/s    frame=  668 fps= 42 q=0.0 size=   12318kB time=22.27 bitrate=4531.7kbits/s    frame=  690 fps= 42 q=0.0 size=   12686kB time=22.94 bitrate=4531.2kbits/s    frame=  711 fps= 42 q=0.0 size=   13092kB time=23.70 bitrate=4525.3kbits/s    frame=  733 fps= 42 q=0.0 size=   13427kB time=24.43 bitrate=4501.7kbits/s    frame=  754 fps= 42 q=0.0 size=   13759kB time=25.13 bitrate=4484.8kbits/s    frame=  777 fps= 42 q=0.0 size=   14127kB time=25.89 bitrate=4470.4kbits/s    frame=  799 fps= 42 q=0.0 size=   14483kB time=26.63 bitrate=4454.9kbits/s    frame=  821 fps= 42 q=0.0 size=   14934kB time=27.37 bitrate=4470.4kbits/s    frame=  827 fps= 42 q=0.0 Lsize=   15040kB time=27.57 bitrate=4469.3kbits/s    
-video:14794kB audio:216kB global headers:0kB muxing overhead 0.198939%

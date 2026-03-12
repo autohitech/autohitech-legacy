@@ -125,7 +125,6 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 </table>
 </form>
 
-<script type="text/javascript" src="<?="$g4[path]/js/md5.js"?>"></script>
 <script type="text/javascript"> var md5_norobot_key = ''; </script>
 <script type="text/javascript" src="<?="$g4[path]/js/prototype.js"?>"></script>
 <script type="text/javascript">

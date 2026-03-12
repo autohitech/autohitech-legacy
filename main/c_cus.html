@@ -1,49 +1,3 @@
-<script type="text/javascript">
-  function preloadImages() {
-    const images = document.images;
-    const numImages = images.length;
-    for (let i = 0; i < numImages; i++) {
-      if (images[i].getAttribute('data-src')) {
-        images[i].src = images[i].getAttribute('data-src');
-      }
-    }
-  }
-
-  function swapImage(event) {
-    const image = event.target;
-    if (image.getAttribute('data-alt-src')) {
-      const temp = image.src;
-      image.src = image.getAttribute('data-alt-src');
-      image.setAttribute('data-alt-src', temp);
-    }
-  }
-
-  function attachEvents() {
-    const images = document.images;
-    const numImages = images.length;
-    for (let i = 0; i < numImages; i++) {
-      images[i].addEventListener('mouseover', swapImage);
-      images[i].addEventListener('mouseout', swapImage);
-    }
-  }
-
-  // 탭 전환 함수
-  function DisplayMenu(index) {
-      if (index == 1) {
-          document.getElementById('notice1').style.display = '';
-          document.getElementById('notice2').style.display = 'none';
-      } else {
-          document.getElementById('notice1').style.display = 'none';
-          document.getElementById('notice2').style.display = '';
-      }
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    preloadImages();
-    attachEvents();
-  });
-</script>
-
   <div id="c_con">
    <!-- Notice -->
     <div class="notice" id="notice1" style="display:;">
@@ -93,8 +47,8 @@
   <div class="btit"><a href="../home/board.php?bo_table=cus01&amp;subNum=1"><img src="img/title_info01.gif" alt="안내" /></a></div>
   <ul>
     <!-- <li style="padding-right:10px;"><a href="#" onclick="javascript:window.open('http://autohitech.co.kr/img/support.png','','width=700,height=400');"><img src="img/bn_remote01.gif" class="ovex" /></a></li> -->
-    <li style="padding-right:10px;"><a href="http://pf.kakao.com/_aSxnyb/chat"><img src="img/bn_remote01.gif" class="ovex" /></a></li>
-    <li><a href="../company/location01.html?subNum=5"><img src="img/bn_location01.gif" class="ovex" /></a></li>
+    <li style="margin-right:10px;"><a href="http://pf.kakao.com/_aSxnyb/chat"><img src="img/bn_remote01.gif" alt="카카오톡" class="ovex" /></a></li>
+    <li><a href="../company/location01.html?subNum=5"><img src="img/bn_location01.gif" alt="오시는길" class="ovex" /></a></li>
   </ul>
   </div>
   </div>

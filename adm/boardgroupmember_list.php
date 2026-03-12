@@ -55,7 +55,6 @@ include_once("./admin.head.php");
 $colspan = 7;
 ?>
 
-<script language="javascript" src="<?=$g4[path]?>/js/sideview.js"></script>
 
 <table width=100% cellpadding=3 cellspacing=1>
 <form name=fsearch method=get>

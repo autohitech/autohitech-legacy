@@ -377,11 +377,9 @@ if ($file_length < 0)
 include_once ("$board_skin_path/write.skin.php");
 
 if (!$member[mb_id]) 
-    echo "<script language='javascript' src='$g4[path]/js/md5.js'></script>\n";
 
 // 필터
 echo "<script language='javascript'> var g4_cf_filter = '$config[cf_filter]'; </script>\n";
-echo "<script language='javascript' src='$g4[path]/js/filter.js'></script>\n";
 
 include_once("./board_tail.php");
 include_once("$g4[path]/tail.sub.php");

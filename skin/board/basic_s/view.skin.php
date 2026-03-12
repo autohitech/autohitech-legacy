@@ -166,7 +166,6 @@ function file_download(link, file) {
 }
 </script>
 
-<script language="JavaScript" src="<?="$g4[path]/js/board.js"?>"></script>
 <script language="JavaScript">
 window.onload=function() {
     resizeBoardImage(<?=(int)$board[bo_image_width]?>);

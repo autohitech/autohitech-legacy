@@ -77,8 +77,6 @@ jQuery(function($){
 var member_skin_path = "<?=$member_skin_path?>";
 </script>
 <script type="text/javascript" src="<?=$member_skin_path?>/ajax_register_form.jquery.js"></script>
-<script type="text/javascript" src="<?=$g4[path]?>/js/md5.js"></script>
-<script type="text/javascript" src="<?=$g4[path]?>/js/sideview.js"></script>
 
 <form id="fregisterform" name=fregisterform method=post onsubmit="return fregisterform_submit(this);" enctype="multipart/form-data" autocomplete="off">
 <input type=hidden name=w                value="<?=$w?>">
@@ -376,7 +374,6 @@ var member_skin_path = "<?=$member_skin_path?>";
 </div>
 <!-- //Content -->
 
-<script type="text/javascript" src="<?="$g4[path]/js/jquery.kcaptcha.js"?>"></script>
 <script type="text/javascript">
 $(function() {
     // 폼의 첫번째 입력박스에 포커스 주기 

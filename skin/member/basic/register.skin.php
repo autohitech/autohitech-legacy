@@ -15,9 +15,7 @@ function MM_preloadImages() { //v3.0
 </script>
 <script type="text/JavaScript">
 <!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
+// Use global MM_openBrWindow from common.js
 //-->
 </script>
 <!-- Title -->

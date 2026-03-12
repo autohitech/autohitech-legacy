@@ -2,9 +2,8 @@
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 
 if ($is_dhtml_editor) {
-    include_once("$g4[path]/lib/cheditor4.lib.php");
-    echo "<script src='$g4[cheditor4_path]/cheditor.js'></script>";
-    echo cheditor1('wr_content', '100%', '250');
+    include_once("$g4[path]/lib/ckeditor5.lib.php");
+    echo ckeditor5_load();
 }
 ?>
 
@@ -121,7 +120,7 @@ if ($option) {
 <tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
 <tr>
 	<? if ($is_dhtml_editor) { ?>
-		<td align="left" valign="top" class="content" colspan='2' style="padding:10px 0px 10px 0px;"><?=cheditor2('wr_content', $content);?></td>
+		<td align="left" valign="top" class="content" colspan='2' style="padding:10px 0px 10px 0px;"><?=ckeditor5_render('wr_content', $content);?></td>
 	<? } else { ?>
 		<td align="center" valign="middle" class=write_head>내용</th>
 		<td align="left" valign="top" style="padding:10px 0px 10px 0px;">
@@ -256,7 +255,6 @@ if ($option) {
 
 </td></tr></table>
 </form>
-<script type="text/javascript" src="<?="$g4[path]/js/jquery.kcaptcha.js"?>"></script>
 <script type="text/javascript">
 <?
 // 관리자라면 분류 선택에 '공지' 옵션을 추가함
@@ -301,6 +299,7 @@ function html_auto_br(obj)
 
 function fwrite_submit(f) 
 {
+    <?=ckeditor5_sync('wr_content')?>
     /*
     var s = "";
     if (s = word_filter_check(f.wr_subject.value)) {
@@ -391,5 +390,4 @@ function fwrite_submit(f)
 }
 </script>
 
-<script type="text/javascript" src="<?="$g4[path]/js/board.js"?>"></script>
 <script type="text/javascript"> window.onload=function() { drawFont(); } </script>

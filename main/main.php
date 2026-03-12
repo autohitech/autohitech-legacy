@@ -43,7 +43,7 @@ function DisplayMenu(index) {
 <!-- AutoBase -->
 <div id="c_base">
   <div class="c_basebox">
-    <iframe id="frame" src="c_base.html" frameborder="0" width="980" height="120" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    <?php include "c_base.html"; ?>
   </div>
 </div>
 
@@ -54,9 +54,9 @@ function DisplayMenu(index) {
       <ul>
         <li><a href="../company/greeting01.html?sugNum=1"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
         <li><img src="../img/copy_dot01.gif" /></li>
-        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="MM_openBrWindow('../company/provision.html','','scrollbars=no,width=720,height=615')" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
         <li><img src="../img/copy_dot01.gif" /></li>
-        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="MM_openBrWindow('../company/privacy.html','','scrollbars=no,width=720,height=615')" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
       </ul>
     </div>
     <div class="copyaddress">
@@ -68,17 +68,8 @@ function DisplayMenu(index) {
 </footer>
 <map name="Map_copy01" id="Map_copy01">
   <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
-  <area shape="rect" coords="75,28,140,40" href="../home/login.php?pageNum=1&amp;subNum=1&amp;url=../home/board.php?bo_table=staff01&amp;pageNum=1&amp;subNum=6" target="_blank" title="관리자페이지이동" />
 </map>
 <!-- //Footer -->
-
-<script type="text/javascript" src="../js/jquery.msAccordion.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    // 적용사례 아코디언 초기화
-    $("#accordion1").msAccordion({defaultid:0});
-});
-</script>
 
 <?php 
   // latest() 함수를 호출하여 최신 글을 출력합니다.

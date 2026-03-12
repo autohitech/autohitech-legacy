@@ -1,3 +1,0 @@
-/www/engart/www/data/moviefile/tmp_file/136633411268.mov
-/www/engart/www/data/moviefile/tmp_file/136633411268.flv
- -vcodec flv -f flv -r 30 -qscale 20  -ar 44100 -sameq -s 320x240

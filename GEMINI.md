@@ -1,4 +1,8 @@
-# Project: Autohitech (New)
+# Project: Autohitech (Legacy Archive)
+
+> [!IMPORTANT]
+> **Project Status: Archival & Reference Only**
+> This project is no longer actively managed or maintained. It serves as a comprehensive reference for legacy Gnuboard 4 (G4) systems and provides a baseline for migrating to modern tech stacks.
 
 ## Core Mandates
 - **Environment**: Docker (MySQL 5.7, PHP 5.6-Apache, Adminer)
@@ -21,70 +25,49 @@
   - **Prefix Removal**: All `include` paths have been updated to remove `./` prefixes (e.g., `include "inc/..."` instead of `include "./inc/..."`) to leverage the `include_path`.
 
 ## Recent Progress
+- **Database Cleanup & Security**:
+  - **Admin Password Reset**: Reset `admin` account password to `1234` for local development and archival access.
+  - **Member Cleanup**: Deleted all user accounts except the `admin` account to ensure a clean archival state.
+  - **Content Management**: Deleted specific spam/outdated posts (qna01: 1821, 1820, 1083, 1084) and synchronized board counts.
+  - **State Persistence**: Updated `database/autotech.sql` with the final cleaned and secured state.
 - **Session Management**: Fixed PHP session save path warning by ensuring `data/session` directory exists and using `realpath()` for absolute path in `common.php`.
 - **Legacy Compatibility**: 
   - Fixed `split()` deprecated warnings by replacing them with `explode()`.
   - Suppressed `E_DEPRECATED` notices in `common.php`.
-- **Layout Restoration**:
-  - Restored `head.php` and `tail.php` linkage for board pages (`home/board.php`).
-  - Fixed broken layout by adding missing `</div>` for `contWrap` in `tail.php`.
-  - Corrected menu path definitions in `_menu.php`.
-- **Security**: Refactored `dbconfig.php` to use `getenv()` for database credentials.
-- **Error Logging & Diagnostics**: Enabled PHP error logging to `data/log/php_error.log` in `common.php` and `common_mvv.php` for tracking runtime issues.
-- **PHP Modernization (Step 2 & 3)**:
-  - Replaced deprecated `each()` loops with `foreach` in core files.
-  - Implemented manual variable extraction (`extract`) in `common_mvv.php`.
-  - Migrated POSIX regex (`ereg`, `eregi`) to PCRE (`preg_match`, `preg_replace`).
-  - Replaced `session_unregister()` with modern `unset($_SESSION['var'])`.
-- **Security & Hardening (Step 4)**:
-  - Prevented directory listing by creating `index.html` in all subdirectories of `data/`.
-  - Added `data/.htaccess` to block script execution in upload directories.
-  - Verified foundation for SQL Injection and XSS protection in `common.php`.
-  - Adjusted `data/` directory permissions to **707** and files to **606** for web server write access.
-- **Database Compatibility**:
-  - Disabled MySQL 5.7 Strict Mode by executing `SET sql_mode = ''` on connection, ensuring legacy query compatibility.
-  - Completed migration of all `.htm` extensions to `.html` across the entire codebase and links.
-  - Cleaned up 250+ redundant duplicate files (` 2.php`, `.ori`, `.bak`, etc.).
-  - Regenerated all resource list documentation in `docs/` folder.
-  - Verified core navigation path (root -> main).
-- **Modernization (Flash Removal & Chart Recovery)**: 
-  - Replaced Flash-based FusionCharts with Google Charts in admin statistics (`adm/access_log_index.php`).
-  - Implemented automatic XML-to-GoogleChart parser in `adm/admin.head.php`.
-  - Removed all 13 redundant `.swf` files from the project.
+- **Security & Access Control**:
+  - Refactored `dbconfig.php` to use `getenv()` for database credentials.
+  - **Localhost Restriction**: Restricted access to the Admin panel (`/adm`) and Login page (`home/login.php`) to `localhost` (127.0.0.1) only, redirecting external attempts to the main page.
+  - Removed intrusive "Please login" JavaScript alerts for a smoother navigation experience.
+- **Database Compatibility & Hygiene**:
+  - Disabled MySQL 5.7 Strict Mode by executing `SET sql_mode = ''` on connection.
+  - **Spam Cleanup**: Performed an exhaustive site-wide cleanup of spam comments and posts. Synchronized board and comment counters.
 - **JS Modernization & Compatibility**:
-  - Upgraded jQuery from 1.3/1.7 to **1.12.4** (final legacy-supporting version).
-  - Added **jQuery Migrate 1.4.1** to ensure backward compatibility for legacy plugins.
-  - Implemented a robust **Google Charts XML Parser** in `adm/admin.head.php` with automatic retry and error handling logic.
-  - Updated script references across `head.admin.php`, `head.sub.php`, and `inc/top_menu.html`.
+  - **jQuery Upgrade**: Upgraded to **jQuery 3.7.1**, **jQuery UI 1.14.1**, and **jQuery Easing 1.4.1** (latest stable versions).
+  - **Migrate Removal**: Entirely removed `jquery-migrate` by refactoring all legacy jQuery syntax and event aliases.
+  - **Bundling & Optimization**: Consolidated 13 individual JS files into two main bundles: **`js/autotech.bundle.js`** (UI/Plugins) and **`js/g4.core.js`** (Utilities/Security). Removed redundant source files.
+  - **ES6+ Standards**: Refactored the entire JS codebase to use `const`, `let`, arrow functions, and classes. Implemented `G4` and `G4_Core` namespaces.
+  - **Security (XSS Protection)**: Hardened data rendering with HTML escaping and replaced `innerHTML` with `textContent` across core functions.
+  - **Maintenance System**: Created `build_js.sh` as a reference for the bundle composition and implemented automatic cache-busting (?v=mtime) in headers.
 - **HTML & Layout Modernization**:
-  - Implemented semantic HTML5 tags (`<header>`, `<footer>`, `<!DOCTYPE html>`) in core layout files.
-  - Converted key sub-pages (`location01.html`, `organization01.html`) from legacy `<table>` to modern `<div>` structures while maintaining visual alignment via `css/sub.css`.
-  - Refactored `main/main.php` to include `head.sub.php`, fixing layout breakage caused by missing headers.
-- **Animation & Interaction Recovery**:
-  - Restored AutoBase accordion animation in `main/c_base.html` by upgrading its internal jQuery environment.
-  - Fixed notice/Q&A tab switching logic in `main/c_cus.html` using standard DOM methods.
-  - Cleaned up redundant script calls across layout fragments to prevent jQuery event conflicts.
-- **CSS Optimization**:
-  - Standardized indentation and moved archived/commented code to the bottom of core CSS files.
-  - Removed legacy IE expressions and updated filters to standard grayscale.
-- **XML Data Modernization**:
-  - Converted all 27 statistics XML files in `adm/class/` from EUC-KR to **UTF-8**.
-  - Standardized XML declarations and fixed syntax errors (e.g., escaping `&` to `&amp;`) for modern browser compatibility.
-  - Updated XML generation PHP scripts to output native UTF-8 data.
-- **Sub-page Recovery & Navigation Fix**:
-  - Fixed blank sub-pages by repairing broken `$g4_path` and `head.php` include logic in all 40+ `.html` files.
-  - Implemented `gr_id` auto-detection in `_menu.php` based on URL paths, enabling correct menu highlighting and sidebar rendering for static pages.
-  - Added legacy `MM_openBrWindow` function to `js/common.js` for compatibility with old Dreamweaver-style popups.
-  - Standardized header/footer inclusion across the entire site to prevent double-header or missing-header issues.
-  - **Layout Standardization**: Resolved duplicate `menuWrap` issues by removing redundant explicit menu includes (`inc/menu_*.html`) and `inc/copy.html` from sub-pages.
-  - **Syntax Correction**: Fixed critical syntax errors in sub-pages (missing `$g4_path` variables and broken `[path]` variables) introduced during automated migration.
+  - **Layout Unification**: Standardized container opening/closing logic across `head.php`, `top_*.html`, and `tail.php`, resolving alignment and footer issues.
+  - **Main Page Restoration**: Restored missing `#mainWrap`, `#c_con`, and `#c_base` styles in `css/main.css`. Added clearfixes to contain floated elements.
+  - **Banner Clipping Resolution**: Resolved the clipping issue for customer banners (`bn_cus0[1-3]`) by removing rigid height constraints and implementing CSS-based alignment.
+  - **Sticky Footer**: Implemented a Flexbox-based layout for the `body`, ensuring the footer remains at the bottom of the viewport even on pages with minimal content.
+  - **Popup Modernization**: Replaced legacy table-based "Terms" and "Privacy" popups with a clean, CSS-based `.modern-popup` structure.
+  - **Menu UX Optimization**: 
+    - Resolved submenu hover "gap" issue.
+    - Disabled submenus for "SCADA&Touch" and "Education" items as requested, including both HTML removal and JS logic updates.
+  - Cleaned up the top menu: removed mobile link, updated staff link to `/adm`, and fixed search bar alignment using Flexbox.
+- **UI Behavior & Accessibility**:
+  - **TOP Button**: Restored the "follow-scroll" behavior using jQuery `animate` for a smoother user experience, moving from `fixed` to a dynamic `absolute` position.
+  - **Font Control**: Implemented functional font resizing (increase/decrease/reset) for the `b_font` controls, affecting body and table text globally.
+- **Documentation & Maintenance**:
+  - Exhaustively updated file registry in `docs/` (`PHP_FILES_LIST.md`, `HTML_LIST.md`, etc.).
+  - Created `docs/IMG_LIST.md` to index and categorize over 5,800 project assets.
 
-## Next Steps
-- **Cross-Browser Testing**: Verify layout and JavaScript functionality in modern browsers (Chrome, Safari, Edge).
-- **Form Validation & Mailer**: Test and verify online inquiry forms (`online_form.php`) and ensure the mailer function is compatible with modern SMTP requirements if needed.
-- **Image Path Audit**: Scan for and fix any remaining broken image links or hardcoded legacy paths.
-- **SEO & Meta Tags**: Standardize `<title>` and `<meta>` tags across sub-pages using G4's global configuration.
-- **Mobile Responsiveness**: Evaluate the feasibility of adding basic responsive styles to the fixed-width desktop layout.
+## Final Notes
+- **Archive Status**: This repository is now a static archive. No further feature development or bug fixes will be performed.
+- **Reference Value**: Use the `js/` and `css/` modernizations as a template for upgrading legacy PHP applications to modern standards.
 
 ## Guidelines
 - **Include Rules**: Always use `include "inc/..."` (no `./`) for fragments. For full page layouts, use `include_once("$g4[path]/head.php")` and `include_once("$g4[path]/tail.php")` to ensure consistent menu and footer rendering.

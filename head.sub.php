@@ -40,16 +40,49 @@ header("Pragma: no-cache");
 <title><?=$g4['title']?></title>
 <link rel="shortcut icon" href="<?=$g4['path']?>/img/favicon.ico" />
 <link rel="stylesheet" href="<?=$g4['path']?>/css/common.css">
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-migrate-1.4.1.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery.easing.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery.global.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/shop_function.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery.style-my-tooltips.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/quick.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/common.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/b4.common.js"></script> 
-<script type="text/javascript" src="<?=$g4['path']?>/js/ajax.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/autotech.bundle.js?v=<?=filemtime($g4['path']."/js/autotech.bundle.js")?>"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
 <script language="javascript">
 // 자바스크립트에서 사용하는 전역변수 선언
 var g4_path      = "<?=$g4['path']?>";
@@ -62,8 +95,6 @@ var g4_bo_table  = "<?=isset($bo_table)?$bo_table:'';?>";
 var g4_sca       = "<?=isset($sca)?$sca:'';?>";
 var g4_charset   = "<?=$g4['charset']?>";
 var g4_cookie_domain = "<?=$g4['cookie_domain']?>";
-var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
-var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
 <? if ($is_admin) { echo "var g4_admin = '{$g4['admin']}';"; } ?>
 </script>
 </head>

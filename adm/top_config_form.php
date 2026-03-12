@@ -240,8 +240,6 @@ include_once ("./admin.head.php");
 </form>
 <?=$g4[path];?>
 <script type="text/javascript" src="<?=$g4[path];?>/js/prototype.js"></script>
-<script type="text/javascript" src="<?=$g4[path];?>/js/md5.js"></script>
-<script type="text/javascript" src="<?=$g4[path];?>/js/kcaptcha.js"></script>
 
 <script language="javascript">
 function fconfigform_submit(f)

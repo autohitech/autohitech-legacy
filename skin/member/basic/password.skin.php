@@ -2,7 +2,6 @@
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가 
 ?>
 
-<script type="text/javascript" src="<?=$g4[path]?>/js/capslock.js"></script>
 
 <form name="fboardpassword" method=post onsubmit="return fboardpassword_submit(this);">
 <input type=hidden name=w           value="<?=$w?>">

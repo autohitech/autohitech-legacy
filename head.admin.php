@@ -44,7 +44,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta http-equiv="content-type" content="text/html; charset=<?=$g4['charset']?>">
 <title><?=$g4['title']?></title>
 <link rel="stylesheet" href="<?=$g4['path']?>/style.css" type="text/css">
-<link href="<?=$g4['path']?>/css/jquery-ui-1.12.1.min.css" rel="stylesheet" type="text/css">
+<link href="<?=$g4['path']?>/css/jquery-ui-1.14.1.min.css" rel="stylesheet" type="text/css">
 </head>
 <script language="javascript">
 // 자바스크립트에서 사용하는 전역변수 선언
@@ -58,17 +58,11 @@ var g4_bo_table  = "<?=isset($bo_table)?$bo_table:'';?>";
 var g4_sca       = "<?=isset($sca)?$sca:'';?>";
 var g4_charset   = "<?=$g4['charset']?>";
 var g4_cookie_domain = "<?=$g4['cookie_domain']?>";
-var g4_is_gecko  = navigator.userAgent.toLowerCase().indexOf("gecko") != -1;
-var g4_is_ie     = navigator.userAgent.toLowerCase().indexOf("msie") != -1;
 <? if ($is_admin) { echo "var g4_admin = '{$g4['admin']}';"; } ?>
 </script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/common.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/ajax.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-migrate-1.4.1.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-ui-1.12.1.min.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/charts.js"></script>
-<script type="text/javascript" src="<?=$g4['path']?>/js/shop_function.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="<?=$g4['path']?>/js/autotech.bundle.js?v=<?=filemtime($g4['path']."/js/autotech.bundle.js")?>"></script>
 
 
 <body topmargin="0" leftmargin="0" <?=isset($g4['body_script']) ? $g4['body_script'] : "";?>>

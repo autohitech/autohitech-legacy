@@ -1,7 +1,7 @@
 <?
 $sub_menu = "300400";
 include_once("./_common.php");
-include_once("$g4[path]/lib/cheditor4.lib.php");
+include_once("$g4[path]/lib/ckeditor5.lib.php");
 
 auth_check($auth[$sub_menu], "w");
 
@@ -25,10 +25,7 @@ else
 $g4[title] = "팝업관리 " . $html_title;
 include_once("./admin.head.php");
 
-
-echo "<script src='$g4[cheditor4_path]/cheditor.js'></script>";
-echo cheditor1('po_content', '100%', '250');
-
+echo ckeditor5_load();
 ?>
 
 <form name=popup method=post onsubmit="return popup_submit(this);" enctype="multipart/form-data" autocomplete="off">
@@ -142,7 +139,7 @@ echo cheditor1('po_content', '100%', '250');
 </tr>
 <tr class='ht'>
     <td>내용</td>
-    <td colspan=3><?=cheditor2('po_content', $row[po_content], '100%', '350');?></td>
+    <td colspan=3><?=ckeditor5_render('po_content', $row[po_content], '100%', '350');?></td>
 </tr>
 <? if ($w == "u") {?>
 <tr class='ht'>
@@ -165,7 +162,7 @@ echo cheditor1('po_content', '100%', '250');
 <script language='Javascript'>
 function popup_submit(f)
 {
-    <?=cheditor3('po_content');?>
+    <?php echo ckeditor5_sync('po_content'); ?>
     f.action = './popup_form_update.php';
     return true;
 }

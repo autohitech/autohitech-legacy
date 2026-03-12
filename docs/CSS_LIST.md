@@ -1,6 +1,6 @@
 # CSS Files List
 
-This document contains a list of all .css files in the project as of 2026-03-11.
+This document contains a list of all .css files in the project as of 2026-03-12.
 
 ```text
 ./adm/acclog/button.css
@@ -17,7 +17,7 @@ This document contains a list of all .css files in the project as of 2026-03-11.
 ./css/basic.css
 ./css/common.css
 ./css/gcs.css
-./css/jquery-ui-1.12.1.min.css
+./css/jquery-ui-1.14.1.min.css
 ./css/layout_touch.css
 ./css/layout.css
 ./css/main.css

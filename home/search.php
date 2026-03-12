@@ -219,7 +219,6 @@ if ($stx)
 $search_query=str_replace('%5C','',$search_query); 
     $write_pages = get_paging($config[cf_write_pages], $page, $total_page, "$_SERVER[PHP_SELF]?$search_query&gr_id=$gr_id&srows=$srows&onetable=$onetable&page=");
 
-    echo "<script type=\"text/javascript\" src=\"$g4[path]/js/sideview.js\"></script>";
 }
 
 $group_select = "<select id='gr_id' name='gr_id' class=select><option value=''>전체 분류";

@@ -4,9 +4,9 @@ if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
 $url = '';
 if ($g4['https_url']) {
     if (preg_match("/^\./", $urlencode))
-        $url = $g4[url];
+        $url = $g4['url'];
     else
-        $url = $g4[url].$urlencode;
+        $url = $g4['url'].$urlencode;
 } else {
     $url = $urlencode;
 }
@@ -18,14 +18,12 @@ if ($g4['https_url']) {
 <div class="navi"><ul><li class="home">홈</li><li>홈페이지관리</li><li class="location">로그인</li></ul></div><? include "../inc/b_font.html";?>
 </div>
 <!-- //Title -->
-<!--? include "../inc/con_fix01.html";?-->
 	
-<script type="text/javascript" src="<?=$g4[path]?>/js/capslock.js"></script>
 
 <!-- Content -->
-<div class="contentM">
+<div class="content">
 <!--로그인-->
-<table height="220" border="0" align="center" cellpadding="0" cellspacing="0">
+<table height="220" border="0" align="center" cellpadding="0" cellspacing="0" style="margin: 50px auto;">
 <form name="flogin" method="post" onsubmit="return flogin_submit(this);" autocomplete="off">
 <input type="hidden" name="url" value='<?=$url?>'>
           <tr>
@@ -75,14 +73,11 @@ if ($g4['https_url']) {
                 <td height="15" align="right" valign="top"></td>
               </tr>
               <tr>
-                <td align="right" valign="top"><a href="javascript:;" onclick="win_password_lost('./password_lost.php');"><img src="<?=$member_skin_path?>/img/btn_lost.gif" width="260" height="17" border="0"></a></td>
+                <td align="right" valign="top"><a href="javascript:;" onclick="win_password_lost('<?=$g4['bbs_path']?>/password_lost.php');"><img src="<?=$member_skin_path?>/img/btn_lost.gif" width="260" height="17" border="0"></a></td>
               </tr>
               <tr>
                 <td height="5" align="right" valign="top"></td>
               </tr>
-              <!--tr>
-                <td align="right" valign="top"><a href="./register.php?subNum=3"><img src="<?=$member_skin_path?>/img/btn_join.gif" width="260" height="17" border="0" /></a></td>
-              </tr-->
             </table>			
 			<!--버튼 테이블 끝-->			</td>
           </tr></form>
@@ -97,8 +92,19 @@ document.flogin.mb_id.focus();
 
 function flogin_submit(f)
 {
+    if (!f.mb_id.value) {
+        alert("아이디를 입력하십시오.");
+        f.mb_id.focus();
+        return false;
+    }
+    if (!f.mb_password.value) {
+        alert("패스워드를 입력하십시오.");
+        f.mb_password.focus();
+        return false;
+    }
+
     <?
-    if ($g4[https_url])
+    if ($g4['https_url'])
         echo "f.action = '$g4[https_url]/$g4[bbs]/login_check.php';";
     else
         echo "f.action = '$g4[bbs_path]/login_check.php';";
