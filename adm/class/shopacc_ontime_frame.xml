@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption=' 2014-08-29  체류시간 (단위 :명)' PYAxisName='방문객' SYAxisName='초' subcaption=' ' bgColor='ffffff' hovercapbg='DEDEBE' hovercapborder='889E6D' xAxisName='' yAxisName=''  numdivlines='9' divLineColor='CCCCCC' divLineAlpha='80' outCnvBaseFont = '굴림' numberPrefix='' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'  rotateNames='0' animation='1' decimalPrecision='0' formatNumberScale='0' showAlternateHGridColor='1' AlternateHGridAlpha='30' AlternateHGridColor='CCCCCC'>
+ <categories font='굴림체' fontSize='12' fontColor='000000'>
+ <category name=''  hoverText='00시' /><category name=''  hoverText='01시' /><category name=''  hoverText='02시' /><category name='03시'  hoverText='03시' /><category name=''  hoverText='04시' /><category name=''  hoverText='05시' /><category name='06시'  hoverText='06시' /><category name=''  hoverText='07시' /><category name=''  hoverText='08시' /><category name='09시'  hoverText='09시' /><category name=''  hoverText='10시' /><category name=''  hoverText='11시' /><category name='12시'  hoverText='12시' /><category name=''  hoverText='13시' /><category name=''  hoverText='14시' /><category name='15시'  hoverText='15시' /><category name=''  hoverText='16시' /><category name=''  hoverText='17시' /><category name='18시'  hoverText='18시' /><category name=''  hoverText='19시' /><category name=''  hoverText='20시' /><category name='21시'  hoverText='21시' /><category name=''  hoverText='22시' /><category name=''  hoverText='23시' />
+</categories>
+<dataset seriesname='방문객수' color='56B9F9' showValues='1'>
+<set value='1' /><set value='0' /><set value='0' /><set value='1' /><set value='1' /><set value='0' /><set value='0' /><set value='2' /><set value='5' /><set value='2' /><set value='8' /><set value='7' /><set value='2' /><set value='10' /><set value='9' /><set value='3' /><set value='4' /><set value='3' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' />
+</dataset>
+<dataset seriesName='체류시간' color='ff0000' showValues='0' parentYAxis='S' >
+<set value='1' /><set value='0' /><set value='0' /><set value='447' /><set value='54' /><set value='0' /><set value='0' /><set value='2' /><set value='1' /><set value='1' /><set value='1761' /><set value='4' /><set value='7' /><set value='650' /><set value='279' /><set value='54' /><set value='2' /><set value='137' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' />
+</dataset>
+<dataset seriesName='평균체류시간' color='0028a2' showValues='0' parentYAxis='S' >
+<set value='1' /><set value='0' /><set value='0' /><set value='447' /><set value='54' /><set value='0' /><set value='0' /><set value='1' /><set value='0.2' /><set value='0.5' /><set value='220.125' /><set value='0.571428571429' /><set value='3.5' /><set value='65' /><set value='31' /><set value='18' /><set value='0.5' /><set value='45.6666666667' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' />
+</dataset>
+</graph>

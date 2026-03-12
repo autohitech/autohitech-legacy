@@ -1,0 +1,41 @@
+/* 스크롤바 */
+body {
+    scrollbar-shadow-color:#f3f3f3; 
+    scrollbar-highlight-color:#f3f3f3; 
+    scrollbar-arrow-color:#f3f3f3; 
+    scrollbar-face-color:#1baacc; 
+    scrollbar-track-color:#f3f3f3; 
+    scrollbar-3dlight-color:#1baacc; 
+    scrollbar-darkshadow-color:#1baacc; 
+
+    margin: 0;
+}
+
+/* 이미지 */
+img { border: 0; }
+a, img { selector-dummy: expression(this.hideFocus=true); } 
+a, img, input { selector-dummy: expression(this.hideFocus=true); }
+
+/* 기본 텍스트 */
+body, table, tr, td {
+    font-family: "굴림", dotum, dotumche, "돋움", Verdana, Tahoma, AppleGothic, sans-serif;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+    line-height: 18px;
+    color: #888888;
+    text-decoration: none;
+}
+a:link    { color: #888; font-weight: bold; text-decoration: underline; font-family: Verdana, Tahoma, "굴림", dotum, dotumche, "돋움", AppleGothic, sans-serif; }
+a:visited { color: #888; font-weight: bold; text-decoration: underline; font-family: Verdana, Tahoma, "굴림", dotum, dotumche, "돋움", AppleGothic, sans-serif; }
+a:active  { color: #1992af; font-weight: bold; text-decoration: underline; font-family: Verdana, Tahoma, "굴림", dotum, dotumche, "돋움", AppleGothic, sans-serif; }
+a:hover   { color: #1992af; font-weight: bold; text-decoration: underline; font-family: Verdana, Tahoma, "굴림", dotum, dotumche, "돋움", AppleGothic, sans-serif; }
+	
+/* 내용 */
+.con_title   { color: #333333; font-size: 13px; font-weight: bold; border-bottom: 1px dashed #d0d0d0; }
+.con_info    { color: #9e285e; font-size: 11px; font-weight: bold; height: 30px; }
+.con_list    { font-size: 11px; }
+.con_body    { color: #888888; font-size: 11px; text-align: justify; padding: 5px 0px 0px 15px; }
+.con_body b  { color: #737373; font-size: 12px; padding-left: 8px; background: url('img/icon_title.gif') 0 0 no-repeat; }
+.con_body ul { margin-top: 5px; }
+.con_body li { list-style: none; margin-left: -40px; padding-left: 7px; background: url('img/icon_list.gif') 0 3px no-repeat; }
+.con_body li strong { list-style: none; }

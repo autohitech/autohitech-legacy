@@ -1,0 +1,103 @@
+<script type="text/javascript">
+  function preloadImages() {
+    const images = document.images;
+    const numImages = images.length;
+    for (let i = 0; i < numImages; i++) {
+      if (images[i].getAttribute('data-src')) {
+        images[i].src = images[i].getAttribute('data-src');
+      }
+    }
+  }
+
+  function swapImage(event) {
+    const image = event.target;
+    if (image.getAttribute('data-alt-src')) {
+      const temp = image.src;
+      image.src = image.getAttribute('data-alt-src');
+      image.setAttribute('data-alt-src', temp);
+    }
+  }
+
+  function attachEvents() {
+    const images = document.images;
+    const numImages = images.length;
+    for (let i = 0; i < numImages; i++) {
+      images[i].addEventListener('mouseover', swapImage);
+      images[i].addEventListener('mouseout', swapImage);
+    }
+  }
+
+  // 탭 전환 함수
+  function DisplayMenu(index) {
+      if (index == 1) {
+          document.getElementById('notice1').style.display = '';
+          document.getElementById('notice2').style.display = 'none';
+      } else {
+          document.getElementById('notice1').style.display = 'none';
+          document.getElementById('notice2').style.display = '';
+      }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    preloadImages();
+    attachEvents();
+  });
+</script>
+
+  <div id="c_con">
+   <!-- Notice -->
+    <div class="notice" id="notice1" style="display:;">
+      <ul>
+        <li><span class="title"><img src="img/tab_notice01.gif" usemap="#Map_notice01">
+      <map name="Map_notice01" id="Map_notice01">
+        <area shape="rect" coords="80,0,160,20" onmouseover="DisplayMenu(2)">
+      <area shape="rect" coords="230,0,270,20" href="../home/board.php?bo_table=cus01&amp;subNum=1">
+      </map>
+      </span></li>
+      </ul>
+        <ul>
+                <?php
+            //  최신글
+              // 사용방법
+              // latest(스킨, 게시판아이디, 출력라인, 글자수);
+              echo latest("basic", "cus01", 3, 40);
+            ?>
+        </ul>
+    </div>
+    <div class="notice" id="notice2" style="display:none;">
+      <ul>
+        <li><span class="title"><img src="img/tab_notice02.gif" usemap="#Map_notice02">
+      <map name="Map_notice02" id="Map_notice02">
+        <area shape="rect" coords="0,0,80,20" onmouseover="DisplayMenu(1)">
+      <area shape="rect" coords="230,0,270,20" href="../home/board.php?bo_table=qna01&amp;subNum=3">
+      </map></span></li>
+      </ul>
+        <ul>
+                <?php
+            //  최신글
+              // 사용방법
+              // latest(스킨, 게시판아이디, 출력라인, 글자수);
+              echo latest("basic", "qna01", 3, 40);
+            ?>
+        </ul>
+    </div>
+    <!-- //Notice -->
+  <!-- Banner -->
+  <div class="bn_cus01"><a href="../bbs/estimate.html?subNum=1"><img src="img/bn_inquiry01.gif" alt="견적문의" /></a></div>
+  <div class="bn_cus02"><a href="../home/board.php?bo_table=qna01&amp;subNum=3"><img src="img/bn_qna01.gif" alt="기술지원 및 Q&A" /></a></div>
+  <div class="bn_cus03"><a href="https://smartstore.naver.com/smart_controller" target="_blank"><img src="img/bn_ucoreshop01.gif" alt="smart_controller" /></a></div>
+  <!-- //Banner -->
+  <!-- Banner -->
+  <div id="bannerWrapM">
+  <div class="banner">
+  <div class="btit"><a href="../home/board.php?bo_table=cus01&amp;subNum=1"><img src="img/title_info01.gif" alt="안내" /></a></div>
+  <ul>
+    <!-- <li style="padding-right:10px;"><a href="#" onclick="javascript:window.open('http://autohitech.co.kr/img/support.png','','width=700,height=400');"><img src="img/bn_remote01.gif" class="ovex" /></a></li> -->
+    <li style="padding-right:10px;"><a href="http://pf.kakao.com/_aSxnyb/chat"><img src="img/bn_remote01.gif" class="ovex" /></a></li>
+    <li><a href="../company/location01.html?subNum=5"><img src="img/bn_location01.gif" class="ovex" /></a></li>
+  </ul>
+  </div>
+  </div>
+  <!-- //Banner -->
+</div>
+<!-- //Customer -->

@@ -1,0 +1,48 @@
+/*웹폰트적용*/
+@font-face{font-family: "다음_Regular";  src:url(http://www.arinmusic.co.kr/home/img/Daum_Regular.eot); }
+
+body {
+	margin-left:0px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+}	
+
+body, table, tr, td{
+	font-size:9pt;
+	line-height:2em;
+	color:#666666;
+	text-decoration:none;
+	font-family:돋움, dotum, dotumche, 굴림, Verdana, Tahoma;
+}
+
+a:link	   {color:#555555; font-size:9pt; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a:visited  {color:#999999; font-size:9pt; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a:active   {color:#9e285e; font-size:9pt; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a:hover	   {color:#9e285e; font-size:9pt; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+
+a.email:link	 {color:#555555; font-size:9pt; font-weight:bold; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a.email:visited  {color:#999999; font-size:9pt; font-weight:bold; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a.email:active   {color:#9e285e; font-size:9pt; font-weight:bold; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+a.email:hover	 {color:#9e285e; font-size:9pt; font-weight:bold; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+
+.tb_T {background-image:url(http://www.arinmusic.co.kr/home/img/tb_T.jpg);
+       background-repeat:no-repeat;
+       background-position:left top;
+	   height:80px;
+	   }
+.tb_M {background-image:url(http://www.arinmusic.co.kr/home/img/tb_M.jpg);
+       background-repeat:repeat-y;
+       background-position:left top;
+	   }
+.tb_B {background-image:url(http://www.arinmusic.co.kr/home/img/tb_B.jpg);
+       background-repeat:no-repeat;
+       background-position:left top;
+	   }   
+.bg_title {background-image:url(http://www.arinmusic.co.kr/home/img/bg_title.gif);
+           background-repeat:repeat-x;
+           background-position:left top;
+	       }	   
+.title_com {color:#fedd00; font-size:22pt; font-weight:bold; letter-spacing:-3px; line-height:1em; padding:50px 0px 0px 40px; font-family:'다음_Regular', 돋움, dotum, dotumche, 굴림, Verdana, Tahoma;}
+.title_t01 {color:#1992af; font-size:14pt; letter-spacing:-1px; font-weight:bold;}
+.title_t02 {color:#5d6b98; font-size:9pt; font-weight:bold;}

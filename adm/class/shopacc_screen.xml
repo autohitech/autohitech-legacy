@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption='해상도별' xAxisName='' bgcolor='ffffff' pieSliceDepth='60' numberPrefix='' outCnvBaseFont = '굴림' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'   rotateNames='1' animation='1'   decimalPrecision='0' formatNumberScale='0' pieRadius='90' showPercentageInLabel='1' pieYScale='45' pieBorderAlpha='40' pieFillAlpha='70'>
+<set name='1024x768' value='6425' color='854fac' /><set name='1280x1024' value='5649' color='82dd83' /><set name='1680x1050' value='2223' color='dae2d4' /><set name='1280x800' value='1751' color='1df70a' /><set name='1152x864' value='1594' color='853514' /><set name='1920x1080' value='1589' color='37f8d6' /><set name='1366x768' value='1258' color='87b318' /><set name='1440x900' value='1221' color='b5f5ec' /><set name='1280x960' value='886' color='5c3793' /><set name='1600x900' value='675' color='e981f2' />
+</graph>

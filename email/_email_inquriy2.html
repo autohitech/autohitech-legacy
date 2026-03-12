@@ -1,0 +1,96 @@
+﻿<?
+  $memo=str_replace("\n","<br>",$memo);
+
+    $send_content = "
+<table width='800' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td align='left' valign='top' background='http://www.autohitech.co.kr/email/img/table_M_bg.jpg'><a href='http://www.autohitech.co.kr' target='_blank'><img src='http://www.autohitech.co.kr/email/img/table_T_Logo.jpg'  border='0'></a></td>
+  </tr>
+  <tr>
+    <td align='center' valign='top' background='http://www.autohitech.co.kr/email/img/table_M_bg.jpg'><table width='740' border='0' cellspacing='0' cellpadding='0'>
+      <tr>
+        <td height='15' align='center'></td>
+      </tr>
+      <tr>
+        <td height='150' align='center' valign='top'>
+			
+			<!--내용 / 테이블 시작-->
+            <table width='700' border='0' align='center' cellpadding='0' cellspacing='0'>
+
+              <tr>
+                <td></td>
+                <td align=\"center\">
+				
+				
+				<table width='100%' border='0' cellpadding='0' cellspacing='1' bgcolor='#d0d0d0'>
+                  <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>회사명</font></strong></td>
+                    <td colspan='3' align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Company</b></td>
+  </tr>
+                  <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>이름</font></strong></td>
+                    <td width='200' align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Name</b></td>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>부서</font></strong></td>
+                    <td align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Part</b></td>
+                  </tr>
+                  <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>핸드폰번호</font></strong></td>
+                    <td align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$HP</b></td>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>이메일</font></strong></td>
+                    <td align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$email</b></td>
+                  </tr>
+                  <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>전화번호</font></strong></td>
+                    <td align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Tel</b></td>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>팩스번호</font></strong></td>
+                    <td align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Fax</b></td>
+                  </tr>
+                  <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>회사주소</font></strong></td>
+                    <td colspan='3' align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$Address</b></td>
+  </tr>
+                  <tr>
+                    <td width='80' rowspan='2' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>교육 선택</font></strong></td>
+                    <td colspan='3' align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>교 육 : $h_part <br>날 짜 : $h_gugun <br>인 원 : $select (명)</b></td>
+  </tr>
+                    <tr>
+                    <td width='80' align='left' valign='middle' bgcolor='#f0f0f0' style='padding:10px;'><strong><font color='333333'>문의 사항</font></strong></td>
+                    <td colspan='3' align='left' valign='middle' bgcolor='#ffffff' style='padding:10px;'><b>$systemsetting</b></td>
+  </tr>
+                </table>
+
+				
+				
+</td>
+                <td background='http://www.autohitech.co.kr/email/img/subb_r1.gif'></td>
+              </tr>
+            </table>
+			<!--내용 / 테이블 끝-->
+				
+          <br>
+           <br> 
+          <br><br /></td>
+      </tr>
+      <tr>
+        <td align='center' valign='bottom'><table width='100%' border='0' cellpadding='0' cellspacing='0' background='http://www.autohitech.co.kr/email/img/login_img03.gif' bgcolor='f8f8f8'>
+          <tr>
+            <td width='10' align='left'><img src='http://www.autohitech.co.kr/email/img/login_img01.gif' width='10' height='90' /></td>
+            <td align='center' valign='middle'>본 메일은 고객님께서 해당 홈페이지에서 요청하신 사항에 대한 확인 메일입니다.</td>
+            <td width='10' align='right'><img src='http://www.autohitech.co.kr/email/img/login_img02.gif' width='10' height='90' /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align='left' valign='bottom'><img src='http://www.autohitech.co.kr/email/img/table_B.jpg' width='800' border='0' usemap='#Map'>
+      <map name='Map' id='Map'>
+        <area shape='rect' coords='55,73,170,88' href='http://www.cohomepage.com' target='_blank' alt='홈페이지제작 환영!' />
+    </map></td>
+  </tr>
+</table>
+";
+$send_content = stripslashes($send_content);
+
+//  echo $send_content;
+?>

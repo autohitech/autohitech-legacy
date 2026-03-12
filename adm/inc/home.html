@@ -1,0 +1,24 @@
+<?if (!defined("_GNUBOARD_")) exit;?>
+<table  align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="21" class="home">HOME &gt; ADMIN &gt; 
+        <? 
+        $tmp_menu = "";
+        if (isset($sub_menu))
+            $tmp_menu = substr($sub_menu, 0, 3);
+        if (isset($menu["menu{$tmp_menu}"][0][1]))
+        {
+            if ($menu["menu{$tmp_menu}"][0][2])
+            {
+                echo "<a href='".$menu["menu{$tmp_menu}"][0][2]."'>";
+                echo $menu["menu{$tmp_menu}"][0][1];
+                echo "</a> > ";
+            }
+            else
+                echo $menu["menu{$tmp_menu}"][0][1]." > ";
+        }
+
+//                echo $menu["menu{$sub_menu}"][0][1]." ";
+        ?><?=$g4['title']?></td>
+  </tr>
+</table>

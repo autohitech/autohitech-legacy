@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* ★Member / Start★ */
+/*-----게시판-스타일-----*/
+a.board_T:link	   {color:#666666; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+a.board_T:visited  {color:#888888; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+a.board_T:active   {color:#1992af; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+a.board_T:hover    {color:#1992af; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.board_Tt{ color : #ffffff; font-size : 8pt; font-weight:bold; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_Tt_R{ color : #ca3f2c; font-size : 8pt; font-weight:bold; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_Tn{ color : #555555; font-size : 8pt; font-weight:bold; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.board_Th{ color : #ffffff; font-size : 8pt; font-weight:bold; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_No{ color : #666666; font-size : 8pt; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.board_Rp{ color : #4440bb; font-size : 8pt; font-weight:bold; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.board_Txt01{ color : #666666; font-size : 8pt; text-decoration:none; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_Txt02{ color : #999999; font-size : 7pt; text-decoration:none; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.board_con{ color : #666666; font-size : 8pt; padding:20px 20px 20px 20px; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+.bt_tab_txt{ color:888888; font-size : 8pt; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+/*갤러리게시판*/
+a.gallery_T:link{color:#666666; line-height:150%; font-size : 8pt; text-decoration:none;; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+a.gallery_T:visited{color:#888888; line-height:150%;font-size : 8pt; text-decoration:none;; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+a.gallery_T:active{color:#1992af; line-height:150%;font-size : 8pt; text-decoration:none;; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+a.gallery_T:hover{color:#1992af; line-height:150%;font-size : 8pt; text-decoration:none;; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif;}
+/*게시판_기본*/
+.bt_basic{ font-size : 9pt; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif, verdana;}
+.bt_num{ color : #777777;}
+.bt_day{ color : #777777;}
+.bt_hit{ color : #777777;}
+.bt_payment{ color : #777777;}
+.bt_amount{ color : #777777; font-weight:bold;}
+.bt_name{ color : #777777;}
+.bt_point{ color : #ed454d; font-weight:bold;}
+.bt_coupon01{ color : #777777; font-weight:bold;}
+.bt_coupon02{ color : #cc0000; font-weight:bold;}
+.bt_question{ color : #666666; padding:7 0 7 0;}
+.bt_answer{ color : #5c9edb; padding:7 0 7 0;}
+.bt_type{ color : #777777;}
+.bt_term{ color : #777777; line-height:120%; padding:2 0 2 0;}
+.bt_add{ color : #888888; line-height:120%; padding:5 0 5 0; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif, verdana;}
+.bt_contact{ font-size : 7pt; color : #999999; line-height:120%; padding:5 0 5 0;}
+.tab_txt{ font-size : 8pt; color : #666666; font-family: 돋움, dotum, dotumche, 굴림,  Verdana, Tahoma, AppleGothic, sans-serif, verdana;}
+/*-----회원가입-스타일-----*/
+/*회원관련*/
+.T_provision{color:#999; font-size:8pt; line-height:160%; font-family:돋움, dotum, 굴림, gulim, Verdana, Tahoma, AppleGothic, sans-serif;}
+/*회원가입폼*/
+.T_id01{color:#51a108; font-size:8pt; font-weight:bold; line-height:160%; letter-spacing:-0.5px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.T_id02{color:#ed0075; font-size:8pt; text-decoration:underline; font-weight:bold; line-height:160%; letter-spacing:-0.5px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+/*회원가입*/
+.mem_t01{color:#777777; font-size:9pt; font-weight:bold; padding-left:20px;}
+.mem_t02{color:#999999; font-size:8pt; line-height:150%;}
+/*회원가입-자동방지*/
+.mem_auto{color:#1992af; font-size:27pt; font-weight:bold; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+/*회원탈퇴*/
+.mem_t03{color:#666666; font-size:9pt; font-family:돋움, dotum, 굴림, gulim, Verdana, Tahoma, AppleGothic, sans-serif;}
+/*회원가입완료*/
+.con_t01{color:#7a7a7a; font-size:8pt;line-height:150%; letter-spacing:-1px; font-family:돋움, dotum, 굴림, gulim, Verdana, Tahoma, AppleGothic, sans-serif;}
+/*-----로그인-----*/
+.mem_line {background-image:url(../skin/member/basic/img/bg_line.gif);
+    background-repeat:repeat-x;
+    background-position:left top;
+}
+.mem_form01 {background-image:url(../skin/member/basic/img/bg_form01.gif);
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+.mem_form02 {background-image:url(../skin/member/basic/img/bg_form02.gif);
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+.login_t01    {color:#777777; font-size:8pt; font-weight:bold; padding-left:5px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.password_t01 {color:#777777; font-size:8pt; font-weight:bold; padding-left:5px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.modify_t01   {color:#1992af; font-size:8pt; font-weight:bold; padding-left:5px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+.memo_t01     {color:#ffffff; font-size:16pt; font-weight:bold; padding:5px 0px 0px 15px; font-family:Verdana, Tahoma, 돋움, dotum, dotumche, 굴림, AppleGothic, sans-serif;}
+/* ★Member / End★ */

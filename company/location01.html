@@ -1,0 +1,77 @@
+<?php
+$g4_path = "..";
+include_once("../_common.php");
+include_once("$g4[path]/head.php");
+?>
+
+
+<!-- Title -->
+<div id="titleWrap">
+  <div class="tit"><img src="../img/title_location01.gif" /></div>
+  <div class="navi">
+    <ul>
+      <li class="home">홈</li>
+      <li>회사소개</li>
+      <li class="location">오시는 길</li>
+    </ul>
+  </div>
+  <? include "../inc/b_font.html";?>
+</div>
+<!-- //Title -->
+
+<!-- Content -->
+<div class="content">
+
+  <!-- Location -->
+  <div class="location_container">
+    
+    <!-- Map Section -->
+    <div class="map_area">
+      <div style="border:1px solid #e3e3e3; padding:4px; width:740px; height:370px;">
+        <!-- * Daum 지도 - 지도퍼가기 -->
+        <!-- 1. 지도 노드 -->
+        <div id="daumRoughmapContainer1484640055680" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+        <!--
+          2. 설치 스크립트
+          * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+        -->
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+
+        <!-- 3. 실행 스크립트 -->
+        <script charset="UTF-8">
+          new daum.roughmap.Lander({
+            "timestamp" : "1484640055680",
+            "key" : "ffwf",
+            "mapWidth" : "740",
+            "mapHeight" : "370"
+          }).render();
+        </script>
+      </div>
+    </div>
+    <!-- //Map Section -->
+    
+    <!-- Spacer -->
+    <div class="spacer_h40"></div>
+    
+    <!-- Info Section -->
+    <div class="info_area">
+      <img src="img/location01.jpg" alt="회사명 : 오토하이테크(주)
+      주소 : 서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호
+      전화 : 02.6330.4700
+      팩스 : 02.6330.4704
+      이메일 : auto@autohitech.co.kr" usemap="#Map_location01" />
+    </div>
+    <!-- //Info Section -->
+
+  </div>
+  <!-- //Location -->
+
+</div>
+<!-- //Content -->
+
+<? include_once("$g4[path]/tail.php"); ?>
+
+<map name="Map_location01" id="Map_location01">
+  <area shape="rect" coords="395,80,550,100" href="mailto:auto@autohitech.co.kr" alt="메일보내기" title="메일보내기" />
+</map>

@@ -1,0 +1,29 @@
+<?
+//각페이지별 페이지넘 활성화
+if($_GET[subNum] == "1") { $select_subNum_1 = "selected='gSelected'"; 
+} else if($_GET[subNum] == "2") { $select_subNum_2 = "selected='gSelected'";
+} else if($_GET[subNum] == "3") { $select_subNum_3 = "selected='gSelected'";
+} else if($_GET[subNum] == "4") { $select_subNum_4 = "selected='gSelected'";
+} else if($_GET[subNum] == "5") { $select_subNum_5 = "selected='gSelected'";
+} else if($_GET[subNum] == "6") { $select_subNum_6 = "selected='gSelected'"; 
+} else if($_GET[subNum] == "7") { $select_subNum_7 = "selected='gSelected'"; 
+} else if($_GET[subNum] == "8") { $select_subNum_8 = "selected='gSelected'"; 
+
+//각게시판별 페이지넘 활성화
+} else if($_GET[bo_table] == "com01") { $select_subNum_5 = "selected='gSelected'"; 
+} else if($_GET[bo_table] == "down01") { $select_subNum_2 = "selected='gSelected'";
+} else if($_GET[bo_table] == "down02") { $select_subNum_3 = "selected='gSelected'"; 
+} else if($_GET[bo_table] == "down03") { $select_subNum_4 = "selected='gSelected'";
+} else if($_GET[bo_table] == "down04") { $select_subNum_5 = "selected='gSelected'";
+} else if($_GET[bo_table] == "cus01") { $select_subNum_1 = "selected='gSelected'";
+} else if($_GET[bo_table] == "qna01") { $select_subNum_3 = "selected='gSelected'";
+} else {
+ $select_subNum_1 = "";
+ $select_subNum_2 = "";
+ $select_subNum_3 = "";
+ $select_subNum_4 = "";
+ $select_subNum_5 = "";
+ $select_subNum_6 = "";
+}
+
+?>

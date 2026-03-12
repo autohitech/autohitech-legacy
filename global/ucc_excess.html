@@ -1,0 +1,51 @@
+<?session_start();
+include_once './inc/_config.php';
+$user_usedquota = userquotasum();
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>동영상업로드</title>
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.20.custom.css"> 
+<script type="text/javascript" src="js/view_flash.js"></script>
+</head>
+<body>
+<div align="center">
+  <!--ucc-->
+  <table width="500" border="0" cellpadding="0" cellspacing="0" class="bg_ucc">
+    <tr>
+      <td height="80" align="center" valign="top"><img src="images/bar_ucc.gif" width="500" height="80" /></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" class="back_ucc">
+<table width="430" height="174" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left" valign="top" class="bg_excess"><div id="txt_excess">총 사용량 : <?=byteFormat($limit_uploadquota);?> / 현재 사용량 : <?=byteFormat($user_usedquota);?></div></td>
+  </tr>
+</table>
+        <!--fix-->
+          <table width="430" height="230" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td align="center" valign="top"><script>doc_write(flash_movie("swf/bn_ad.swf", "mainflash", "430", "220", "transparent"));</script></td>
+          </tr>
+        </table>
+        <table width="430" height="60" border="0" cellpadding="0" cellspacing="1" bgcolor="d8d8d8">
+          <tr>
+            <td align="center" valign="middle" bgcolor="#fafafa" class="con_Fix01"><strong>·</strong> 지적재산권, 음란물, 청소년 유해매체물을 포함한 타인의 권리를 침해하는 <strong>·</strong><br />
+              자료등은 제한 조치나 법적인 처벌을 받을 수 있습니다.</td>
+          </tr>
+        </table>
+        <!--fix-->
+      </td>
+    </tr>
+    <tr>
+      <td height="35" align="center" valign="bottom"><a href='#' onclick='window.close();'><img src="images/btn_close.gif" width="500" height="35" border="0" /></a></td>
+    </tr>
+  </table>
+  <!--//ucc-->
+</div>
+</body>
+</html>

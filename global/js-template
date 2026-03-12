@@ -1,0 +1,86 @@
+
+<script type="text/javascript">
+			var progress_key = '{rand}';
+
+			$(document).ready(function() {
+			//$("#progressbar").progressBar();
+			$("#progressbar").progressbar();
+			startConvert();
+			});
+
+			function startConvert() {
+				$('#select_images').hide();
+				$("#progress").show();
+				$("#progressbar").fadeIn();
+				$("#status").fadeIn(300);
+				var i = setInterval(function() { 
+					$.getJSON("./inc/progress.php?pkey=" + progress_key, function(data) {
+						if (data == null) {
+							clearInterval(i);
+							$('#status').fadeOut(300);
+							document.title = '{lang[LANG][2]}'; 	
+						
+						}
+						var pz = Math.floor(100 * parseInt(data.time_encoded) / parseInt(data.time_total));
+						document.title = '{lang[LANG][3]}'; 	
+						if(pz == 'Infinity'){
+							clearInterval(i);
+							$('#status').fadeOut(300);
+							document.title = '{lang[LANG][2]}'; 	
+						}
+						          
+						if(pz > 99){
+							document.title='{lang[LANG][4]}';				
+							clearInterval(i);
+							$.ajax({
+							  url: '{RE_FORM}?pkey=' + progress_key,
+							  type: 'GET',
+							  
+								beforeSend: function(){
+							    		$('#progress').fadeOut(100, function() {
+										//$("#step2").height(auto); 
+										$('#select_images').hide();
+										$('#progressbar').hide();
+							    		$('#status').hide();
+									    $('#loading').fadeIn(100);
+									});
+							  	},
+/*								
+								  success: function(getData) {
+									$('#loading').fadeOut('400', function() {
+									  $('#progressbar').hide();
+								      $('#status').html(getData);
+									  $('#ad_flash').hide();
+								      $('#select_thumb').show();
+							  									  
+									});
+	
+								  }
+	*/
+								  success: function(getData) {
+									$('#loading').fadeOut(100, function() {
+										$("#step2").height(464); 
+										$('#select_images').show();
+										$('#progress').hide();
+										$('#progressbar').hide();
+										$('#ad_flash').hide();
+								        $('#select_images').html(getData);
+										$('#thumb li:nth-child(3n)').css( "margin-right","0px");
+								        $('#thumb').fadeIn(1);
+									});
+								  }	
+							});
+						}
+						   $("#progressbar").progressbar({value: pz});     
+						//$("#progressbar").progressBar(pz);
+						var encoded = data.time_encoded_min;
+						var total = data.time_total_min;
+						$("#time_cur").html(encoded);
+						$("#time_total").html(total);
+                        $('#percent').html('<strong>'+ pz + ' %</strong>');
+					});
+				}, {UPD_RATE});
+
+				return true;
+			}
+		</script>

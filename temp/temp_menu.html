@@ -1,0 +1,416 @@
+<html>
+
+<head>
+<title>:: Autohitech :: templates</title>
+
+<style>
+a:link {text-decoration:none} 
+a:visited {text-decoration:underline;}
+a:active {text-decoration:none;}
+a:hover {text-decoration:underline} 
+</style>
+
+<script>
+function autoblur() {
+	if(event.srcElement.tagName == "A") document.body.focus();
+	}
+	document.onfocusin = autoblur;
+</script>
+
+<style type="text/css">
+<!-- body,td { font-size:8pt; font-family:돋움,arial; } -->
+</style>
+
+<SCRIPT language=javascript> 
+var old=''; 
+
+function menu(name) 
+{ 
+submenu=eval("submenu_"+name+".style"); 
+if(old!=submenu) 
+{ 
+if(old!='') 
+{ 
+old.display='none'; 
+} 
+submenu.display='block'; 
+old=submenu; 
+} 
+else 
+{ 
+submenu.display='none'; 
+old=''; 
+} 
+} 
+</SCRIPT> 
+
+
+
+<base target="temp_body">
+
+
+
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
+
+<table border="0" width="210" cellpadding="0" height="69" background="img/menu_bg05.jpg">
+	<tr>
+		<td>
+		<p align="center"><b><span class="short_text">
+<span style="text-decoration: none" lang="en-us"><a href="temp_body.html">
+		<font color="#FFFFFF">INFORMATION(Main)</font></font></a></span></span></b></td>
+	</tr>
+</table>
+
+<!--메뉴 표 시작-->
+<table border="0" width="100%" height="105" cellpadding="10" cellspacing="10">
+	<tr>
+		<td valign="top" height="85">
+
+		<!--배경01 템플릿-->
+		<img border="0" src="img/icon01.gif" width="9" height="11"><b><a onclick="menu(1);" style="CURSOR:hand"> 배경 템플릿</a><br>
+		</b>
+		<img border="0" src="img/icon03.gif" width="9" height="11"><a onclick="menu(1);" style="CURSOR:hand"> 
+		<font color="#808080">Background Templates</font></a><font color="#808080">
+
+		<!--배경01 사이드메뉴-->
+		</font>
+		<span id=submenu_1 style="DISPLAY: none;">
+		<table width="100%" cellspacing="4" cellpadding="0">
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20">	
+				<img border="0" src="img/icon02.gif" width="9" height="11">&nbsp;<a href="page_bg/bg01.html"><font color="#003399">배경01</font>
+				<font color="#C0C0C0">Background 01</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11">&nbsp;<a href="page_bg/menu01.html"><font color="#003399">메뉴</font>
+				<font color="#C0C0C0">Menu</font></a></td>
+			</tr>
+		</table>
+		</span>
+		<br><br>
+		
+		<!--프로젝트 템플릿-->
+		<img border="0" src="img/icon01.gif" width="9" height="11"><b><a onclick="menu(2);" style="CURSOR:hand"> 프로젝트 배경</a><br>
+		</b>
+		<font color="#808080">
+		<img border="0" src="img/icon03.gif" width="9" height="11"><a onclick="menu(2);" style="CURSOR:hand"> Project Background</a>
+		<!--배경 02 사이드메뉴-->
+		</font>
+		<span id=submenu_2 style="DISPLAY: none;">
+		<table width="100%" cellspacing="4" cellpadding="0">
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_project/01_project_electric01.html"><font color="#003399">전력 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Electric power</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_project/02_SolarWind_PowerBio01.html"><font color="#003399">태양광/풍력 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Solar/Wind Power</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_project/03_HVAC01.html"><font color="#003399">공조제어 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">HVAC</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_project/04_Waterworks01.html"><font color="#003399">수처리 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Waterworks Treatment</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">폐기물처리 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Waste Disposition</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">공정 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Process</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">시험장비 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Test Equipment</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">가스 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Gas</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">조명제어 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Lighting</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="javascript:;"><font color="#003399">기타 </font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Other</font></a>
+				</td>
+				</td>
+			</tr>
+		</table>
+		</span>		
+		<br><br>
+		
+		<!--공정템플릿-->
+		<img border="0" src="img/icon01.gif" width="9" height="11"><b><a onclick="menu(3);" style="CURSOR:hand"> 공정 템플릿</a><br>
+		</b>
+		<font color="#808080">
+		<img border="0" src="img/icon03.gif" width="9" height="11"><a onclick="menu(3);" style="CURSOR:hand"> Process Templates</a>
+		<!--공정사이드메뉴-->
+		</font>
+		<span id=submenu_3 style="DISPLAY: none;">
+		<table width="100%" cellspacing="4" cellpadding="0">
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/01_Electric.html"><font color="#003399">전력 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Electric power</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/02_Solar.html"><font color="#003399">태양광/풍력 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Solar/Wind Power</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/03_HVAC.html"><font color="#003399">공조제어 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">HVAC</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/04_Waterworks.html"><font color="#003399">수처리 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Waterworks Treatment</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/05_Waste.html"><font color="#003399">폐기물처리 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Waste Disposition</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/06_Process.html"><font color="#003399">공정 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Process</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/07_Test.html"><font color="#003399">시험장비 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Test Equipment</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/08_Gas.html"><font color="#003399">가스 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Gas</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/09_Lighting.html"><font color="#003399">조명제어 모니터링 시스템</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Lighting</font></a>
+				</td>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10"></td>
+				<td height="20" >				
+				<font color="#003399"><img border="0" src="img/icon02.gif" width="9" height="11"></font>
+				<a target="temp_body" href="page_process/10_Other.html"><font color="#003399">기타 </font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11"><font color="#ffffff">&nbsp;</font><font color="#C0C0C0">Other</font></a>
+				</td>
+				</td>
+			</tr>
+		</table>
+		</span>		
+		<br><br>
+		<!--배경템플릿-->
+		<img border="0" src="img/icon01.gif" width="9" height="11"><b><a onclick="menu(4);" style="CURSOR:hand"> 아이콘 템플릿</a><br>
+		</b>
+		<font color="#808080">
+		<img border="0" src="img/icon03.gif" width="9" height="11"><a onclick="menu(4);" style="CURSOR:hand"> Icon Templates</a>
+
+		<!--배경사이드메뉴-->
+		</font>
+		<span id=submenu_4 style="DISPLAY: none;">
+		<table width="100%" cellspacing="4" cellpadding="0">
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/gauge01.html"><font color="#003399">계기 Gauge</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/valve01.html"><font color="#003399">밸브 Valve</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/pipe01.html"><font color="#003399">파이프 Pipe</font></a></td>
+			</tr>			
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/factory01.html"><font color="#003399">공장 Factory</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/pump01.html"><font color="#003399">펌프 Pump</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/tank01.html"><font color="#003399">탱크 Tank</font></a></td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/sell01.html"><font color="#003399">셀 Solar Sell</font>
+				</a>
+				</td>
+			</tr>
+			<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/analbox01.html"><font color="#003399">값박스</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11">&nbsp;<font color="#003399">Analogue Box</font></a>
+				</td>
+			</tr>
+						<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/electric01.html"><font color="#003399">전력아이콘</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11">&nbsp;<font color="#003399">Electric Icon</font></a>
+				</td>
+
+			</tr>
+						<tr>
+				<td height="20" width="10">				　</td>
+				<td height="20">				
+				<img border="0" src="img/icon02.gif" width="9" height="11"> 
+				<a href="page_icon/dpmbox01.html"><font color="#003399">계측값 Box</font>
+				<br>
+				<img border="0" src="img/icon03.gif" width="9" height="11">&nbsp;<font color="#003399">D.P.M Box</font></a>
+				</td>
+
+			</tr>
+		</table>
+		</span>
+		
+		<br>
+		<br>
+
+		</td>
+	</tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption=' 2013-04-14 ~ 2013-04-19  (단위 :명)' subcaption=' ' bgColor='ffffff' hovercapbg='DEDEBE' hovercapborder='889E6D' xAxisName='' yAxisName=''  numdivlines='9' divLineColor='CCCCCC' divLineAlpha='80' outCnvBaseFont = '굴림' numberPrefix='' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'  rotateNames='0' animation='1' decimalPrecision='0' formatNumberScale='0' showAlternateHGridColor='1' AlternateHGridAlpha='30' AlternateHGridColor='CCCCCC'>
+ <categories font='굴림체' fontSize='12' fontColor='000000'>
+ <category name='04/14'  hoverText='04/14(일)' /><category name='04/15'  hoverText='04/15(월)' /><category name='04/16'  hoverText='04/16(화)' /><category name='04/17'  hoverText='04/17(수)' /><category name='04/18'  hoverText='04/18(목)' /><category name='04/19'  hoverText='04/19(금)' />
+</categories>
+<dataset seriesname='페이지뷰' color='FDC12E'>
+<set value='0' /><set value='0' /><set value='124' /><set value='195' /><set value='311' /><set value='22' />
+</dataset>
+<dataset seriesname='방문객수' color='56B9F9'>
+<set value='0' /><set value='0' /><set value='7' /><set value='5' /><set value='10' /><set value='4' />
+</dataset>
+</graph>

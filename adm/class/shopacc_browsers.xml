@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption='브라우져별' xAxisName='' bgcolor='ffffff' pieSliceDepth='60' numberPrefix='' outCnvBaseFont = '굴림' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'   rotateNames='1' animation='1'   decimalPrecision='0' formatNumberScale='0' pieRadius='90' showPercentageInLabel='1' pieYScale='45' pieBorderAlpha='40' pieFillAlpha='70'>
+<set name='Internet Explorer 8.0' value='24' color='4c9214' /><set name='Safari 534.52.7' value='2' color='defb5a' /><set name='Chrome 23.0.1271.91' value='1' color='98804a' /><set name='Chrome 23.0.1271.95' value='1' color='a6724b' />
+</graph>

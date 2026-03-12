@@ -1,0 +1,156 @@
+/*½ºÅ©·Ñ¹Ù*/
+body {
+scrollbar-face-color:#eeeeee;
+scrollbar-highlight-color:#f6f6f6;
+scrollbar-3dlight-color:#dedede;
+scrollbar-darkshadow-color:#ffffff;
+scrollbar-shadow-color:#f6f6f6;
+scrollbar-arrow-color:#dedede;
+scrollbar-track-color:#ffffff;
+
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+
+
+
+
+
+.adm_copy {background-image:url(/error/img/bg_copy_adm.gif); 
+         background-repeat: no-repeat; 
+         background-position: center top;
+}
+
+
+
+/*±âº»ÅØ½ºÆ®*/
+body, table, tr, td {
+	 font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;
+	font-size: 8pt;
+	letter-spacing:-0.5px;
+	line-height:180%;
+	color: #555555;
+	text-decoration: none
+}
+
+
+
+/*ÀÌ¹ÌÁö*/
+img { border: 0; }
+a,img {selector-dummy: expression(this.hideFocus=true);} 
+a,img,input{selector-dummy: expression(this.hideFocus=true);}
+
+
+
+/*form*/
+textarea, select 
+	{font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;
+     color: #666666;
+	 font-size: 8pt; 
+	 border: #cccccc 1px solid; 
+	 background-color:#ffffff;
+	 }
+	 
+input 
+	{font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;
+     color: #666666;
+	 font-size: 8pt; 
+	 border: #cccccc; 
+	 background-color:#ffffff;
+	 }
+
+
+/*Åõ¸íÀÌ¹ÌÁö*/
+.png24 {
+  tmp:expression(setPng24(this));
+}
+
+
+
+
+/*»ó´Ü¸Þ´º¸µÅ©*/
+a.menu_TT:link		{color:#ffffff; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TT:visited	{color:#ffffff; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TTactive	    {color:#90fbff; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TT:hover		{color:#ffff00; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+
+
+
+/*¿ÞÂÊ¸Þ´º¸µÅ©*/
+a.menu_TL:link		{color:#9e285e; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TL:visited	{color:#9e285e; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TL:active	{color:#219cb3; font-weight:bold; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TL:hover		{color:#e50276; font-weight:bold; text-decoration:underline; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+
+
+/*¿ÞÂÊÇÏºÎ¸Þ´º¸µÅ©*/
+a.menu_TB:link		{color:#333333; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TB:visited	{color:#333333; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TB:active	{color:#333333; text-decoration:none; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+a.menu_TB:hover		{color:#ffff00; font-weight:bold; text-decoration:underline; font-size : 9pt; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+
+
+
+
+
+/*ÀÏ¹Ý¸µÅ©*/
+a:link		{color:#727272; text-decoration:none;}
+a:visited	{color:#999999; text-decoration:none;}
+a:active	{color:#d27a18; text-decoration:none;}
+a:hover		{color:#d27a18; text-decoration:none;}
+
+
+
+/*¸®½ºÆ®Ä«¿îÅÍ*/
+a.count:link	{color:#666666; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.count:visited	{color:#888888; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.count:active	{color:#be9112; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.count:hover	{color:#009900; font-size : 8pt; text-decoration:underline; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+.count_line{ color : #b0b0b0; font-size : 7pt; font-family:µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+
+
+
+/*È÷½ºÅä¸®ÅØ½ºÆ®*/
+.navi_text{ color : #666666; font-size : 8pt; text-decoration: none; font-family: µ¸¿ò, dotum, dotumche, ±¼¸², Verdana, Tahoma, AppleGothic, sans-serif;}
+.navi_t01 { color : #219cb3; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: µ¸¿ò, dotum, dotumche, ±¼¸², Verdana, Tahoma, AppleGothic, sans-serif;}
+.navi_t02 { color : #d27a18; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: µ¸¿ò, dotum, dotumche, ±¼¸², Verdana, Tahoma, AppleGothic, sans-serif;}
+.navi_t03 { color : #46649b; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: µ¸¿ò, dotum, dotumche, ±¼¸², Verdana, Tahoma, AppleGothic, sans-serif;}
+.navi_t03 { color : #5a39ac; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: µ¸¿ò, dotum, dotumche, ±¼¸², Verdana, Tahoma, AppleGothic, sans-serif;}
+
+
+
+
+/*ÇÏ´Ücopy°ü¸®ÀÚ·Î±×ÀÎ*/
+.copy_text01{ color : #a7a7a7; font-size : 7pt; text-decoration: none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+.copy_name01{ color : #219cb3; font-size : 7pt; text-decoration: none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+
+
+/*ÇÏ´Ücopy°ü¸®ÀÚ¸ÞÀÎ*/
+.copy_text02{ color : #999999; font-size : 7pt; text-decoration: none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.copy_name02:link		{color:#999999; font-size : 7pt; text-decoration:none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.copy_name02:visited	{color:#999999; font-size : 7pt; text-decoration:none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.copy_name02:active	{color:#999999; font-size : 7pt; text-decoration:none; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+a.copy_name02:hover		{color:#ffff00; font-size : 7pt; text-decoration:underline; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+
+
+
+
+
+/*»ó´Ü½Ã°è*/
+.day_T{ color : #4a4a4a; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+.time_T{ color : #7a1b41; font-size : 8pt; text-decoration: none; font-weight:bold; font-family: Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+
+
+/*³»¿ë°ü·ÃÅØ½ºÆ®*/
+.cate_T{ color : #005500; font-size : 10pt; text-decoration: none; font-weight:bold; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+.cate_S{ color : #005500; font-size : 10pt; text-decoration: none; font-weight:bold; font-family:±¼¸², Verdana, Tahoma, µ¸¿ò, dotum, dotumche, AppleGothic, sans-serif;}
+
+
+
+/*µ¡±Û*/
+.reply_t01{ color : #666666; font-size : 9pt; text-decoration: none; font-weight:bold; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+.reply_t02{ color : #888888; font-size : 8pt; text-decoration: none; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+.reply_text{ color : #777777; font-size : 8pt; text-decoration:none; font-family:Verdana, Tahoma, µ¸¿ò, dotum, dotumche, ±¼¸², AppleGothic, sans-serif;}
+

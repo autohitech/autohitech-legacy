@@ -1,0 +1,149 @@
+flatform@charset "utf-8";
+input  {margin:0; padding:0;}
+.reset {margin:0 !important; padding:0 !important;}
+/* fontStyle */ tt, i, b, u, s, strike, big, small, 
+/* phrase */ em, strong, dfn, code, samp, kbd, var, cite, abbr, acronym,
+/* special */ a, img, applet, object, font, basefont, br, script, map, q, sub, sup, span, bdo, iframe, 
+/* formctrl */ input, select, textarea, label, button, 
+/* document */ address, div, 
+p, h1, h2, h3, h4, h5, h6, pre, blockquote, ins, del, dl, dt, dd, ul, ol, li, dir, menu, form, option, fieldset, legend, th, td {margin:0; padding:0;}
+table {width:100%; border-collapse:collapse; margin:0; padding:0; border:0;}
+hr    {display:none;}
+img   {font-size:1%; line-height:1; border:0;}
+ul, ol, li {list-style:none;}
+
+html {overflow-y:scroll;}
+html, body {height:100%; /* Required */ }
+body {
+	margin:0; 
+	padding:0; 
+	font-family:Dotum, Gulim, Verdana, Arial, Tahoma, Helvetica, sans-serif; 
+	color:#666; 
+	font-size:12px; 
+	line-height:18px; 
+	letter-spacing:0em;
+	}
+	
+a:link	    {color:#767676; text-decoration:none;}
+a:hover	    {color:#333333; text-decoration:none;}
+a:active	{color:#767676; text-decoration:none;}
+a:visited	{color:#767676; text-decoration:none;}	
+
+#wrapper {
+	width:100%;  
+	height:130px; 
+	background:url('../img/menu_bg.png') left top repeat-x; 
+	overflow:visible; 
+	position:relative; 
+	}
+	
+body#main#wrapper {
+	background:none; 
+	margin-bottom:30px; 
+	position:relative; 
+	overflow:visible;
+	}
+	
+header#header {
+	width:980px; 
+	margin:0 auto; 
+	height:130px; 
+	overflow:visible;
+	}
+	#logo {float:left; width:230px; padding-top:30px;}
+#topMenu {float:left; width:750px; height:78px;}
+.tophome {float:right; margin-top:10px; width:398px; height:17px;}
+.tophome ul {}
+.tophome li {height:17px; float:left; overflow:hidden;}		
+		
+#topMenu .menuT       {float:left; margin:18px 0px 0px 70px; width:680px; height:15px;}
+#topMenu .menuT ul    {width:680px;}
+#topMenu .menuT li    {float:left; height:15px; overflow:hidden;}
+/*
+#topMenu .menuT ul li .m01 {width:80px;}
+#topMenu .menuT ul li .m02 {width:110px;}
+#topMenu .menuT ul li .m03 {width:75px;}
+#topMenu .menuT ul li .m04 {width:120px;}
+#topMenu .menuT ul li .m05 {width:93px;}
+#topMenu .menuT ul li .m06 {width:55px;}
+#topMenu .menuT ul li .m07 {width:80px;}
+#topMenu .menuT ul li .m08 {width:67px;}*/
+
+#topMenu .menuT ul li .m01 {}
+#topMenu .menuT ul li .m02 {}
+#topMenu .menuT ul li .m03 {}
+#topMenu .menuT ul li .m04 {}
+#topMenu .menuT ul li .m05 {}
+#topMenu .menuT ul li .m06 {}
+#topMenu .menuT ul li .m07 {}
+#topMenu .menuT ul li .m08 {}
+
+
+/* Sub Menu */
+#topMenu .subBar {width:100%; height:50px; position:relative; background:url('../img/sub_bg.png') left top repeat-x;}
+#topMenu .subS01       {float:left;}
+#topMenu .subS01 ul li {float:left; overflow:hidden; height:30px;}
+
+#topMenu .subS02       {float:left;}
+#topMenu .subS02 ul li {float:left; overflow:hidden; height:30px;}
+
+#topMenu .subS03       {float:left;}
+#topMenu .subS03 ul li {float:left; overflow:hidden; height:30px;}		
+		
+#topMenu .subS05       {float:left;}
+#topMenu .subS05 ul li {float:left; overflow:hidden; height:30px;}			
+		
+#topMenu .subS07       {float:left; margin-left:-50px;}
+#topMenu .subS07 ul li {float:left; overflow:hidden; height:30px;}
+			
+#topMenu .subS08       {float:left;}
+#topMenu .subS08 ul li {float:left; overflow:hidden; height:30px;}			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	#MainVisual {width:980px; height:450px;}
+#MainVisual .VisualAT {width:980px;}
+#MainVisual .VisualAT ul{}
+#MainVisual .VisualAT ul li {overflow:hidden; float:left; width:245px; height:450px;}
+
+.quickFlip { float: left;  position: relative; width:245px; height:450px;}
+
+.fronPanel, .blackPanel { float: left; width:245px; height:450px;  text-align: center;}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+#contWrap { clear: both; width: 926px; margin: 0 auto; overflow: hidden; }
+body#main #contWrap { clear: both; width: 100%; margin-top: -75px; overflow: hidden; z-index: 1; position: relative;}
+	#lm { width: 216px; float: left; font-family: Tahoma, sans-serif; color: #775954; line-height: 21px; }
+	#cont { width: 709px; border-left: 1px solid #eaeaea; float: left; padding: 0 0 60px 0; min-height: 600px; margin-bottom: 60px; }
+#footer { background: #f2f2f2;  }
+.inner-foot { width: 926px; margin: 0 auto; padding:15px 0;}
+.inner-foot img { margin-left: 261px;  }

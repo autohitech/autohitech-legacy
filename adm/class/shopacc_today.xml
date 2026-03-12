@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption='오늘 시간대별' subcaption='일시 : 02 월 27 일 (단위 : 명)' bgcolor='ffffff' xAxisName='오늘 시간대별 방문통계' yAxisName='' outCnvBaseFont = '굴림' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' rotateNames='0' animation='1' decimalPrecision='0' formatNumberScale='0'>
+<set name='5 시' value='1' color='22e6ad' /><set name='6 시' value='2' color='9f4431' /><set name='9 시' value='2' color='590dee' /><set name='11 시' value='1' color='36c618' /><set name='12 시' value='10' color='bff964' /><set name='13 시' value='3' color='b50501' /><set name='16 시' value='2' color='cde8f7' />
+</graph>

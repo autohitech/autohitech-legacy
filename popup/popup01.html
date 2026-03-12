@@ -1,0 +1,60 @@
+﻿<html>
+	<head>
+		<title>:: 오토하이테크에 오신것을 환영합니다 ::</title>
+<script language="javascript">
+
+
+
+function setCookie( name, value, expiredays )
+{
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin()
+{
+    if ( document.forms[0].Notice.checked )
+        setCookie( "popup", "ok" ,1);
+    self.close();
+}
+		function go_info()
+		{
+			self.window.opener.location.href = "http://www.autohitech.co.kr/controller/controller00_01.html?subNum=1";
+			self.close();
+		}
+
+</script>
+
+</head>
+<body leftmargin="0" topmargin="0">
+<form>
+<table cellpadding="0" cellspacing="0" width="0">
+ <tr>
+  <td width="661" height="347">
+	<img src="popup_SDA.png" border="0" usemap="#Map"></a></td>
+ </tr>
+   <tr>
+  <td  height="20" valign="top">
+  <table cellpadding="0" cellspacing="0" width="100%" align="center" height="20">
+   <tr>
+    <td height="20" align="center" align="center" bgcolor="#000000">
+     <p align="right"><font color="#FFFFFF">
+     <input type="checkbox" name="Notice" onClick="closeWin();">
+     <font face="돋움" size="2">하루 동안 열지 않음</font>
+             </font>
+             <a href="#" onClick="javascript:history.onclick=closeWin();" style="font-family:굴림체;font-size:9pt;">
+		<font color="#FFFFFF">[닫기]</font></a><font color="#FFFFFF"> </font>
+     </td>
+    <td height="20" align="center" align="center" bgcolor="#000000">
+     &nbsp;</td>
+   </tr>
+  </table></td>
+   </tr>
+</table>
+</form>
+<map name="Map">
+	<area href="javascript:go_info();" shape="rect" coords="138,258,249,283" >
+</map>
+</body>
+</html>l>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption=' 2013-07-16  방문통계 (단위 :명)' subcaption=' ' bgColor='ffffff' hovercapbg='DEDEBE' hovercapborder='889E6D' xAxisName='' yAxisName=''  numdivlines='9' divLineColor='CCCCCC' divLineAlpha='80' outCnvBaseFont = '굴림' numberPrefix='' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'  rotateNames='0' animation='1' decimalPrecision='0' formatNumberScale='0' showAlternateHGridColor='1' AlternateHGridAlpha='30' AlternateHGridColor='CCCCCC'>
+ <categories font='굴림체' fontSize='12' fontColor='000000'>
+ <category name='00시'  hoverText='00시' /><category name='01시'  hoverText='01시' /><category name='02시'  hoverText='02시' /><category name='03시'  hoverText='03시' /><category name='04시'  hoverText='04시' /><category name='05시'  hoverText='05시' /><category name='06시'  hoverText='06시' /><category name='07시'  hoverText='07시' /><category name='08시'  hoverText='08시' /><category name='09시'  hoverText='09시' /><category name='10시'  hoverText='10시' /><category name='11시'  hoverText='11시' /><category name='12시'  hoverText='12시' /><category name='13시'  hoverText='13시' /><category name='14시'  hoverText='14시' /><category name='15시'  hoverText='15시' /><category name='16시'  hoverText='16시' /><category name='17시'  hoverText='17시' /><category name='18시'  hoverText='18시' /><category name='19시'  hoverText='19시' /><category name='20시'  hoverText='20시' /><category name='21시'  hoverText='21시' /><category name='22시'  hoverText='22시' /><category name='23시'  hoverText='23시' />
+</categories>
+<dataset seriesname='페이지뷰' color='FDC12E'>
+<set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='2' /><set value='33' /><set value='175' /><set value='236' /><set value='69' /><set value='2' /><set value='126' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' />
+</dataset>
+<dataset seriesname='방문객수' color='56B9F9'>
+<set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='1' /><set value='3' /><set value='4' /><set value='2' /><set value='1' /><set value='1' /><set value='5' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' /><set value='0' />
+</dataset>
+</graph>

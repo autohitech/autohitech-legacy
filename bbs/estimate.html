@@ -1,0 +1,395 @@
+<? include "../inc/top_customer.html";?>
+<? include "../inc/menu_estimate.html";?>
+<script language="javascript">
+
+function doChangePart2() {
+	var mForm = document.mForm;
+	var t_gugun2 = mForm.h_gugun2;
+	var CodeSelected = 0;
+
+	while(mForm.h_part2.options[CodeSelected].selected == false) CodeSelected++;
+
+	t_gugun2.options[0].value = '';
+	t_gugun2.options[0].text = '종류';
+	t_gugun2.options[0].selected = true;
+
+	if(mForm.h_part2.options[CodeSelected].value == '') t_gugun2.options.length = 1;
+	else t_gugun2.options.length = 40;
+	
+	if(mForm.h_part2.options[CodeSelected].value == 'BASIC') {
+
+		t_gugun2.options[1].value = '32tag';
+		t_gugun2.options[1].text = '32tag';
+
+		t_gugun2.options[2].value = '64tag';
+		t_gugun2.options[2].text = '64tag';
+
+		t_gugun2.options[3].value = '128tag';
+		t_gugun2.options[3].text = '128tag';
+
+		t_gugun2.options[4].value = '256tag';
+		t_gugun2.options[4].text = '256tag';
+
+		t_gugun2.options[5].value = '512tag';
+		t_gugun2.options[5].text = '512tag';
+
+		t_gugun2.options[6].value = '2048tag';
+		t_gugun2.options[6].text = '2048tag';
+
+		t_gugun2.options[7].value = '무제한tag';
+		t_gugun2.options[7].text = '무제한tag';
+
+		t_gugun2.options.length = 8;
+	}
+	
+	if(mForm.h_part2.options[CodeSelected].value == 'FULL') {
+
+		t_gugun2.options[1].value = '32tag';
+		t_gugun2.options[1].text = '32tag';
+
+		t_gugun2.options[2].value = '64tag';
+		t_gugun2.options[2].text = '64tag';
+
+		t_gugun2.options[3].value = '128tag';
+		t_gugun2.options[3].text = '128tag';
+
+		t_gugun2.options[4].value = '256tag';
+		t_gugun2.options[4].text = '256tag';
+
+		t_gugun2.options[5].value = '512tag';
+		t_gugun2.options[5].text = '512tag';
+
+		t_gugun2.options[6].value = '2048tag';
+		t_gugun2.options[6].text = '2048tag';
+
+		t_gugun2.options[7].value = '무제한tag';
+		t_gugun2.options[7].text = '무제한tag';
+
+		t_gugun2.options.length = 8;
+	}
+	
+	if(mForm.h_part2.options[CodeSelected].value == 'WEB') {
+
+		t_gugun2.options[1].value = '2user';
+		t_gugun2.options[1].text = '2user';
+
+		t_gugun2.options[2].value = '5user';
+		t_gugun2.options[2].text = '5user';
+
+		t_gugun2.options[3].value = '10user';
+		t_gugun2.options[3].text = '10user';
+
+		t_gugun2.options[4].value = '20user';
+		t_gugun2.options[4].text = '20user';
+
+		t_gugun2.options[5].value = '30user';
+		t_gugun2.options[5].text = '30user';
+
+		t_gugun2.options[6].value = '40user';
+		t_gugun2.options[6].text = '40user';
+
+		t_gugun2.options.length = 7;
+	}
+	
+}
+
+</script>
+<script language="javascript">
+
+function doChangePart() {
+	var mForm = document.mForm;
+	var t_gugun = mForm.h_gugun;
+	var CodeSelected = 0;
+
+	while(mForm.h_part.options[CodeSelected].selected == false) CodeSelected++;
+
+	t_gugun.options[0].value = '';
+	t_gugun.options[0].text = '종류';
+	t_gugun.options[0].selected = true;
+
+	if(mForm.h_part.options[CodeSelected].value == '') t_gugun.options.length = 1;
+	else t_gugun.options.length = 40;
+	
+	if(mForm.h_part.options[CodeSelected].value == 'BASIC') {
+
+		t_gugun.options[1].value = '32tag';
+		t_gugun.options[1].text = '32tag';
+
+		t_gugun.options[2].value = '64tag';
+		t_gugun.options[2].text = '64tag';
+
+		t_gugun.options[3].value = '128tag';
+		t_gugun.options[3].text = '128tag';
+
+		t_gugun.options[4].value = '256tag';
+		t_gugun.options[4].text = '256tag';
+
+		t_gugun.options[5].value = '512tag';
+		t_gugun.options[5].text = '512tag';
+
+		t_gugun.options[6].value = '2048tag';
+		t_gugun.options[6].text = '2048tag';
+
+		t_gugun.options[7].value = '무제한tag';
+		t_gugun.options[7].text = '무제한tag';
+
+		t_gugun.options.length = 8;
+	}
+	
+	if(mForm.h_part.options[CodeSelected].value == 'FULL') {
+
+		t_gugun.options[1].value = '32tag';
+		t_gugun.options[1].text = '32tag';
+
+		t_gugun.options[2].value = '64tag';
+		t_gugun.options[2].text = '64tag';
+
+		t_gugun.options[3].value = '128tag';
+		t_gugun.options[3].text = '128tag';
+
+		t_gugun.options[4].value = '256tag';
+		t_gugun.options[4].text = '256tag';
+
+		t_gugun.options[5].value = '512tag';
+		t_gugun.options[5].text = '512tag';
+
+		t_gugun.options[6].value = '2048tag';
+		t_gugun.options[6].text = '2048tag';
+
+		t_gugun.options[7].value = '무제한tag';
+		t_gugun.options[7].text = '무제한tag';
+
+		t_gugun.options.length = 8;
+	}
+	
+	if(mForm.h_part.options[CodeSelected].value == 'WEB') {
+
+		t_gugun.options[1].value = '2user';
+		t_gugun.options[1].text = '2user';
+
+		t_gugun.options[2].value = '5user';
+		t_gugun.options[2].text = '5user';
+
+		t_gugun.options[3].value = '10user';
+		t_gugun.options[3].text = '10user';
+
+		t_gugun.options[4].value = '20user';
+		t_gugun.options[4].text = '20user';
+
+		t_gugun.options[5].value = '30user';
+		t_gugun.options[5].text = '30user';
+
+		t_gugun.options[6].value = '40user';
+		t_gugun.options[6].text = '40user';
+
+		t_gugun.options.length = 7;
+	}
+	
+}
+
+</script>
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_estimate01.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li class="location">견적문의</li></ul></div><? include "../inc/b_font.html";?>
+</div>
+<!-- //Title -->
+
+<!-- Content -->
+<div class="content">
+
+<!-- Estimate -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script language='javascript'>
+      function form_check(sun) {
+          if (sun.Company.value == '') {
+          alert('회사명을 입력하세요.'); sun.Company.focus(); return false;
+        } else if (sun.Tel.value == '') {
+            alert('전화번호를 입력하세요.'); sun.Tel.focus(); return false;
+        } else if ((sun.email.value=='') || (sun.email.value.search(/(\S+)@(\S+)\.(\S+)/) == -1)) {
+          alert('E-mail을 바르게 입력하세요.'); sun.email.focus(); return false;					 
+        } else if (sun.Name.value == '') {
+          alert('담당자명을 입력하세요.'); sun.Name.focus(); return false;
+
+
+        }
+
+        return true;
+      }
+    </script>
+
+<form name=mForm method="post" action="inquiry.php?subNum=1"  enctype='multipart/form-data' onsubmit='return form_check(this)'>
+<input type=hidden name="subject" value="Autohitech-Inquiry">
+<input type=hidden name="text_color" value="#000000">
+<input type=hidden name="required" value="Company,Name,email,Tel">
+    <tr>
+      <td align="left" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="25" align="left" valign="top" class="es_Tt01"><img src="img/icon01.gif" />&nbsp;아래 <img src="img/icon_starR.gif" style="padding-top:5px;" />표시된 부분은 필수 입력사항입니다. 반드시 입력해 주세요.</td>
+        </tr>
+        <tr>
+          <td height="4" align="left" valign="top" background="img/lineW.gif"></td>
+        </tr>
+        <tr>
+          <td height="5" align="left" valign="top">
+		  <!--견적문의 폼-->
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="es_con">
+            <tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />회사명</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Company' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />전화번호</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle" class="PD_R01"><input name='Tel' type='text' style='width:100%; height:18px;' /></td>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />담당이메일</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle"><input name='email' type='text' style='width:100%; height:18px;' /></td>
+            </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />담당자명</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td width="230" align="left" valign="middle" class="PD_R01"><input name='Name' type='text' style='width:100%; height:18px;' /></td>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />부서</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td width="230" align="left" valign="middle"><input name='Part' type='text' style='width:100%; height:18px;' /></td>
+            </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />회사주소</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Address' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<!--tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />홈페이지주소</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Homepage' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr-->
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />핸드폰번호</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle" class="PD_R01"><input name='HP' type='text' style='width:100%; height:18px;' /></td>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />팩스번호</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle"><input name='Fax' type='text' style='width:100%; height:18px;' /></td>
+            </tr>			
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />HMI Software</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4" style="padding:10px 0px 10px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="left" valign="middle">구 분</td>
+                  <td align="left" valign="middle"><select name='h_part' style='font_size:12px; width: 70px' onchange='doChangePart();'>
+                      <option value="">구분</option>
+                      <option value="BASIC">BASIC</option>
+                      <option value="FULL">FULL</option>
+                      <option value="WEB">WEB</option>
+                  </select></td>
+                  <td align="left" valign="middle">종 류</td>
+                  <td align="left" valign="middle"><select name='h_gugun' style='font_size:12px; width: 80px'>
+                      <option value="">종류</option>
+                  </select></td>
+                  <td align="left" valign="middle">단 위</td>
+                  <td align="left" valign="middle"><select name="select1">
+                      <option>SET</option>
+                  </select></td>
+                  <td align="left" valign="middle">수 량</td>
+                  <td align="left" valign="middle"><select name="select2">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                  </select></td>
+                  <td align="left" valign="middle">추가/삭제</td>
+                  <td align="left" valign="middle"><select name="select3">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                  </select></td>
+                </tr>
+                <tr>
+                  <td align="left" valign="middle">&nbsp;</td>
+                  <td align="left" valign="middle"><select name='h_sido2' id="h_part2" style='font_size:12px; width: 70px' onchange='doChangePart2();'>
+                      <option value="">구분</option>
+                      <option value="BASIC">BASIC</option>
+                      <option value="FULL">FULL</option>
+                      <option value="WEB">WEB</option>
+                  </select></td>
+                  <td align="left" valign="middle">&nbsp;</td>
+                  <td align="left" valign="middle"><select name='h_gugun2' id="h_gugun2" style='font_size:12px; width: 80px'>
+                      <option value="">종류</option>
+                  </select></td>
+                  <td align="left" valign="middle" >&nbsp;</td>
+                  <td align="left" valign="middle"><select name="select11">
+                      <option>SET</option>
+                  </select></td>
+                  <td align="left" valign="middle">&nbsp;</td>
+                  <td align="left" valign="middle"><select name="select12">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                  </select></td>
+                  <td align="left" valign="middle">&nbsp;</td>
+                  <td align="left" valign="middle"><select name="select13">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                  </select></td>
+                </tr>
+              </table></td>
+			</tr>
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />System 구축</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" colspan="4" valign="middle" style="padding:10px 0px 10px 0px;"><textarea name='System_setting' rows='18' cols='78' style="width:100%;"></textarea></td>
+            </tr>
+            <tr>
+              <td height='2' colspan="6" bgcolor="#dfdccf"></td>
+            </tr>
+          </table>
+		  <!--//견적문의 폼-->
+          <br />
+          <br />
+          <!--버튼테이블-->
+          <table width="100%" height="70" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="50" align="center" valign="top"><input name="image" type=image src="img/btn_confirm.gif">
+                &nbsp; <a href='javascript:location.reload()'><img src="img/btn_cancel.gif" border="0"></a></td>
+            </tr>
+          </table>
+        <!--//버튼테이블-->
+		  </td>
+        </tr>
+
+      </table>
+
+      </td>
+    </tr>
+  </form>
+</table>
+<!-- //Estimate -->
+
+</div>
+<!-- //Content -->
+
+<? include "../inc/copy.html";?>

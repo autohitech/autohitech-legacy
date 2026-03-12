@@ -1,0 +1,255 @@
+﻿/*Default 스타일 지우기-스타일 초기화*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, .footer {
+    border-style: none;
+    border-width: 0;
+    margin: 0 0 0px 0;
+    padding: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-family: 'Malgun Gothic',NanumMyeongjo, Dotum, Gulim;
+    
+}
+
+/*footer*/
+
+.foot {
+   
+    width:100%;
+    height:80px;
+    background-color:#333;
+    
+    border-top:2px solid #cf0 ;
+    float : left;
+}
+
+.contact {
+    margin: 0 auto;
+    width:840px;
+    padding:15px 60px 18px 60px;
+    line-height:22px;
+    color:#aaa;
+    font-size:9pt;
+}
+
+a.email {
+    color:#aaa;
+    text-decoration:none;
+}
+
+    a.email:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    /*본문*/
+    .Wrap_body {
+    background-position: 0px top;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 960px;
+    height: 100%;
+    min-height: 322px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: auto;
+    padding: 0px;
+    float : left;
+}
+
+    .wrapBodyPro {
+    background-position: 0px top;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: 960px;
+    height: 100%;
+    min-height: 322px;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: auto;
+    padding: 0px;
+    
+}
+
+.text {
+    line-height:22px;
+    font-size:12px;
+    color:#444;
+    margin-left: 30px;
+    padding-left: 25px;
+    padding-top:30px;
+    padding-bottom:20px;
+}
+
+img.dev {
+    width: 40%;
+    height: 40%;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    display: block;
+}
+
+img.iconEx {
+    height:22px; 
+    width:22px;  
+    margin-top:-72px;
+    margin-bottom:50px; 
+    display:block; 
+    margin-left:30px; 
+    cursor:pointer;   
+}
+
+    /*gnb Wrap*/
+    div.Header {
+        width: 100%;
+        min-width: 960px;
+        height: 110px;
+        background-color: #222;
+    }
+
+    div.Wrap_gnb {
+        width: 960px;
+        height: 110px;
+        margin: 0 auto;
+    }
+
+    div.language {
+        float: right;
+        width: 200px;        
+        margin-top: 10px;
+        font-family: Arial;
+        font-size: 12px;
+        color: #ccc;
+        vertical-align: middle;
+    }
+
+    .logo {
+        float:left;
+        margin-top: 30px;
+        margin-left: 20px;
+        cursor:pointer;
+    }
+
+
+
+
+    /*메뉴*/
+
+
+    div.Wrap_bar {
+        width: 100%;
+        background-image:url(../../images/menu_bg.png);
+        background-repeat:repeat-x;
+        margin: 0px;
+        border-top: 2px solid #CF0;        
+        background-color:#333;
+    }
+
+    div.Wrap_menu, Wrab_submenu {
+        width: 960px;
+        margin: 0 auto 0 auto;
+        
+        
+    }
+
+div.Wrap_menu {
+    background-image: url(../../images/menu_bg.png);
+}
+
+    div.Wrap_submenu {
+        
+        height:30px;
+        display:none;        
+    }
+
+div.devider {
+    width:1px;
+    height:40px;
+    background-image:url('../../images/menu_devider.png');
+    float:left;
+    visibility:visible;
+
+}
+
+.menu_Over, .menu {
+    width:180px;
+    height: 30px;
+    text-align: center;
+    font-size: 12pt;
+    padding-top: 10px;    
+    float: left;
+    margin: 0;
+    cursor: pointer;
+}
+
+.menu {
+    color: #ccc;
+    
+}
+
+.menu_Over {
+    
+    color: #fff;
+    
+}
+
+.menuOpen, .menuClose {
+    background-position:center;
+    background-repeat:no-repeat;
+    width:45px;
+    height:40px;
+    visibility:visible;
+    
+    float:right;
+}
+.menuOpen {
+    background-image:url(../../images/menuOpen.png);
+    
+    
+}
+
+.menuClose {
+    background-image:url(../../images/menuClose.png);   
+}
+
+.menuSub {
+    width: 121px;
+    height: 100%;
+    padding: 20px;
+    padding-top:10px;
+    padding-left:40px;
+    line-height: 20pt;
+    color: #ccc;
+    font-size: 10pt;
+    vertical-align:top;
+    float:left;
+
+}
+
+.menuSub_topic {
+
+    font-family:'Malgun Gothic',Dotum, Tahoma,'Trebuchet MS', Arial;
+    font-size:10pt;
+    color:#ccc;
+    padding-left:25px;
+}
+
+a.menuSub_link {
+    font-size: 10pt;
+}
+
+a.menu:hover, a.menuSub_link:hover {
+    color: #fff;
+    text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+<!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_admin01.gif" alt="홈페이지관리" /></div>
+<ul>
+<?
+if ($member[mb_id])
+{
+$XML_CATE ="
+<li><a href='../home/logout.php?pageNum=1&subNum=1'><img src='../img/menuL10_01.gif' alt='로그아웃' $select_subNum_1 class='gexchange' /></a></li>
+<li><a href='../home/member_confirm.php?url=register_form.php&pageNum=1&subNum=2'><img src='../img/menuL10_02.gif' alt='회원정보수정' $select_subNum_2 class='gexchange' /></a></li>
+<li><a href='javascript:win_memo();'><img src='../img/menuL10_03.gif' alt='쪽지' $select_subNum_3 class='gexchange' /></a></li>
+<li><a href='javascript:win_scrap();'><img src='../img/menuL10_04.gif' alt='스크랩북' $select_subNum_4 class='gexchange' /></a></li>
+<li><a href='../home/board.php?bo_table=popup01&pageNum=1&subNum=5'><img src='../img/menuL10_05.gif' alt='팝업창관리' $select_subNum_5 class='gexchange' /></a></li>
+<li><a href='../home/board.php?bo_table=staff01&pageNum=1&subNum=6'><img src='../img/menuL10_06.gif' alt='직원게시판' $select_subNum_6 class='gexchange' /></a></li>
+<li><a href='/adm'><img src='../img/menuL10_07.gif' alt='홈페이지관리' class='gexchange' /></a></li>
+";
+} else {
+$XML_CATE ="
+<li><a href='../home/login.php?pageNum=1&subNum=1'><img src='../img/menuL09_01.gif' alt='로그인' $select_subNum_1 class='gexchange' /></a></li>
+<li><a href='javascript:win_password_lost();'><img src='../img/menuL09_02.gif' alt='아이디/비밀번호찾기' $select_subNum_2 class='gexchange' /></a></li>
+";
+}
+
+echo $XML_CATE;
+?>
+</ul>
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">

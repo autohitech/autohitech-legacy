@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* ★Basic / Start★ */
+input  {margin:0; padding:0;}
+.reset {margin:0 !important; padding:0 !important;}
+/* fontStyle */ tt, i, b, u, s, strike, big, small,
+/* phrase */ em, strong, dfn, code, samp, kbd, var, cite, abbr, acronym,
+/* special */ a, img, applet, object, font, basefont, br, script, map, q, sub, sup, span, bdo, iframe,
+/* formctrl */ input, select, textarea, label, button,
+/* document */ address, div,
+p, h1, h2, h3, h4, h5, h6, pre, blockquote, ins, del, dl, dt, dd, ul, ol, li, dir, menu, form, option, fieldset, legend {border:0; margin:0; padding:0;}
+hr, caption    {display:none;}
+img   {font-size:1%; line-height:1; border:0;}
+ul, ol, li {list-style:none;}
+html, body {height:100%; /* Required */ }
+html {
+    scrollbar-shadow-color:#f0f0f0;
+    scrollbar-highlight-color:#f0f0f0;
+    scrollbar-arrow-color:#f0f0f0;
+    scrollbar-face-color:#1baacc;
+    scrollbar-track-color:#f0f0f0;
+    scrollbar-3dlight-color:#1baacc;
+    scrollbar-darkshadow-color:#1baacc;
+    overflow-y:scroll;
+}
+body {
+    margin-left:0px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    min-width:1070px;
+}
+body, table, tr, td{
+    font-family:돋움, Dotum, 굴림, Gulim, Verdana, Arial, Tahoma, Helvetica, sans-serif;
+    color:#666666;
+    font-size:12px;
+    line-height:1.8em;
+    letter-spacing:0em;
+    color:#666;
+    text-decoration:none;
+}
+input, select, textarea {border:1px solid #e5e5e5; color:#666; font-size:11px;}
+input[type=image]    {border:none;}
+input[type=radio]    {border:none;}
+input[type=checkbox] {border:none;}
+img {border:0; vertical-align:top; margin:0;}
+/* 링크/이미지 포커스 아웃라인 제거 */
+a, img, input { outline: none; }
+/* 공통 활성 상태 클래스 (jQuery 제어용) */
+.on, .active, .selected { font-weight: bold; }
+.ov { opacity: 0.8; transition: opacity 0.2s; }
+.none {display:none;}
+a:link		{color:#666666; text-decoration:none;}
+a:visited	{color:#888888; text-decoration:none;}
+a:active	{color:#333333; text-decoration:none;}
+a:hover		{color:#333333; text-decoration:none;}
+/* ★Basic / End★ */

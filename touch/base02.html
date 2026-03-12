@@ -1,0 +1,221 @@
+<?php
+$g4_path = "..";
+include_once("../_common.php");
+include_once("$g4[path]/head.php");
+?>
+
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_touch01_01.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li>SCADA&TOUCH</li><li class="location">SDADA</li></ul></div><? include "../inc/b_font.html";?>
+</div>
+<!-- //Title -->
+
+
+<!-- Content -->
+<div class="content">	
+
+<!-- 조명제어 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="javascript:doNothing()" onClick="win1Open=displayImage('img/base02_01.jpg', 'popWin1', '640', '512')" onMouseOver="window.status='Click to display picture'; return true;" onMouseOut="window.status=''"><img src="img/base02_01.jpg" /></a></td>
+        </tr>
+      </table>
+    <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01">조명제어<? include "inc/btn_prv.html";?></td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">빌딩 전체의 조명관리를 목적으로 하는 시스템이다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">총 7개 층을 총괄하여 감시하는 화면이 있고 각 구역별 운전은 해당층에서 한다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">각 개별 조명의 제어를 기본으로 사무실 별로 그룹으로 묶어서 한번에 제어할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">스케쥴에 맞추어 자동으로 on/off가 되도록 하였으며 예약 스케쥴 기능을 사용하였다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">PLC의 485Link 기능을 사용하여 한 선로에 여러개의 PLC를 병렬로 접속하였다.</td>
+        </tr>
+      </table>
+	 <!-- //Txt --> 
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //조명제어 -->
+<!-- 각 층별 제어 화면 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="javascript:doNothing()" onClick="win1Open=displayImage('img/base02_02.jpg', 'popWin1', '640', '512')" onMouseOver="window.status='Click to display picture'; return true;" onMouseOut="window.status=''"><img src="img/base02_02.jpg" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">	
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01">각 층별 제어 화면</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">층별로 감시/제어 할 수 있는 화면이다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">사무실 별로 그룹으로 묶어서 화면에 제어할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">조명의 위치가 자세하게 나타나 있으므로 관리를 효율적으로 할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">추가 스케쥴도 사용할 수 있다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //각 층별 제어 화면 -->
+<!-- 연간 예약 스케쥴 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="javascript:doNothing()" onClick="win1Open=displayImage('img/base02_03.jpg', 'popWin1', '640', '512')" onMouseOver="window.status='Click to display picture'; return true;" onMouseOut="window.status=''"><img src="img/base02_03.jpg" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">	
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01">연간 예약 스케쥴</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">연간 예약 스케쥴 수정/확인 화면이다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">스케쥴은 모든 태그를 사용할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">지정된 시간이 되면 자동으로 on/off나 스크립트를 실행 할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">추가 스케쥴도 사용할 수 있다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //연간 예약 스케쥴 -->
+<!-- 여러 구역 동시 감시 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="javascript:doNothing()" onClick="win1Open=displayImage('img/base02_04.jpg', 'popWin1', '640', '512')" onMouseOver="window.status='Click to display picture'; return true;" onMouseOut="window.status=''"><img src="img/base02_04.jpg" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">	
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01">여러 구역 동시 감시</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">여러 층을 동시에 감시할 수 있다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">전체 층이 한 화면에 감시 되므로 관리를 쉽게 할 수 있다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //여러 구역 동시 감시 -->
+<!-- 그룹 태그 화면 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="javascript:doNothing()" onClick="win1Open=displayImage('img/base02_05.jpg', 'popWin1', '640', '512')" onMouseOver="window.status='Click to display picture'; return true;" onMouseOut="window.status=''"><img src="img/base02_05.jpg" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->    </td>
+    <td align="left" valign="top">	
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01">그룹 태그 화면</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">특정 구역 내의 태그들을 그룹으로 묶어서 전체 감시하는 화면이다.</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt03">&nbsp;</td>
+          <td class="sub_txt01">여러 종류의 태그를 하나의 그룹으로 묶어서 감시, 제어한다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->	  </td>
+  </tr>
+</table>
+<!-- //그룹 태그 화면 -->
+
+</div>
+<!-- //Content -->
+
+<? include_once("$g4[path]/tail.php"); ?>

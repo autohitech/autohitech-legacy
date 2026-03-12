@@ -1,0 +1,114 @@
+<?
+include_once './inc/_config.php';
+$user_usedquota = userquotasum();
+if($user_usedquota>$limit_uploadquota) {
+include  "./ucc_excess.html";     
+} else {
+$g4_path = ".."; // common.php 의 상대 경로
+include_once("$g4_path/common_mvv.php");
+
+if ($member[mb_level]<8) 
+{
+	 echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
+	 echo "<script language='javascript'>alert('글을 등록할 권한이 없습니다. 감사합니다. ');self.close();</script>";
+	 exit;
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>동영상업로드<?=$member[mb_level];?></title>
+<link rel="stylesheet" type="text/css" href="css/my.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.20.custom.css"> 
+<script type="text/javascript" src="js/jquery-1.7.1.js"> </script> 
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script> 
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/view_flash.js"></script>
+</head>
+<body>
+<div align="center">
+  <!--ucc-->
+  <table width="500" border="0" cellpadding="0" cellspacing="0" class="bg_ucc">
+    <tr>
+      <td height="80" align="center" valign="top"><img src="images/bar_ucc.gif" width="500" height="80" /></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" class="back_ucc">
+      <div id="step1">
+<table width="430" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="65" align="left" valign="top"><img src="images/tab_m01.gif" width="430" height="50" /></td>
+  </tr>
+  <tr>
+    <td height="30" align="left" valign="top" class="bg_title con_Tt01"><div id="step_1_txt"><strong><img src="images/icon_Tt.gif" align="texttop" />변환할 동영상 파일</strong>을 선택해 주시기 바랍니다.</div>
+    <div id="step_2_txt"><strong><img src="images/icon_Tt.gif" align="texttop" />동영상파일을 전송 중 입니다.</strong> 잠시만 기다려 주세요.</div></td> 
+  </tr>
+  <tr>
+    <td height="10" align="left" valign="top">
+    <form id="form1" action="save.php" method="post" enctype="multipart/form-data">
+<div id="progressba_step_one"><div id="tdPercentUploaded" class="label"></div></div> 
+<div  id="UploadBtn"><span id="spanButtonPlaceHolder"></span><img id="btnCancel" src="images/btn_upload03.gif" onclick="swfu.cancelQueue();" />	</div>
+<div id="divStatus"></div>
+</form>
+</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><!--search-->
+      <table width="100%" height="60" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="28" align="left" valign="top"></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" class="con_txt01">
+          <div id=txt_1><ul><li>잔여시간/경과시간 : </li><li><div id="tdTimeRemaining"></div> / </li><li><div id="tdTimeElapsed"></div></li></ul></div>
+          <div id=txt_2>지원가능한 파일 : <strong>avi,wmv,mov,mp4,flv</strong> (최대업로드용량 : <font color="#FF0000"><strong>100Mb</strong></font>까지)</div></td>
+        </tr>
+		
+      </table>
+      <!--//search-->
+<div id="proaaa">
+<div id="tdFilesQueued"></div> 
+<div id="tdFilesUploaded"></div> 
+<div id="tdErrors"></div> 
+<div id="tdCurrentSpeed"></div> 
+<div id="tdAverageSpeed"></div> 
+<div id="tdMovingAverageSpeed"></div> 
+<div id="tdSizeUploaded"></div> 
+<div id="tdProgressEventCount"></div> 
+
+    </td>
+  </tr>
+</table>
+
+</div>
+<div id="step2"></div>
+        <!--fix-->
+        <div id="ad_flash">
+          <table width="430" height="230" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td align="center" valign="top"><script>doc_write(flash_movie("swf/bn_ad.swf", "mainflash", "430", "220", "transparent"));</script></td>
+          </tr>
+        </table>
+        
+        <table width="430" height="60" border="0" cellpadding="0" cellspacing="1" bgcolor="d8d8d8">
+          <tr>
+            <td align="center" valign="middle" bgcolor="#fafafa" class="con_Fix01"><strong>·</strong> 지적재산권, 음란물, 청소년 유해매체물을 포함한 타인의 권리를 침해하는 <strong>·</strong><br />
+              자료등은 제한 조치나 법적인 처벌을 받을 수 있습니다.</td>
+          </tr>
+        </table>
+        </div>
+        <!--fix-->
+      </td>
+    </tr>
+    <tr>
+      <td height="35" align="center" valign="bottom"><a href='#' onclick='window.close();'><img src="images/btn_close.gif" width="500" height="35" border="0" /></a></td>
+    </tr>
+  </table>
+  <!--//ucc-->
+</div>
+</body>
+</html>
+<?}?>

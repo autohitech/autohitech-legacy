@@ -1,0 +1,263 @@
+<?if (!defined("_GNUBOARD_")) exit;?>
+		<script type="text/JavaScript">
+		var menux="admin_leftmenu";
+		function visual2(admsub){
+		
+			if (menux != admsub){
+				show_admMenu2();
+				eval(admsub).style.display="block";
+				menux=admsub;
+			}
+			else{
+				menux="admin_leftmenu";
+				show_admMenu2();
+			}
+		}
+		function show_admMenu2(){
+			
+			for(i=1;i<=37;i++) {
+				if(document.getElementById("admmenu"+i)) {
+					document.getElementById("admmenu"+i).style.display="none";		
+				}		
+				bb="document.getElementById(admsub).style";
+			}	
+		}</script>
+
+
+
+
+<?
+echo "
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td height='77' align='center' background='img/left_topbg.gif' class='lmenu'><a href=\"javascript:visual2('admmenu1');\"><img src='img/plus.gif' border=0> 기본환경</a></td>
+  </tr>
+</table>
+<div id='admmenu1' style='display:hide;display:block;'>
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td width='20' valign='top' align='left' class='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/config_form.php'>기본환경설정</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/auth_list.php'>관리권한설정</a></td>
+  </tr>
+    <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/repair.php'>복구/최적화</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/session_delete.php'>세션 삭제</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <!---tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/sendmail_test.php'>메일 테스트</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr---->
+</table>
+</div>
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td height='77' align='center' background='img/left_topbg.gif' class='lmenu'><a href=\"javascript:visual2('admmenu3');\"><img src='img/plus.gif' border=0> 회원관리</a></td>
+  </tr>
+</table>
+<div id='admmenu3' style='display:hide;display:block;'>
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/member_list.php'>회원관리</a></td>
+  </tr>
+    <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/point_list.php'>포인트관리</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <!--tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/point_list.php'>포인트관리</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/mail_list.php'>회원메일발송</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/visit_list.php'>접속자현황</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/poll_list.php'>투표관리</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr-->
+</table>
+</div>
+
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td height='77' align='center' background='img/left_topbg.gif' class='lmenu'><a href=\"javascript:visual2('admmenu4');\"><img src='img/plus.gif' border=0> 게시판관리</a></td>
+  </tr>
+</table>
+<div id='admmenu4' style='display:hide;display:block;'>
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/board_list.php'>게시판관리</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+  <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+    <td width='162' valign='top' class='left' align='left'><a href='$g4[admin_path]/boardgroup_list.php'>게시판그룹 및 메뉴 관리</a></td>
+  </tr>
+  <tr>
+    <td colspan='2' valign='top'><img src='img/left_line.gif' width='180' height='3'></td>
+  </tr>
+</table>
+</div>
+<table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+  <tr>
+    <td height='77' align='center' background='img/left_topbg.gif' class='lmenu'><a href='visit_list.php'><img src='img/plus.gif' border=0> 접속통계</a></td>
+  </tr>
+</table>";
+?><table width='180' border='0' align='center' cellpadding='0' cellspacing='0'>
+              <tr>
+                <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+                <td align="left" valign="middle" class="menu_cate"><a href="#" class="menu_TL"><b>접속수분석</b></a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_today_visitors.php" class="menu_TB">시간</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_visitors_week.php" class="menu_TB">요일</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_visitors.php" class="menu_TB">날짜</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_today_visitors_ontime.php" class="menu_TB">체류시간</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+                <td align="left" valign="middle" class="menu_cate"><a href="#" class="menu_TL"><b>유입경로분석</b></a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_referer.php" class="menu_TB">도메인</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_engine.php" class="menu_TB">검색엔진</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_sitesearch.php" class="menu_TB">검색어</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_country.php" class="menu_TB">국가</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_region.php" class="menu_TB">지역</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+                <td align="left" valign="middle" class="menu_cate"><a href="#" class="menu_TL"><b>페이지분석</b></a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_topcontent.php" class="menu_TB">많이 찾는 페이지</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_toplanding.php" class="menu_TB">시작된 페이지</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_topexit.php" class="menu_TB">종료된 페이지</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_word.php" class="menu_TB">사이트 검색어</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'><img src='img/arrow1.gif' width='18' height='20'></td>
+                <td align="left" valign="middle" class="menu_cate"><a href="#" class="menu_TL"><b>시스템환경분석</b></a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_system_for_mobile.php" class="menu_TB">모바일</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_browsers.php" class="menu_TB">웹브라우저</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_system.php" class="menu_TB">운영체제</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_screen.php class="menu_TB">모니터해상도</a></td>
+              </tr>
+              <tr>
+    <td width='20' valign='top' class='left' align='left'></td>
+                <td height="22" align="left" valign="middle">
+             <img src="img/icon_dot.gif" align="absmiddle"><a href="access_log_color.php"" class="menu_TB">모니터색상</a></td>
+              </tr>
+</table>

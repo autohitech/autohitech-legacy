@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graph caption=' 2013-05-15  체류시간 방문통계 (단위 :명)' PYAxisName='방문객' SYAxisName='초' subcaption=' ' bgColor='ffffff' hovercapbg='DEDEBE' hovercapborder='889E6D' xAxisName='' yAxisName=''  numdivlines='9' divLineColor='CCCCCC' divLineAlpha='80' outCnvBaseFont = '굴림' numberPrefix='' outCnvBaseFontSze='35'  baseFont='굴림체' baseFontSize='15' showNames='1'  rotateNames='0' animation='1' decimalPrecision='0' formatNumberScale='0' showAlternateHGridColor='1' AlternateHGridAlpha='30' AlternateHGridColor='CCCCCC'>
+ <categories font='굴림체' fontSize='12' fontColor='000000'>
+ 
+</categories>
+<dataset seriesname='방문객수' color='56B9F9' showValues='1'>
+
+</dataset>
+<dataset seriesName='체류시간' color='ff0000' showValues='0' parentYAxis='S' >
+
+</dataset>
+<dataset seriesName='평균체류시간' color='0028a2' showValues='0' parentYAxis='S' >
+
+</dataset>
+</graph>

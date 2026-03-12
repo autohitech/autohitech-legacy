@@ -1,0 +1,48 @@
+//r=red, b=blue, y=brown 색깔지정, 
+//8자리 날짜와 공백없이+내용입력(날짜 뒤 내용은 공백, 태그 포함 가능) 
+//날짜와 일치하는지 여부가 주관건으로, 기록된 날짜가 유효하지 않다면 버리게 됨. 
+//파일 이름은 꼭 *.yyyy 형식으로 저장(YYYY = 네자리수 년도, 동일한 스킨을 여러개 사용할때 * 부분의 이름을 달리하여 구분한다.)
+//중복된 날짜가 존재할때는 제일 마지막 날짜만 출력되므로, 0101 신정 처럼 태그를 사용하여 한줄에 표현한다.
+//라인이 많아질수록 for 문이 더 돌게 되므로 이 파일에 주석은 하지 않는 게 좋다.
+r20090101신정
+b20090105소한
+b20090120대한
+b20090204입춘
+b20090214발렌타인데이
+r20090301<img src=../skin/board/schedule/img/bull_a.gif align=absmiddle> 삼일절
+b20090305경칩
+b20090314화이트데이
+b20090320춘분
+b20090405식목일
+b20090419419기념일
+b20090420장애인의날
+r20090501근로자의날
+r20090505어린이날, <font color=blue>입하</font>
+b20090508어버이날
+b20090515스승의날
+b20090518518기념일
+b20090519성년의날
+b20090521부부의날
+r20090606<img src=../skin/board/schedule/img/bull_a.gif align=absmiddle> 현충일
+b20090621하지
+b20090625625
+b20090707소서
+b20090717<img src=../skin/board/schedule/img/bull_a.gif align=absmiddle> 제헌절
+b20090714초복
+b20090723대서
+b20090724중복
+b20090807입추
+b20090813말복
+r20090815<img src=../skin/board/schedule/img/bull_a.gif align=absmiddle> 광복절
+b20090823처서
+b20090923추분
+b20091001국군의날
+r20091003<img src=../skin/board/schedule/img/bull_a.gif align=absmiddle> 개천절
+b20091009한글날
+b20091021경찰의날
+b20091107입동
+b20091122소설
+b20091207대설
+b20091222동지
+r20091225성탄절
+#빈줄삽입, 절기 => http://www.kasi.re.kr/knowledge/almanac.aspx

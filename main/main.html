@@ -1,0 +1,76 @@
+﻿<meta name="description" content="오토하이테크는 산업용 IoT 컨트롤러 및 스마트팩토리, 스마트팜, 스마트머신, SDADA, SMIoT Controller 등을 개발하는 기업입니다. Smart Factory, Smart Farm, Smart Machine, HMI에 대한 최신 기술 정보를 제공합니다.">
+<meta name="keywords" content="오토하이테크, Autohitech, 산업용 IoT 컨트롤러, 스마트팩토리, 스마트팜, 스마트머신, SDADA, SMIoT Controller, Smart Factory, Smart Farm, Smart Machine, HMI">
+<meta name="author" content="Autohitech">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<?php
+include_once("../home/_common.php");
+include_once("$g4[path]/lib/latest.lib.php");
+include "../inc/top_menu.html";
+?>
+
+<script language="JavaScript">
+alert("당사의 새로운 웹사이트는 어떤 기기에서든지 최상의 사용자 경험을 위해 모바일 최적화와 반응형 디자인을 지원하며, 곧 SSL 인증서를 추가하여 보다 안전한 연결을 제공할 예정입니다.\n\n기술적인 혁신과 함께 좋은 서비스로 찾아뵙겠습니다.\n많은 기대 부탁드립니다!\n\n새로운 사이트는 autohitech.kr에서 확인 가능합니다.");
+if (document.cookie.indexOf("popup=ok") === -1) {
+  window.open('/popup/popup01.html','_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=yes,width=659,height=362,left=0,top=100');
+  window.open('/popup/popup02.html','_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=659,height=362,left=665,top=100');
+  document.cookie = "popup=ok";
+}
+</script>
+
+<!-- 메인 비주얼 -->
+<div id="mainWrap">
+  <div id="mainvisual">
+    <div id="visual">
+      <div class="visualAT">
+        <ul>
+          <li><a href="../controller/controller00_01.html?subNum=1"><img src="img/m_img01.jpg" class="mainani" style="display:none" /></a></li>
+          <li><a href="../touch/touch01_01.html?subNum=1"><img src="img/m_img02.jpg" class="mainani" style="display:none" /></a></li>
+          <li><a href="../system/system01.html?subNum=1"><img src="img/m_img03.jpg" class="mainani" style="display:none" /></a></li>
+          <li><a href="../education/education11.html?subNum=1"><img src="img/m_img04.jpg" class="mainani" style="display:none" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php include "c_cus.html"; ?>
+
+<!-- AutoBase -->
+<div id="c_base">
+  <div class="c_basebox">
+    <iframe id="frame" src="c_base.html" frameborder="0" width="980" height="120" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <div class="copyboxM">
+    <div class="copymenu">
+      <ul>
+        <li><a href="../company/greeting01.html?sugNum=1"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="MM_openBrWindow('../company/provision.html','','scrollbars=no,width=720,height=615')" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="MM_openBrWindow('../company/privacy.html','','scrollbars=no,width=720,height=615')" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="75,28,140,40" href="../home/login.php?pageNum=1&amp;subNum=1&amp;url=../home/board.php?bo_table=staff01&amp;pageNum=1&amp;subNum=6" target="_blank" title="관리자페이지이동" />
+</map>
+<!-- //Footer -->
+
+<?php 
+  // latest() 함수를 호출하여 최신 글을 출력합니다.
+  echo latest('popup_latest', 'popup01', 1);
+?>
+</body>
+</html>

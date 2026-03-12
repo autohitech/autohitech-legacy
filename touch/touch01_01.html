@@ -1,0 +1,292 @@
+<?php
+$g4_path = "..";
+include_once("../_common.php");
+include_once("$g4[path]/head.php");
+?>
+
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_touch01_01.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li>SCADA&Touch</li><li class="location">SDADA</li></ul></div><? include "../inc/b_font.html";?>
+</div>
+<!-- //Title -->
+
+<!-- Content -->
+<div class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top">
+<!-- 공조제어 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base01.html"><img src="img/base01_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base01.html" class="sub_Tt"><span class="title">공조제어</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">빌딩 전체의 온/습도 관리를 목적으로 하는 시스템으로 각 구역별 운전은 PLC에서 담당하며<br> 
+            PC에서는 운전에 필요한 목표 온/습도를 설정하고 각 구역 별 명령 정보를 종합하여 상황을 <br>
+            경정한 후 연계되어 있는 구역으로 다시 명령을 보내게 된다. 하루 단위로 리포터가 자동 작성<br>
+            되어 프린터로 출력되도록 구성하였으며 TCP/IP를 사용하여 PLC의 통신 속도를 증가시켜 <br>
+            반응속도를 빠르게 하였다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //공조제어 -->
+<!-- 조명제어 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base02.html"><img src="img/base02_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base02.html" class="sub_Tt"><span class="title">조명제어</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">빌딩 전체의 조명 관리를 목적으로 하는 시스템으로 총 7개 층을 총괄하여 감시하는 
+            화면이 
+            <br>
+            있고 
+            각 구역별 운전은 해당층에서 한다. 각 개별 조명의 제어를 기본으로 사무실 
+            별로 
+            그룹<br>
+            으로 묶어서 한번에 제어할 수 있다. 스케쥴에 맞추어 자동으로 ON/OFF가 되도록 
+            하였으며 <br>
+            예약 스케쥴 기능을 사용하였다. PLC의 RS-485 Link 기능을 사용하여 한 선로에 
+            <br>
+            여러개의 PLC를 병렬로 접속하였다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //조명제어 -->
+<!-- 원격감시 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base03.html"><img src="img/base03_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base03.html" class="sub_Tt"><span class="title">원격감시</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">건물 내 감시와 달리 전화망이나 기타 네트워크망을 이용하여 원거리에 있는 현장을 <br>
+            감시/제어하는 시스템이다. 전용선로를 사용하면 24시간 감시가 가능하므로 일반적인 <br>
+            건물 내 감시와 감시 방법이 유사하다. 측정값이 순간적으로 많이 변하지 않는 곳의 <br>
+            경우에는 일반회선을 사용하여 지정된 시간에 전화를 걸어서 감시할 수 있다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //원격감시 -->
+<!-- 폐기물처리 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base04.html"><img src="img/base04_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base04.html" class="sub_Tt"><span class="title">폐기물처리</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">폐기물 처리 설비는 HMI/MMI 프로그램의 일반적인 적용분야이다. 폐기물 투입, 소각/압축, <br>
+            배출 등의 공정들이 자동으로 처리되도록 되어 있고, 하루의 폐기물 처리량 발생 유해 가스량 <br>
+            등을 리포터로 출력해 준다. 시스템은 RS-422로 연결된 PLC와 PC에 Card형태로 내장<br>
+            되는 I/O보드를 사용하여 구성 하였다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //폐기물처리 -->
+<!-- 전력감시 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base05.html"><img src="img/base05_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base05.html" class="sub_Tt"><span class="title">전력감시</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">모든 산업 현장의 전력 부하 측정 및 감시/제어를 통해 신속하고 정확한 데이터를 획득한 후 <br>
+            예상 부하 분석으로 그에 따른 원가 분석을 산출해 내어 에너지의 효율적인 관리를 목적으로 <br>
+            하는 시스템이다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //전력감시 -->
+<!-- 태양광발전감시 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base06.html"><img src="img/base06_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->
+    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base06.html" class="sub_Tt"><span class="title">태양광발전감시</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">태양광 발전 감시시스템은 일반적으로 인터넷을 통한 실시간 원격운영감시 체제로서 <br>
+            인터넷이 가능한 곳이면 어디서나 태양광발전시스템의 운전 상태와 발전 데이터의 <br>
+            확인이 가능한 모니터링 시스템이다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->
+	  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="dot-line01"></td>
+  </tr>
+</table>
+<!-- //태양광발전감시 -->
+<!-- 특수장비감시 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top" class="base_L">
+	<!-- Img -->
+      <table border='0' cellspacing='0' class='base'>
+        <tr>
+          <td><a href="base07.html"><img src="img/base07_01.jpg" border="0" /></a></td>
+        </tr>
+      </table>
+      <!-- //Img -->    </td>
+    <td align="left" valign="top">
+	<!-- Txt -->
+	<table border="0" cellspacing="0" cellpadding="0" class="base_R">
+        <tr>
+          <td colspan="2" class="sub_Tt01_bk">
+<!-- Sub Tt -->		  
+<div class="subtitleWrap"><a href="base07.html" class="sub_Tt"><span class="title">특수장비감시</span><span class="extra"></span><span class="icon"></span></a></div>
+<!-- //Sub Tt -->
+</td>
+        </tr>
+        <tr>
+          <td class="sub_Tt02">&nbsp;</td>
+          <td class="sub_txt01">실험장비모니터링 시스템은 여러 측정기로부터 실험 데이터를 측정하여 데이터 베이스에 <br>
+            저장하여 그 결과를 레포트로 출력하는 시스템이다.</td>
+        </tr>
+      </table>
+	  <!-- //Txt -->	  </td>
+  </tr>
+</table>
+<!-- //특수장비감시 -->
+</td>
+  </tr>
+</table>
+</div>
+<!-- //Content -->
+
+<? include_once("$g4[path]/tail.php"); ?>
