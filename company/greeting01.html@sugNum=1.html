@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOBASE</title>
+<link rel="shortcut icon" href="http://localhost:8000/img/favicon.ico" />
+<link rel="stylesheet" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="../js/autotech.bundle.js@v=1773323804"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "home";
+var g4_bbs_img   = "img";
+var g4_url       = "http://localhost:8000";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+</script>
+</head>
+<body >
+<a name="g4_head"></a>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<header id="headerWrap">
+  <div id="header">
+  <!-- TopMenu Wrap -->
+  <div id="topMenuWrap">
+    <p id="logo"><a href="../index.html"><img src="../img/logo01.png" alt="Autohitech" /></a></p>
+	<!-- Top Menu -->
+	<div id="topMenu">
+	<!-- Top Home -->
+      <div class="tophome" style="float:right; width:auto; margin-top:10px;">
+       <form name="fsearchbox" method="get" action="http://localhost:8000/home/search.php" onSubmit="return fsearchbox_submit(this);">
+          <input type="hidden" name="sfl" value="wr_subject||wr_content||wr_3">
+		  <input type="hidden" name="sop" value="and">
+		  <fieldset style="border:0; margin:0; padding:0;">
+        <ul style="display:flex; align-items:center; list-style:none; margin:0; padding:0;">
+          <li style="height:17px;"><a href="../index.html"><img src="../img/top_home01.gif" alt="home" class="ovup" /></a></li>
+		  <li style="padding:0 5px;"><img src="../img/top_dot01.gif" /></li>
+          <li style="height:17px;"><a href="../adm.html"><img src="../img/top_staff01.gif" alt="staff" class="ovup" /></a></li>
+		  <li class="searchL" style="margin-left:15px; width:5px; height:17px; background:url('../img/bg_searchL01.gif') no-repeat;"></li>
+          <li class="searchM" style="width:100px; height:17px; background:url('../img/bg_searchM01.gif') repeat-x;"><input type="text" name="stx" tabindex="1" class="searchTt" style="width:100px; height:17px; border:0; background:transparent; font-size:11px; font-weight:bold; padding:0 2px; line-height:17px;" /></li>
+          <li style="height:17px;"><input type="image" src="../img/bg_searchR01.gif" alt="검색" style="width:20px; height:17px; display:block;" /></li>
+          </ul></fieldset>
+		  </form>
+      </div>
+	  <!-- //Top Home -->
+	<div class="menuT">
+      <ul id="topnav">
+	    <!-- menu01 -->
+        <li class="m01"><a href="greeting01.html@subNum=1.html"><img src="../img/menu01.gif" alt="회사소개" class="sovup" /></a>
+		  <span>
+            <div class="subS01">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="greeting01.html@subNum=1.html"><img src="../img/sub01_01.gif" alt="CEO인사말" class="ovsub" /></a></li>
+			    <li><a href="history01.html@subNum=2.html"><img src="../img/sub01_02.gif" alt="연혁 및 사업분야" class="ovsub" /></a></li>
+			    <li><a href="organization01.html@subNum=3.html"><img src="../img/sub01_03.gif" alt="조직도" class="ovsub" /></a></li>
+			    <li><a href="location01.html@subNum=4.html"><img src="../img/sub01_04.gif" alt="오시는 길" class="ovsub" /></a></li>
+			    <li><a href="perform01.html@subNum=5.html"><img src="../img/sub01_07.gif" alt="수행실적" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/sub01_05.gif" alt="협력업체" class="ovsub" /></a></li>
+                <li><a href="../home/board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/sub01_06.gif" alt="고객사" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+			</div>
+		  </span>
+        </li>
+        <li class="m02"><a href="../controller/controller00_01.html@subNum=1.html"><img src="../img/menu04.gif" alt="CONTROLLER" class="sovup" /></a>
+        </li>
+        <!-- menu03 -->
+        <li class="m03"><a href="../touch/touch01_02.html@subNum=2.html"><img src="../img/menu03.gif" alt="TOUCH" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS03">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../touch/touch01_01.html?subNum=1"><img src="../img/sub03_01.gif" alt="SCADA" class="ovsub" /></a></li>
+                <li><a href="../touch/touch01_02.html?subNum=2"><img src="../img/sub03_02.gif" alt="Touch" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu04 -->
+        <li class="m04"><a href="../system/system01.html@subNum=1.html"><img src="../img/menu05.gif" alt="시스템구축" class="sovup" /></a>
+		  <span>
+            <div class="subS04">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../system/system01.html@subNum=1.html"><img src="../img/sub05_01.gif" alt="시스템 구축 안내" class="ovsub" /></a></li>
+			    <li><a href="../system/system02.html@subNum=2.html"><img src="../img/sub05_02.gif" alt="구축 사례" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+        <!-- menu05 -->
+        <li class="m05"><a href="../education/education11.html@subNum=1.html"><img src="../img/menu06.gif" alt="교육" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS05">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../education/education11.html?subNum=1"><img src="../img/sub06_01.gif" alt="교육과정" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu06 -->
+        <li class="m06"><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/menu07.gif" alt="다운로드" class="sovup" /></a>
+		  <span style="margin-left:-175px;">
+            <div class="subS06">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/sub07_05.gif" alt="Smart IoT Controller 자료" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down02&amp;subNum=2.html"><img src="../img/sub07_02.gif" alt="카달로그/인증서" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down03&amp;subNum=3.html"><img src="../img/sub07_03.gif" alt="작업 예제" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down04&amp;subNum=4.html"><img src="../img/sub07_04.gif" alt="일반 자료" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+		<!-- menu07 -->
+        <li class="m07"><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menu08.gif" alt="고객지원" class="sovup" /></a>
+		  <span style="margin-left:-20px;">
+            <div class="subS07">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/sub08_01.gif" alt="공지사항" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=qna01&amp;subNum=3.html"><img src="../img/sub08_03.gif" alt="Q&A" class="ovsub" /></a></li>
+                <li><a href="../customer/customer01.html@subNum=4.html"><img src="../img/sub08_04.gif" alt="원격지원요청" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //Top Menu -->
+</div>
+<!-- //TopMenu Wrap -->
+</header>
+<!-- Container Wrap -->
+<div id="contWrap">
+
+<!-- Sub Visual -->
+<div id="subWrap">
+<div id="subvisual">
+<img src="../img/s_txt_company01.png" class="s_txtT" style="display:none;" />
+<img src="../img/s_txt_fix01.png" class="s_txtB" style="display:none;" />
+<img src="../img/s_img_fix01.png" class="s_imgL" style="display:none;" />
+<img src="../img/s_img_company01.png" class="s_imgR_company" style="display:none;" />
+</div>
+</div>
+<!-- //Sub Visual -->
+
+<!-- Container -->
+<div id="container">﻿<!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_company01.gif" alt="회사소개" /></div>
+<ul>
+<li><a href="greeting01.html@subNum=1.html"><img src="../img/menuL01_01.gif" alt="CEO인사말"  class="gexchange" /></a></li>
+<li><a href="history01.html@subNum=2.html"><img src="../img/menuL01_02.gif" alt="연혁 및 사업분야"  class="gexchange" /></a></li>
+<li><a href="organization01.html@subNum=3.html"><img src="../img/menuL01_03.gif" alt="조직도"  class="gexchange" /></a></li>
+<li><a href="location01.html@subNum=4.html"><img src="../img/menuL01_04.gif" alt="오시는 길"  class="gexchange"  /></a></li>
+<li><a href="perform01.html@subNum=5.html"><img src="../img/menuL01_07.gif" alt="수행실적"  class="gexchange"  /></a></li>
+<li><a href="../home/board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/menuL01_05.gif" alt="협력업체"  class="gexchange" /></a></li>
+<li><a href="../home/board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/menuL01_06.gif" alt="고객사"  class="gexchange" /></a></li>
+</ul>
+
+<!-- Banner -->
+<div id="bannerWrap">
+<a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/bn_tel.gif" alt="고객센터" /></a>
+</div>
+<!-- //Banner -->
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_greeting01.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li>회사소개</li><li class="location">CEO인사말</li></ul></div><!-- -->
+<div class="b_font">
+<ul><li><a href="greeting01.html@sugNum=1.html#" class="increaseFont"><img src='../img/btn_plus01.gif' alt="크게보기" class="ovup" /></a></li>
+<li><a href="greeting01.html@sugNum=1.html#" class="decreaseFont"><img src='../img/btn_minus01.gif' alt="작게보기" class="ovup" /></a></li>
+<li><a href="greeting01.html@sugNum=1.html#" class="resetFont"><img src='../img/btn_refresh01.gif' alt="초기화" class="ovup" /></a></li>
+</div>
+<!-- --></div>
+<!-- //Title -->
+
+<!-- Content -->
+<div class="content">
+<p class="none">
+고객을 최우선으로 생각하고 고객을 위한 오토하이테크(주)
+당사는 수 년 동안 자동화용 소프트웨어 및 자동화 시스템개발에서 풍부한 경험과
+전문지식을 바탕으로 한 기술진들이 모여 여러 산업분야에서 일익을 담당하고 있습니다.
+
+특히, 외국기술에 의존하던 국내 자동화시스템분야에 자립도를 높이고 나아가 통합된
+자동화 솔루션을 제공하고자 순수 국내기술로 개발된 산업자동화 소프트웨어인 
+
+'AUTOBASE'를 다수의 현장에 적용, 그 우수성과 안정성 그리고 손쉬운 조작성능을 
+입증 받아, 이를 바탕으로 통합자동화 솔루션을 확대 공급하고 있습니다.
+
+또한, 공정자동화 시스템 PA(Process Automation System) / 공장자동화 시스템 FA(Factory Automation System) / 빌딩자동화 시스템 BA(Building Automation System)
+
+태양광 발전감시시스템에서 발생되고 있는 문제점들을 철저히 분석하여 기존의
+문제점들을 과감히 개선하고 새로운 인터넷환경의 자동화SYSTEM을 개발, 
+이를 이용하여 통합 자동화시스템을 구축하는 엔지니어링 전문업체입니다.
+
+21세기 정보화시대에 발맞추어 인터넷 전용선, LAN network, Server를 자체 구축하고 있으며, 
+이를 산업기술에 관련된 업체의 홍보 및 개발과 홈페이지 구축, 웹호스팅 등의 분야에 적용시켜 적극적으로 아이디어를 창출하여 
+진정으로 기술인이 대우 받는 시대를 열고자 힘차게 정진하고 있습니다.
+
+당사의 목표는 고객으로부터 가장 사랑받는 통합자동화 시스템을 만들어서 21세기 정보화 사회의 주 무대인 인터넷 환경의 자동화 솔루션을 제공하고 자동화 시스템 분야의 초일류전문기업이 되는 것입니다.
+
+감사합니다.
+</p>
+<img src="img/greeting01.jpg" alt="" />
+
+</div>
+<!-- //Content -->
+
+
+
+</div>
+<!-- //contentWrap -->
+</div>
+<!-- //container -->
+</div>
+<!-- //contWrap -->
+</div>
+<!-- //ContentWrap -->
+</div>
+<!-- //Container -->
+</div>
+<!-- //Container Wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="copybox">
+    <div class="copymenu">
+      <ul>
+        <li><a href="greeting01.html@sugNum=1.html"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="220,28,345,40" href="http://www.cohomepage.com" target="_blank" alt="홈페이지제작" title="홈페이지제작" />
+</map>
+<!-- //Footer -->
+
+<div id="quickR">
+  <p><a href="greeting01.html@sugNum=1.html#"><img src="../img/btn_top01.gif" class="ovup" /></a></p>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40879538-1', 'autohitech.co.kr');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/g4.core.js@v=1773323804"></script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+
+
+

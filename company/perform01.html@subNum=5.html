@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOBASE</title>
+<link rel="shortcut icon" href="http://localhost:8000/img/favicon.ico" />
+<link rel="stylesheet" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="../js/autotech.bundle.js@v=1773323804"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "home";
+var g4_bbs_img   = "img";
+var g4_url       = "http://localhost:8000";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+</script>
+</head>
+<body >
+<a name="g4_head"></a>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<header id="headerWrap">
+  <div id="header">
+  <!-- TopMenu Wrap -->
+  <div id="topMenuWrap">
+    <p id="logo"><a href="../index.html"><img src="../img/logo01.png" alt="Autohitech" /></a></p>
+	<!-- Top Menu -->
+	<div id="topMenu">
+	<!-- Top Home -->
+      <div class="tophome" style="float:right; width:auto; margin-top:10px;">
+       <form name="fsearchbox" method="get" action="http://localhost:8000/home/search.php" onSubmit="return fsearchbox_submit(this);">
+          <input type="hidden" name="sfl" value="wr_subject||wr_content||wr_3">
+		  <input type="hidden" name="sop" value="and">
+		  <fieldset style="border:0; margin:0; padding:0;">
+        <ul style="display:flex; align-items:center; list-style:none; margin:0; padding:0;">
+          <li style="height:17px;"><a href="../index.html"><img src="../img/top_home01.gif" alt="home" class="ovup" /></a></li>
+		  <li style="padding:0 5px;"><img src="../img/top_dot01.gif" /></li>
+          <li style="height:17px;"><a href="../adm.html"><img src="../img/top_staff01.gif" alt="staff" class="ovup" /></a></li>
+		  <li class="searchL" style="margin-left:15px; width:5px; height:17px; background:url('../img/bg_searchL01.gif') no-repeat;"></li>
+          <li class="searchM" style="width:100px; height:17px; background:url('../img/bg_searchM01.gif') repeat-x;"><input type="text" name="stx" tabindex="1" class="searchTt" style="width:100px; height:17px; border:0; background:transparent; font-size:11px; font-weight:bold; padding:0 2px; line-height:17px;" /></li>
+          <li style="height:17px;"><input type="image" src="../img/bg_searchR01.gif" alt="검색" style="width:20px; height:17px; display:block;" /></li>
+          </ul></fieldset>
+		  </form>
+      </div>
+	  <!-- //Top Home -->
+	<div class="menuT">
+      <ul id="topnav">
+	    <!-- menu01 -->
+        <li class="m01"><a href="greeting01.html@subNum=1.html"><img src="../img/menu01.gif" alt="회사소개" class="sovup" /></a>
+		  <span>
+            <div class="subS01">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="greeting01.html@subNum=1.html"><img src="../img/sub01_01.gif" alt="CEO인사말" class="ovsub" /></a></li>
+			    <li><a href="history01.html@subNum=2.html"><img src="../img/sub01_02.gif" alt="연혁 및 사업분야" class="ovsub" /></a></li>
+			    <li><a href="organization01.html@subNum=3.html"><img src="../img/sub01_03.gif" alt="조직도" class="ovsub" /></a></li>
+			    <li><a href="location01.html@subNum=4.html"><img src="../img/sub01_04.gif" alt="오시는 길" class="ovsub" /></a></li>
+			    <li><a href="perform01.html@subNum=5.html"><img src="../img/sub01_07.gif" alt="수행실적" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/sub01_05.gif" alt="협력업체" class="ovsub" /></a></li>
+                <li><a href="../home/board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/sub01_06.gif" alt="고객사" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+			</div>
+		  </span>
+        </li>
+        <li class="m02"><a href="../controller/controller00_01.html@subNum=1.html"><img src="../img/menu04.gif" alt="CONTROLLER" class="sovup" /></a>
+        </li>
+        <!-- menu03 -->
+        <li class="m03"><a href="../touch/touch01_02.html@subNum=2.html"><img src="../img/menu03.gif" alt="TOUCH" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS03">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../touch/touch01_01.html?subNum=1"><img src="../img/sub03_01.gif" alt="SCADA" class="ovsub" /></a></li>
+                <li><a href="../touch/touch01_02.html?subNum=2"><img src="../img/sub03_02.gif" alt="Touch" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu04 -->
+        <li class="m04"><a href="../system/system01.html@subNum=1.html"><img src="../img/menu05.gif" alt="시스템구축" class="sovup" /></a>
+		  <span>
+            <div class="subS04">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../system/system01.html@subNum=1.html"><img src="../img/sub05_01.gif" alt="시스템 구축 안내" class="ovsub" /></a></li>
+			    <li><a href="../system/system02.html@subNum=2.html"><img src="../img/sub05_02.gif" alt="구축 사례" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+        <!-- menu05 -->
+        <li class="m05"><a href="../education/education11.html@subNum=1.html"><img src="../img/menu06.gif" alt="교육" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS05">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../education/education11.html?subNum=1"><img src="../img/sub06_01.gif" alt="교육과정" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu06 -->
+        <li class="m06"><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/menu07.gif" alt="다운로드" class="sovup" /></a>
+		  <span style="margin-left:-175px;">
+            <div class="subS06">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/sub07_05.gif" alt="Smart IoT Controller 자료" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down02&amp;subNum=2.html"><img src="../img/sub07_02.gif" alt="카달로그/인증서" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down03&amp;subNum=3.html"><img src="../img/sub07_03.gif" alt="작업 예제" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down04&amp;subNum=4.html"><img src="../img/sub07_04.gif" alt="일반 자료" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+		<!-- menu07 -->
+        <li class="m07"><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menu08.gif" alt="고객지원" class="sovup" /></a>
+		  <span style="margin-left:-20px;">
+            <div class="subS07">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/sub08_01.gif" alt="공지사항" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=qna01&amp;subNum=3.html"><img src="../img/sub08_03.gif" alt="Q&A" class="ovsub" /></a></li>
+                <li><a href="../customer/customer01.html@subNum=4.html"><img src="../img/sub08_04.gif" alt="원격지원요청" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //Top Menu -->
+</div>
+<!-- //TopMenu Wrap -->
+</header>
+<!-- Container Wrap -->
+<div id="contWrap">
+
+<!-- Sub Visual -->
+<div id="subWrap">
+<div id="subvisual">
+<img src="../img/s_txt_company01.png" class="s_txtT" style="display:none;" />
+<img src="../img/s_txt_fix01.png" class="s_txtB" style="display:none;" />
+<img src="../img/s_img_fix01.png" class="s_imgL" style="display:none;" />
+<img src="../img/s_img_company01.png" class="s_imgR_company" style="display:none;" />
+</div>
+</div>
+<!-- //Sub Visual -->
+
+<!-- Container -->
+<div id="container">﻿<!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_company01.gif" alt="회사소개" /></div>
+<ul>
+<li><a href="greeting01.html@subNum=1.html"><img src="../img/menuL01_01.gif" alt="CEO인사말"  class="gexchange" /></a></li>
+<li><a href="history01.html@subNum=2.html"><img src="../img/menuL01_02.gif" alt="연혁 및 사업분야"  class="gexchange" /></a></li>
+<li><a href="organization01.html@subNum=3.html"><img src="../img/menuL01_03.gif" alt="조직도"  class="gexchange" /></a></li>
+<li><a href="location01.html@subNum=4.html"><img src="../img/menuL01_04.gif" alt="오시는 길"  class="gexchange"  /></a></li>
+<li><a href="perform01.html@subNum=5.html"><img src="../img/menuL01_07.gif" alt="수행실적" selected='gSelected' class="gexchange"  /></a></li>
+<li><a href="../home/board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/menuL01_05.gif" alt="협력업체"  class="gexchange" /></a></li>
+<li><a href="../home/board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/menuL01_06.gif" alt="고객사"  class="gexchange" /></a></li>
+</ul>
+
+<!-- Banner -->
+<div id="bannerWrap">
+<a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/bn_tel.gif" alt="고객센터" /></a>
+</div>
+<!-- //Banner -->
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_perform01.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li>회사소개</li><li class="location">수행실적</li></ul></div><!-- -->
+<div class="b_font">
+<ul><li><a href="perform01.html@subNum=5.html#" class="increaseFont"><img src='../img/btn_plus01.gif' alt="크게보기" class="ovup" /></a></li>
+<li><a href="perform01.html@subNum=5.html#" class="decreaseFont"><img src='../img/btn_minus01.gif' alt="작게보기" class="ovup" /></a></li>
+<li><a href="perform01.html@subNum=5.html#" class="resetFont"><img src='../img/btn_refresh01.gif' alt="초기화" class="ovup" /></a></li>
+</div>
+<!-- --></div>
+<!-- //Title -->
+
+<!-- Content -->
+<div class="content" style="margin-top:-25px;">
+<!-- Title -->
+<table border='0' cellspacing='0' id='TBL_BL'>
+
+	<tr >
+                	<td class='sb'><b>ID</b></td>
+                  <td class='sb'><b>연/월</b></td>
+                  <td class='sb'><b>납품처</b></td>
+                  <td class='sb'><b>적용시스템</b></td>
+  </tr>
+
+    <tr>
+	   <td calss='sb'>214</td>
+	   <td>2021년 12월</td>
+	   <td>한국지오텍</td>
+	   <td>AI기반 그라우팅 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>213</td>
+	   <td>2021년 11월</td>
+	   <td>원알로이</td>
+	   <td>전력감시 시스템 업그레이드</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>212</td>
+	   <td>2021년 08월</td>
+	   <td>한국지오텍</td>
+	   <td>수조제어장치 제작</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>211</td>
+	   <td>2021년 08월</td>
+	   <td>세종문화회관</td>
+	   <td>무대제어 시스템 업그레이드</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>210</td>
+	   <td>2021년 07월</td>
+	   <td>한국지오텍</td>
+	   <td>그라우팅/믹서 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>209</td>
+	   <td>2021년 06월</td>
+	   <td>동해 해양기지</td>
+	   <td>전력감시 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>208</td>
+	   <td>2021년 06월</td>
+	   <td>진원테크놀러지</td>
+	   <td>스마트 면상발열 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>207</td>
+	   <td>2021년 03월</td>
+	   <td>충북대</td>
+	   <td>ESS 무선전송장치</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>206</td>
+	   <td>2021년 02월</td>
+	   <td>평택시청</td>
+	   <td>분수제어 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>205</td>
+	   <td>2021년 01월</td>
+	   <td>원익홀딩스</td>
+	   <td>가스누적량 전송장치</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>204</td>
+	   <td>2021년 01월</td>
+	   <td>현대로템</td>
+	   <td>견인전동시험기 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>203</td>
+	   <td>2021년 01월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료정지 급탕시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>202</td>
+	   <td>2020년 12월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료정지 급탕시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>201</td>
+	   <td>2020년 08월</td>
+	   <td>원익홀딩스</td>
+	   <td>가스감시 시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>200</td>
+	   <td>2020년 07월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지 감시시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>199</td>
+	   <td>2020년 05월</td>
+	   <td>한국에너지연구원</td>
+	   <td>이산화탄소 포집공정시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>198</td>
+	   <td>2020년 04월</td>
+	   <td>디에스이</td>
+	   <td>스마트팜(엽채, 과채, 새싹, 버섯)시스템 </td>
+	</tr>
+    <tr>
+	   <td calss='sb'>197</td>
+	   <td>2020년 04월</td>
+	   <td>한국지오텍</td>
+	   <td>SA장비제작</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>196</td>
+	   <td>2020년 03월</td>
+	   <td>삼성디스플레이</td>
+	   <td>유량적산 경보장치</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>195</td>
+	   <td>2020년 03월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지 급탕시스템</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>194</td>
+	   <td>2020년 02월</td>
+	   <td>태화축산</td>
+	   <td>방역분무장치 개발</td>
+	</tr>
+    <tr>
+	   <td calss='sb'>193</td>
+	   <td>2020년 01월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지 급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>192</td>
+	   <td>2019년 12월</td>
+	   <td>한국전력</td>
+	   <td>스마트 IoT 조명제어</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>191</td>
+	   <td>2019년 12월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>190</td>
+	   <td>2019년 11월</td>
+	   <td>덕산기계</td>
+	   <td>스마트팩토리 생산수량 제어장치</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>189</td>
+	   <td>2019년 10월</td>
+	   <td> 마미닥터(주)</td>
+	   <td>사료공정감시제어시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>188</td>
+	   <td>2019년 10월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>187</td>
+	   <td>2019년 8월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>186</td>
+	   <td>2019년 8월</td>
+	   <td>에이테그린(주)</td>
+	   <td>워터스프레이 장비개발</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>185</td>
+	   <td>2019년 8월</td>
+	   <td>삼양사</td>
+	   <td>수지 PILOT시험장비 제어시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>184</td>
+	   <td>2019년 7월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>183</td>
+	   <td>2019년 6월</td>
+	   <td>에스엔에이치(주)</td>
+	   <td>제품이력관리 시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>182</td>
+	   <td>2019년 6월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>181</td>
+	   <td>2019년 5월</td>
+	   <td>석모도펜션</td>
+	   <td>스마트 IoT 펜션제어시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>180</td>
+	   <td>2019년 5월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>179</td>
+	   <td>2019년 4월</td>
+	   <td>플럭스코리아</td>
+	   <td>파티클카운터 DAQ 시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>178</td>
+	   <td>2019년 3월</td>
+	   <td>한국지오텍</td>
+	   <td>CJP제어 프로그램</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>177</td>
+	   <td>2018년 3월</td>
+	   <td>한국지오텍</td>
+	   <td>AGS인버터제어 프로그램</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>176</td>
+	   <td>2019년 3월</td>
+	   <td>마이크로프랜드(주)</td>
+	   <td>설비감시시스템 </td>
+	</tr>
+	<tr>
+	   <td calss='sb'>175</td>
+	   <td>2018년 11월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>174</td>
+	   <td>2018년 10월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>173</td>
+	   <td>2018년 9월</td>
+	   <td>롯데캐슬아파트</td>
+	   <td>태양광 자료전송시스템 </td>
+	</tr>
+	<tr>
+	   <td calss='sb'>172</td>
+	   <td>2018년 9월</td>
+	   <td>진원테크놀러지</td>
+	   <td>연료전지급탕시스템</td>
+	</tr>
+	<tr>
+	   <td calss='sb'>171</td>
+	   <td>2018년 5월</td>
+	   <td>한국지오텍</td>
+	   <td>팩앵커 감시제어시스템</td>
+	</tr>
+
+
+
+
+<tr>
+   <td calss='sb'>170</td>
+   <td>2018년 4월</td>
+   <td>진원테크놀러지</td>
+   <td>연료전지_급탕시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>168</td>
+   <td>2018년 3월</td>
+   <td>한국지오텍</td>
+   <td>뉴팩앵커시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>169</td>
+   <td>2018년 3월</td>
+   <td>대림건설㈜</td>
+   <td>아파트공조모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>166</td>
+   <td>2018년 2월</td>
+   <td>한국지오텍</td>
+   <td>이동형SA장비제작_V1</td>
+</tr>
+<tr>
+   <td calss='sb'>167</td>
+   <td>2018년 2월</td>
+   <td>한국지오텍</td>
+   <td>CJP장비업그래이드_V3</td>
+</tr>
+<tr>
+   <td calss='sb'>163</td>
+   <td>2018년 1월</td>
+   <td>현대로템</td>
+   <td>견인전동기시험기</td>
+</tr>
+<tr>
+   <td calss='sb'>164</td>
+   <td>2018년 1월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>165</td>
+   <td>2018년 1월</td>
+   <td>(주)드라스타</td>
+   <td>모바일압력감시장치</td>
+</tr>
+<tr>
+   <td calss='sb'>159</td>
+   <td>2017년 9월</td>
+   <td>한국지오텍</td>
+   <td>T_RCG프로그램 데모</td>
+</tr>
+<tr>
+   <td calss='sb'>156</td>
+   <td>2017년 8월</td>
+   <td>동희오토㈜</td>
+   <td>가스누설경보기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>157</td>
+   <td>2017년 8월</td>
+   <td>코미코</td>
+   <td>자동제어프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>158</td>
+   <td>2017년 8월</td>
+   <td>서울대학교</td>
+   <td>핵재료연구실 전력감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>152</td>
+   <td>2017년 6월</td>
+   <td>한국지오텍</td>
+   <td>AGS인버터프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>153</td>
+   <td>2017년 6월</td>
+   <td>한국지오텍</td>
+   <td>T_RCG프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>154</td>
+   <td>2017년 6월</td>
+   <td>화력 발전소</td>
+   <td>발전소 화재 감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>155</td>
+   <td>2017년 6월</td>
+   <td>㈜KAI</td>
+   <td>건조로모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>151</td>
+   <td>2017년 5월</td>
+   <td>글래드호텔</td>
+   <td>연료전지_급탕시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>150</td>
+   <td>2017년 4월</td>
+   <td>진성엔지니어링</td>
+   <td>피더제어 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>148</td>
+   <td>2017년 3월</td>
+   <td>한국지오텍</td>
+   <td>ACG프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>149</td>
+   <td>2017년 3월</td>
+   <td>삼성디스플레이</td>
+   <td>충진시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>147</td>
+   <td>2017년 2월</td>
+   <td>동아전업공사</td>
+   <td>히터제어 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>144</td>
+   <td>2017년 1월</td>
+   <td>Kayan</td>
+   <td>Guard Bed Unit</td>
+</tr>
+<tr>
+   <td calss='sb'>145</td>
+   <td>2017년 1월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>146</td>
+   <td>2017년 1월</td>
+   <td>LOTTE</td>
+   <td>Water Treating Unit</td>
+</tr>
+<tr>
+   <td calss='sb'>162</td>
+   <td>2017년 12월</td>
+   <td>삼성디스플레이</td>
+   <td>원료이동인식시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>161</td>
+   <td>2017년 11월</td>
+   <td>한국지오텍</td>
+   <td>CJP장비업그레이드_V2</td>
+</tr>
+<tr>
+   <td calss='sb'>160</td>
+   <td>2017년 10월</td>
+   <td>한국원자력연구원</td>
+   <td>제5연구동 전력감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>136</td>
+   <td>2016년 8월</td>
+   <td>포스코</td>
+   <td>맥동밸브 제어 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>134</td>
+   <td>2016년 7월</td>
+   <td>㈜영동</td>
+   <td>생산관리 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>135</td>
+   <td>2016년 7월</td>
+   <td>(주)에스피티</td>
+   <td>유량모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>133</td>
+   <td>2016년 6월</td>
+   <td>(주)에스피티</td>
+   <td>유량모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>132</td>
+   <td>2016년 5월</td>
+   <td>현대공조</td>
+   <td>공조 실험장비 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>131</td>
+   <td>2016년 4월</td>
+   <td>글로비스호</td>
+   <td>팬댐퍼제어 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>129</td>
+   <td>2016년 2월</td>
+   <td>(주)대우조선해양</td>
+   <td>해저석유시추공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>130</td>
+   <td>2016년 2월</td>
+   <td>한국지오텍</td>
+   <td>AGS_TOTAL장비</td>
+</tr>
+<tr>
+   <td calss='sb'>126</td>
+   <td>2016년 1월</td>
+   <td>수자원공사</td>
+   <td>독립전원전기방식 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>127</td>
+   <td>2016년 1월</td>
+   <td>구로구청</td>
+   <td>배수펌프장 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>128</td>
+   <td>2016년 1월</td>
+   <td>한국지오텍</td>
+   <td>AGS_PID제어 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>140</td>
+   <td>2016년 11월</td>
+   <td>평택시청</td>
+   <td>분수조명감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>141</td>
+   <td>2016년 11월</td>
+   <td>한국지오텍</td>
+   <td>이동형SA장비</td>
+</tr>
+<tr>
+   <td calss='sb'>142</td>
+   <td>2016년 11월</td>
+   <td>KDPOWER</td>
+   <td>통합에너지모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>143</td>
+   <td>2016년 11월</td>
+   <td>평창 풍력 발전소</td>
+   <td>풍력발전전력모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>137</td>
+   <td>2016년 10월</td>
+   <td>일성기전</td>
+   <td>진공성형기</td>
+</tr>
+<tr>
+   <td calss='sb'>138</td>
+   <td>2016년 10월</td>
+   <td>한국원자력연구원</td>
+   <td>전력감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>139</td>
+   <td>2016년 10월</td>
+   <td>굳모닝테크</td>
+   <td>가스 통합 모니터링</td>
+</tr>
+<tr>
+   <td calss='sb'>121</td>
+   <td>2015년 9월</td>
+   <td>한국지오텍</td>
+   <td>AGS자동운전프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>122</td>
+   <td>2015년 9월</td>
+   <td>말레이시아(파잠)</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>123</td>
+   <td>2015년 9월</td>
+   <td>서울메트로</td>
+   <td>상부개폐기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>120</td>
+   <td>2015년 8월</td>
+   <td>에스앤에이치</td>
+   <td>제품이력관리 DB작업</td>
+</tr>
+<tr>
+   <td calss='sb'>118</td>
+   <td>2015년 7월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>119</td>
+   <td>2015년 7월</td>
+   <td>롯데호텔(소공동)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>115</td>
+   <td>2015년 6월</td>
+   <td>(주)에스피티</td>
+   <td>유량모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>116</td>
+   <td>2015년 6월</td>
+   <td>이라크</td>
+   <td>수처리 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>117</td>
+   <td>2015년 6월</td>
+   <td>비엠티</td>
+   <td>전력 감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>114</td>
+   <td>2015년 5월</td>
+   <td>한국지오텍</td>
+   <td>제방그라우팅 프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>112</td>
+   <td>2015년 4월</td>
+   <td>리워텍</td>
+   <td>군산설비모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>113</td>
+   <td>2015년 4월</td>
+   <td>해태음료</td>
+   <td>원당설비모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>110</td>
+   <td>2015년 3월</td>
+   <td>고려제강</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>111</td>
+   <td>2015년 3월</td>
+   <td>TDK</td>
+   <td>성형기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>109</td>
+   <td>2015년 2월</td>
+   <td>에스앤에이치</td>
+   <td>제품이력관리 DB작업</td>
+</tr>
+<tr>
+   <td calss='sb'>108</td>
+   <td>2015년 1월</td>
+   <td>MAXCOM</td>
+   <td>ESS&PCS 터치프로그램</td>
+</tr>
+<tr>
+   <td calss='sb'>124</td>
+   <td>2015년 11월</td>
+   <td>우지막코리아</td>
+   <td>가소공정_</td>
+</tr>
+<tr>
+   <td calss='sb'>125</td>
+   <td>2015년 11월</td>
+   <td>LG하우시스(옥산)</td>
+   <td>중합_발포모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>98</td>
+   <td>2014년 9월</td>
+   <td>GM대우</td>
+   <td>VT-SHED모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>99</td>
+   <td>2014년 9월</td>
+   <td>동아대병원</td>
+   <td>오토디스펜서모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>100</td>
+   <td>2014년 9월</td>
+   <td>현대차(아산공장)</td>
+   <td>전력유량모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>97</td>
+   <td>2014년 8월</td>
+   <td>교도소</td>
+   <td>도어락감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>95</td>
+   <td>2014년 5월</td>
+   <td>(주)더존기술</td>
+   <td>데이터로거터치개발</td>
+</tr>
+<tr>
+   <td calss='sb'>96</td>
+   <td>2014년 5월</td>
+   <td>태평양 금속㈜</td>
+   <td>가소라인 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>93</td>
+   <td>2014년 4월</td>
+   <td>한국지오텍 </td>
+   <td>AGS 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>94</td>
+   <td>2014년 4월</td>
+   <td>롯데호텔(소공동)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>91</td>
+   <td>2014년 2월</td>
+   <td>수자원공사</td>
+   <td>수차발전감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>92</td>
+   <td>2014년 2월</td>
+   <td>(주)에스피티</td>
+   <td>증기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>90</td>
+   <td>2014년 1월</td>
+   <td>기아차(소하리)</td>
+   <td>외곽전력설비 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>103</td>
+   <td>2014년 12월</td>
+   <td>현대차(아산공장)</td>
+   <td>보일러모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>104</td>
+   <td>2014년 12월</td>
+   <td>애경백화점</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>105</td>
+   <td>2014년 12월</td>
+   <td>유성정밀</td>
+   <td>요동검사기</td>
+</tr>
+<tr>
+   <td calss='sb'>106</td>
+   <td>2014년 12월</td>
+   <td>사우디</td>
+   <td>탈염설비모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>107</td>
+   <td>2014년 12월</td>
+   <td>평창 풍력 발전소</td>
+   <td>풍력발전전력모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>102</td>
+   <td>2014년 11월</td>
+   <td>성희프라자(위례)</td>
+   <td>공조시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>101</td>
+   <td>2014년 10월</td>
+   <td>동아전업공사</td>
+   <td>컨베어이동량모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>82</td>
+   <td>2013년 9월</td>
+   <td>말레이시아(파잠)</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>81</td>
+   <td>2013년 8월</td>
+   <td>에이테크솔루션</td>
+   <td>전력감시모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>80</td>
+   <td>2013년 7월</td>
+   <td>LG독산사옥</td>
+   <td>설비자료원격전송 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>79</td>
+   <td>2013년 6월</td>
+   <td>프로시스템</td>
+   <td>오토스프레이모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>77</td>
+   <td>2013년 5월</td>
+   <td>롯데호텔(소공동)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>78</td>
+   <td>2013년 5월</td>
+   <td>아시아나</td>
+   <td>폐수 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>75</td>
+   <td>2013년 4월</td>
+   <td>현대중공업</td>
+   <td>전력감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>76</td>
+   <td>2013년 4월</td>
+   <td>삼성전자</td>
+   <td>공정모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>71</td>
+   <td>2013년 2월</td>
+   <td>남양유업㈜</td>
+   <td>유량감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>72</td>
+   <td>2013년 2월</td>
+   <td>동희오토 주식회사</td>
+   <td>전착통전모니터링 </td>
+</tr>
+<tr>
+   <td calss='sb'>73</td>
+   <td>2013년 2월</td>
+   <td>수자원공사</td>
+   <td>수차발전감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>74</td>
+   <td>2013년 2월</td>
+   <td>서울아산병원</td>
+   <td>오토디스펜서모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>69</td>
+   <td>2013년 1월</td>
+   <td>EXCO</td>
+   <td>신재생 에너지 통합 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>70</td>
+   <td>2013년 1월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>87</td>
+   <td>2013년 12월</td>
+   <td>기아차(화성공장)</td>
+   <td>전력감시모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>88</td>
+   <td>2013년 12월</td>
+   <td>기아차(소하리)</td>
+   <td>이물량 감시모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>89</td>
+   <td>2013년 12월</td>
+   <td>(주)더존기술</td>
+   <td>중량프린팅터치개발(METTLERTOLEDO)</td>
+</tr>
+<tr>
+   <td calss='sb'>85</td>
+   <td>2013년 11월</td>
+   <td>수도권매립지관리공사</td>
+   <td>고화처리장 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>86</td>
+   <td>2013년 11월</td>
+   <td>(주)더존기술</td>
+   <td>중량프린팅터치개발(SARTORIUS)</td>
+</tr>
+<tr>
+   <td calss='sb'>83</td>
+   <td>2013년 10월</td>
+   <td>LG전자</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>84</td>
+   <td>2013년 10월</td>
+   <td>상해</td>
+   <td>소프트페라이트 공정모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>62</td>
+   <td>2012년 9월</td>
+   <td>기아차(소하리)</td>
+   <td>전착통전모니터링 </td>
+</tr>
+<tr>
+   <td calss='sb'>61</td>
+   <td>2012년 8월</td>
+   <td>서교 메세나폴리스</td>
+   <td>빙축열모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>60</td>
+   <td>2012년 7월</td>
+   <td>동희오토 주식회사</td>
+   <td>EOCR 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>57</td>
+   <td>2012년 6월</td>
+   <td>전의하수처리장</td>
+   <td>오폐수 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>58</td>
+   <td>2012년 6월</td>
+   <td>주성대</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>59</td>
+   <td>2012년 6월</td>
+   <td>전라남도</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>55</td>
+   <td>2012년 5월</td>
+   <td>기아차</td>
+   <td>전착통전 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>56</td>
+   <td>2012년 5월</td>
+   <td>말레이시아</td>
+   <td>태양광모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>53</td>
+   <td>2012년 3월</td>
+   <td>태백 풍력 발전소</td>
+   <td>풍력발전 전력모니터링</td>
+</tr>
+<tr>
+   <td calss='sb'>54</td>
+   <td>2012년 3월</td>
+   <td>(주)도루코</td>
+   <td>페이스설비 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>67</td>
+   <td>2012년 12월</td>
+   <td>남양유업㈜</td>
+   <td>유량감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>68</td>
+   <td>2012년 12월</td>
+   <td>(주)에스피티</td>
+   <td>증기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>64</td>
+   <td>2012년 11월</td>
+   <td>롯데호텔(소공동)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>65</td>
+   <td>2012년 11월</td>
+   <td>(주)대한세라믹스</td>
+   <td>소성로공정모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>66</td>
+   <td>2012년 11월</td>
+   <td>매탄현대힐스테이트</td>
+   <td>조명전력감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>63</td>
+   <td>2012년 10월</td>
+   <td>천보㈜</td>
+   <td>반응기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>46</td>
+   <td>2011년 8월</td>
+   <td>기아차(소하리)</td>
+   <td>전력감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>44</td>
+   <td>2011년 7월</td>
+   <td>롯데호텔(소공동)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>45</td>
+   <td>2011년 7월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>41</td>
+   <td>2011년 6월</td>
+   <td>상해</td>
+   <td>소프트페라이트 공정모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>42</td>
+   <td>2011년 6월</td>
+   <td>포스코파워</td>
+   <td>연료전지 전력 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>43</td>
+   <td>2011년 6월</td>
+   <td>LG LCD 공장</td>
+   <td>탈수 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>38</td>
+   <td>2011년 5월</td>
+   <td>동성콘크리트</td>
+   <td>생산공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>39</td>
+   <td>2011년 5월</td>
+   <td>서울대</td>
+   <td>전력 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>40</td>
+   <td>2011년 5월</td>
+   <td>희성피엠텍</td>
+   <td>포뮬라공정모니터링</td>
+</tr>
+<tr>
+   <td calss='sb'>37</td>
+   <td>2011년 2월</td>
+   <td>SNS 에너지</td>
+   <td>폐수열 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>34</td>
+   <td>2011년 1월</td>
+   <td>파력발전소</td>
+   <td>파력발전 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>35</td>
+   <td>2011년 1월</td>
+   <td>아트로닉스</td>
+   <td>지진감지기모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>36</td>
+   <td>2011년 1월</td>
+   <td>창우양수장</td>
+   <td>창우양수장모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>51</td>
+   <td>2011년 12월</td>
+   <td>㈜유니드엘이디</td>
+   <td>공정모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>52</td>
+   <td>2011년 12월</td>
+   <td>강남성모병원</td>
+   <td>전력감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>49</td>
+   <td>2011년 11월</td>
+   <td>거진도등대</td>
+   <td>등대감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>50</td>
+   <td>2011년 11월</td>
+   <td>태창엔이티</td>
+   <td>풍력발전모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>47</td>
+   <td>2011년 10월</td>
+   <td>롯데호텔(제주)</td>
+   <td>가스감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>48</td>
+   <td>2011년 10월</td>
+   <td>로얄포레골프장</td>
+   <td>전력감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>24</td>
+   <td>2010년 9월</td>
+   <td>EXCO</td>
+   <td>신재생 에너지 통합 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>25</td>
+   <td>2010년 9월</td>
+   <td>LG이노텍</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>26</td>
+   <td>2010년 9월</td>
+   <td>난지물재생센터</td>
+   <td>수축열 냉난방 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>27</td>
+   <td>2010년 9월</td>
+   <td>한화석유화학</td>
+   <td>전력 감시시스템 </td>
+</tr>
+<tr>
+   <td calss='sb'>20</td>
+   <td>2010년 8월</td>
+   <td>기아소하리</td>
+   <td>유량감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>21</td>
+   <td>2010년 8월</td>
+   <td>사빅 이노베이트 플라스틱</td>
+   <td>LPC 라인감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>22</td>
+   <td>2010년 8월</td>
+   <td>서울대</td>
+   <td>전력 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>23</td>
+   <td>2010년 8월</td>
+   <td>진건 폐수 처리장</td>
+   <td>RO,UF시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>15</td>
+   <td>2010년 7월</td>
+   <td>포토멕</td>
+   <td>RAON1300감시시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>16</td>
+   <td>2010년 7월</td>
+   <td>삼성전자</td>
+   <td>폐글라스모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>17</td>
+   <td>2010년 7월</td>
+   <td>신고리3,4호기</td>
+   <td>폐수 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>18</td>
+   <td>2010년 7월</td>
+   <td>신광FA</td>
+   <td>윤축프레스 시험장비 </td>
+</tr>
+<tr>
+   <td calss='sb'>19</td>
+   <td>2010년 7월</td>
+   <td>고리발전소</td>
+   <td>외곽감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>11</td>
+   <td>2010년 6월</td>
+   <td>LG전자 구미공장</td>
+   <td>태양광 모니터링</td>
+</tr>
+<tr>
+   <td calss='sb'>12</td>
+   <td>2010년 6월</td>
+   <td>연천청소년수련관</td>
+   <td>지열 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>13</td>
+   <td>2010년 6월</td>
+   <td>(주)진평</td>
+   <td>코크스과립생산시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>14</td>
+   <td>2010년 6월</td>
+   <td>태안화력발전소</td>
+   <td>화재감시 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>10</td>
+   <td>2010년 5월</td>
+   <td>장수파프리카 농장</td>
+   <td>냉난방 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>7</td>
+   <td>2010년 4월</td>
+   <td>삼성물산_동천래미안</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>8</td>
+   <td>2010년 4월</td>
+   <td>삼성전자 기흥</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>9</td>
+   <td>2010년 4월</td>
+   <td>한국지오텍 </td>
+   <td>그라우팅 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>6</td>
+   <td>2010년 3월</td>
+   <td>현대제철</td>
+   <td>원심탈수 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>3</td>
+   <td>2010년 2월</td>
+   <td>LG전자 가산동</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>4</td>
+   <td>2010년 2월</td>
+   <td>LG전자 구미공장</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>5</td>
+   <td>2010년 2월</td>
+   <td>구로구청 치수과</td>
+   <td>강우량,수위 관측시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>1</td>
+   <td>2010년 1월</td>
+   <td>진건 폐수 처리장</td>
+   <td>폐수 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>2</td>
+   <td>2010년 1월</td>
+   <td>현대제철 펌프장</td>
+   <td>오폐수 처리시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>32</td>
+   <td>2010년 12월</td>
+   <td>루셈</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>33</td>
+   <td>2010년 12월</td>
+   <td>한양정공</td>
+   <td>태양광 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>31</td>
+   <td>2010년 11월</td>
+   <td>LG생활건강(청주)</td>
+   <td>MBR 페수처리 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>28</td>
+   <td>2010년 10월</td>
+   <td>LG생활건강(청주)</td>
+   <td>페수처리 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>29</td>
+   <td>2010년 10월</td>
+   <td>LG생활건강(온산)</td>
+   <td>계면활성제공정 모니터링 시스템</td>
+</tr>
+<tr>
+   <td calss='sb'>30</td>
+   <td>2010년 10월</td>
+   <td>한국지오텍 </td>
+   <td>그라우팅 모니터링 시스템</td>
+</tr>
+</table>
+</div>
+<!-- //Content -->
+
+
+
+
+
+
+
+
+</div>
+<!-- //contentWrap -->
+</div>
+<!-- //container -->
+</div>
+<!-- //contWrap -->
+</div>
+<!-- //ContentWrap -->
+</div>
+<!-- //Container -->
+</div>
+<!-- //Container Wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="copybox">
+    <div class="copymenu">
+      <ul>
+        <li><a href="greeting01.html@sugNum=1.html"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="220,28,345,40" href="http://www.cohomepage.com" target="_blank" alt="홈페이지제작" title="홈페이지제작" />
+</map>
+<!-- //Footer -->
+
+<div id="quickR">
+  <p><a href="perform01.html@subNum=5.html#"><img src="../img/btn_top01.gif" class="ovup" /></a></p>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40879538-1', 'autohitech.co.kr');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/g4.core.js@v=1773323804"></script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+
+
+

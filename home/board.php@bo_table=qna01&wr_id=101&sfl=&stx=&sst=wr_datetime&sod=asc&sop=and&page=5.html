@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOBASE</title>
+<link rel="shortcut icon" href="http://localhost:8000/img/favicon.ico" />
+<link rel="stylesheet" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="../js/autotech.bundle.js@v=1773323804"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "home";
+var g4_bbs_img   = "img";
+var g4_url       = "http://localhost:8000";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "qna01";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+</script>
+</head>
+<body >
+<a name="g4_head"></a>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<header id="headerWrap">
+  <div id="header">
+  <!-- TopMenu Wrap -->
+  <div id="topMenuWrap">
+    <p id="logo"><a href="../index.html"><img src="../img/logo01.png" alt="Autohitech" /></a></p>
+	<!-- Top Menu -->
+	<div id="topMenu">
+	<!-- Top Home -->
+      <div class="tophome" style="float:right; width:auto; margin-top:10px;">
+       <form name="fsearchbox" method="get" action="http://localhost:8000/home/search.php" onSubmit="return fsearchbox_submit(this);">
+          <input type="hidden" name="sfl" value="wr_subject||wr_content||wr_3">
+		  <input type="hidden" name="sop" value="and">
+		  <fieldset style="border:0; margin:0; padding:0;">
+        <ul style="display:flex; align-items:center; list-style:none; margin:0; padding:0;">
+          <li style="height:17px;"><a href="../index.html"><img src="../img/top_home01.gif" alt="home" class="ovup" /></a></li>
+		  <li style="padding:0 5px;"><img src="../img/top_dot01.gif" /></li>
+          <li style="height:17px;"><a href="../adm.html"><img src="../img/top_staff01.gif" alt="staff" class="ovup" /></a></li>
+		  <li class="searchL" style="margin-left:15px; width:5px; height:17px; background:url('../img/bg_searchL01.gif') no-repeat;"></li>
+          <li class="searchM" style="width:100px; height:17px; background:url('../img/bg_searchM01.gif') repeat-x;"><input type="text" name="stx" tabindex="1" class="searchTt" style="width:100px; height:17px; border:0; background:transparent; font-size:11px; font-weight:bold; padding:0 2px; line-height:17px;" /></li>
+          <li style="height:17px;"><input type="image" src="../img/bg_searchR01.gif" alt="검색" style="width:20px; height:17px; display:block;" /></li>
+          </ul></fieldset>
+		  </form>
+      </div>
+	  <!-- //Top Home -->
+	<div class="menuT">
+      <ul id="topnav">
+	    <!-- menu01 -->
+        <li class="m01"><a href="../company/greeting01.html@subNum=1.html"><img src="../img/menu01.gif" alt="회사소개" class="sovup" /></a>
+		  <span>
+            <div class="subS01">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../company/greeting01.html@subNum=1.html"><img src="../img/sub01_01.gif" alt="CEO인사말" class="ovsub" /></a></li>
+			    <li><a href="../company/history01.html@subNum=2.html"><img src="../img/sub01_02.gif" alt="연혁 및 사업분야" class="ovsub" /></a></li>
+			    <li><a href="../company/organization01.html@subNum=3.html"><img src="../img/sub01_03.gif" alt="조직도" class="ovsub" /></a></li>
+			    <li><a href="../company/location01.html@subNum=4.html"><img src="../img/sub01_04.gif" alt="오시는 길" class="ovsub" /></a></li>
+			    <li><a href="../company/perform01.html@subNum=5.html"><img src="../img/sub01_07.gif" alt="수행실적" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/sub01_05.gif" alt="협력업체" class="ovsub" /></a></li>
+                <li><a href="board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/sub01_06.gif" alt="고객사" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+			</div>
+		  </span>
+        </li>
+        <li class="m02"><a href="../controller/controller00_01.html@subNum=1.html"><img src="../img/menu04.gif" alt="CONTROLLER" class="sovup" /></a>
+        </li>
+        <!-- menu03 -->
+        <li class="m03"><a href="../touch/touch01_02.html@subNum=2.html"><img src="../img/menu03.gif" alt="TOUCH" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS03">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../touch/touch01_01.html?subNum=1"><img src="../img/sub03_01.gif" alt="SCADA" class="ovsub" /></a></li>
+                <li><a href="../touch/touch01_02.html?subNum=2"><img src="../img/sub03_02.gif" alt="Touch" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu04 -->
+        <li class="m04"><a href="../system/system01.html@subNum=1.html"><img src="../img/menu05.gif" alt="시스템구축" class="sovup" /></a>
+		  <span>
+            <div class="subS04">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../system/system01.html@subNum=1.html"><img src="../img/sub05_01.gif" alt="시스템 구축 안내" class="ovsub" /></a></li>
+			    <li><a href="../system/system02.html@subNum=2.html"><img src="../img/sub05_02.gif" alt="구축 사례" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+        <!-- menu05 -->
+        <li class="m05"><a href="../education/education11.html@subNum=1.html"><img src="../img/menu06.gif" alt="교육" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS05">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../education/education11.html?subNum=1"><img src="../img/sub06_01.gif" alt="교육과정" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu06 -->
+        <li class="m06"><a href="board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/menu07.gif" alt="다운로드" class="sovup" /></a>
+		  <span style="margin-left:-175px;">
+            <div class="subS06">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/sub07_05.gif" alt="Smart IoT Controller 자료" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down02&amp;subNum=2.html"><img src="../img/sub07_02.gif" alt="카달로그/인증서" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down03&amp;subNum=3.html"><img src="../img/sub07_03.gif" alt="작업 예제" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down04&amp;subNum=4.html"><img src="../img/sub07_04.gif" alt="일반 자료" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+		<!-- menu07 -->
+        <li class="m07"><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menu08.gif" alt="고객지원" class="sovup" /></a>
+		  <span style="margin-left:-20px;">
+            <div class="subS07">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/sub08_01.gif" alt="공지사항" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=qna01&amp;subNum=3.html"><img src="../img/sub08_03.gif" alt="Q&A" class="ovsub" /></a></li>
+                <li><a href="../customer/customer01.html@subNum=4.html"><img src="../img/sub08_04.gif" alt="원격지원요청" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //Top Menu -->
+</div>
+<!-- //TopMenu Wrap -->
+</header>
+<!-- Container Wrap -->
+<div id="contWrap">
+
+<!-- Sub Visual -->
+<div id="subWrap">
+<div id="subvisual">
+<img src="../img/s_txt_customer01.png" class="s_txtT" style="display:none;" />
+<img src="../img/s_txt_fix01.png" class="s_txtB" style="display:none;" />
+<img src="../img/s_img_fix01.png" class="s_imgL" style="display:none;" />
+<img src="../img/s_img_customer01.png" class="s_imgR" style="display:none;" />
+</div>
+</div>
+<!-- //Sub Visual -->
+
+<!-- Container -->
+<div id="container"><!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_customer01.gif" alt="고객지원" /></div>
+<ul>
+<li><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menuL08_01.gif" alt="공지사항"  class="gexchange" /></a></li>
+<li><a href="board.php@bo_table=qna01&amp;subNum=2.html"><img src="../img/menuL08_03.gif" alt="Q&A" selected='gSelected' class="gexchange" /></a></li>
+<li><a href="../customer/customer01.html@subNum=3.html"><img src="../img/menuL08_04.gif" alt="원격지원요청"  class="gexchange" /></a></li>
+</ul>
+
+<!-- Banner -->
+<div id="bannerWrap">
+<a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/bn_tel.gif" alt="고객센터" /></a>
+</div>
+<!-- //Banner -->
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src='../img/title_qna01.gif'></div>
+<div class="navi"><ul><li class="home">홈</li><li>고객지원</li><li class="location">Q&A</li></ul></div><!-- -->
+<div class="b_font">
+<ul><li><a href="board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html#" class="increaseFont"><img src='../img/btn_plus01.gif' alt="크게보기" class="ovup" /></a></li>
+<li><a href="board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html#" class="decreaseFont"><img src='../img/btn_minus01.gif' alt="작게보기" class="ovup" /></a></li>
+<li><a href="board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html#" class="resetFont"><img src='../img/btn_refresh01.gif' alt="초기화" class="ovup" /></a></li>
+</div>
+<!-- --></div>
+<!-- //Title -->
+
+<link rel="stylesheet" href="../skin/board/basic/css/basic.css" type="text/css" />
+<script type="text/javascript" src="../skin/board/basic/js/jquery-board.js"></script>
+<style type="text/css">
+.board_list {clear:both; width:100%; table-layout:fixed; margin:5px 0 0 0; }
+</style>
+<div style="height:5px;"></div>
+<table width='100%' align='center' cellpadding='0' cellspacing='0'>
+<tr>
+<td>
+<div style="clear:both; height:30px;">
+    <div style="float:left; margin-top:6px;">
+    <img src="../skin/board/basic/img/icon_date.gif" align=absmiddle border='0'>
+    <span style="color:#888888;">작성일 : 09-04-27 14:35</span>
+    </div>
+
+    <!-- 링크 버튼 -->
+    <div style="float:right;">
+                <a href="http://localhost:8000/home/password.php?w=u&amp;bo_table=qna01&amp;wr_id=101&amp;page=5&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5"><img src='../skin/board/basic/img/btn_modify.gif' border='0' align='absmiddle'></a>     <a href="http://localhost:8000/home/write.php?w=r&amp;bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5"><img src='../skin/board/basic/img/btn_reply.gif' border='0' align='absmiddle'></a> 	<a href="http://localhost:8000/home/password.php?w=d&amp;bo_table=qna01&amp;wr_id=101&amp;page=5&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5"><img src='../skin/board/basic/img/btn_delete.gif' border='0' align='absmiddle'></a>     		<a href="board.php@bo_table=qna01&amp;page=5.html"><img src='../skin/board/basic/img/btn_list.gif' border='0' align='absmiddle'></a>         </div>
+</div>
+
+<div style="border:1px solid #ddd; clear:both; height:34px; background:url(../skin/board/basic/img/title_bg.gif) repeat-x;">
+<table width='100%' align='center' cellpadding='0' cellspacing='0' class='board_list'>
+    <tr>
+        <td style="padding-left:10px;">
+            <div style="width:622px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#505050; font-size:13px; font-weight:bold;">
+                        통신버퍼 주소 설정을 어떻게 하죠?            </div>
+        </td>
+        <td align="right" style="padding:0 6px 0 0;" width=120>
+                                </td>
+    </tr>
+    </table>
+</div>
+</td></tr></table>
+<div style="height:20px;"></div>
+
+<div class="info">
+<div style="width:100%; height:28px; padding:10px 0px 4px 0px; background:#f8f8f8;">
+<span class="writer">
+  <span style="float:left;" class="c_gray">글쓴이&nbsp;<span class='guest'>이정복</span>&nbsp;</span>
+</span>
+<span class="writer">
+  <span style="float:left;" class="c_gray">등록일&nbsp;09-04-27 14:35</span>
+</span>
+</div>
+
+<div class="right_info">
+<span class="count"><span class="c_gray">조회</span> 2,701</span>
+
+</div>
+
+
+
+<div class="link"><ul></ul></div>
+<div class="file"><ul></ul></div>
+</div><!-- info end -->
+
+
+<!-- 내용 출력 -->
+<div class="contents">
+오토베이스 통신프로그램에서 통신포트를 3개 open하였습니다.<br/>PLC는 glofa ethernet을 사용했구요.<br/>통신포트 0번은 glofa M워드영역 0~99까지를 읽구요,<br/>통신포트 1번은 glofa M워드영역 100~199까지를 읽구요,<br/>통신포트 2번은 glofa M워드영역 200~299까지를 읽었습니다,<br/>그런데, 각 통신포트의 read문을 Read, 0, MW,0,0,100,를 하였는데,<br/>통신프로그램의 주소가 더블되어도 괜찮은가요?<br/>궁금합니다.<br/><br/><!-- 테러 태그 방지용 --></xml></xmp><a href="board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html"></a><a href='board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'></a>
+
+
+
+
+<script type='text/javascript'> var md5_norobot_key = 'd41d8cd98f00b204e9800998ecf8427e'; </script><script type="text/javascript">
+// 글자수 제한
+var char_min = parseInt(0); // 최소
+var char_max = parseInt(0); // 최대
+</script>
+
+<!-- 코멘트 리스트 -->
+<div id="commentContents" style=" position:relative; width:100%;">
+<h3 style=" margin:0 0 10px 0; padding:0 0 3px 0; letter-spacing:-1px; border-bottom:2px solid #ccc; font-size:12px;">Comments <span style=" font-size:11px; color:#e01300; font-weight:bold;"></span></h3>
+
+
+<!-- 코멘트 입력 -->
+<div id="comment_write" style=" position:relative; margin:20px 0px 6px 0px; border:2px solid #1baacc; padding:0 10px 10px 10px; background:#ffffff; display:none;">
+<form name="fviewcomment" method="post" action="http://localhost:8000/home/write_comment_update.php" onsubmit="return fviewcomment_submit(this);" autocomplete="off" style=" position:relative; " >
+<input type=hidden name=w           id=w value="c">
+<input type=hidden name=bo_table    value="qna01">
+<input type=hidden name=wr_id       value="101">
+<input type=hidden name=comment_id  id="comment_id" value="">
+<input type=hidden name=sca         value="" >
+<input type=hidden name=sfl         value="" >
+<input type=hidden name=stx         value="">
+<input type=hidden name=spt         value="">
+<input type=hidden name=page        value="5">
+<input type=hidden name=cwin        value="">
+<input type=hidden name=is_good     value="">
+
+
+<div class="wr_content" style=" margin-right:100px;">
+
+<div style=" height:18px; padding:5px 0 5px 0; margin:0; vertical-align:top;">
+	<span style="cursor: pointer;" onclick="textarea_decrease('wr_content', 5);" class="icon up"></span>
+	<span style="cursor: pointer;" onclick="textarea_original('wr_content', 5);" class="icon init"></span>
+	<span style="cursor: pointer;" onclick="textarea_increase('wr_content', 5);" class="icon down"></span>
+    <input type=checkbox id="wr_secret" name="wr_secret" value="secret"><span style=" color:#999">비밀글</span>
+</div>
+
+<textarea id="wr_content" name="wr_content" rows="5" itemname="내용" required  style="width:100%; height:75px; background:#f0f0f0; border:1px solid #e5e5e5;"></textarea>
+    
+	    <p style=" margin-top:10px; ">
+	<img id="kcaptcha_image" align="absmiddle" style="margin-right:5px;"/>
+		<input title="왼쪽의 글자를 입력하세요." type="input" name="wr_key" style='border:1px solid; width:160px; height:58px; text-align:center; line-height:58px; background-color:#ffffff; margin-right:10px;' class='mem_auto' itemname="자동등록방지" required />
+		<span style=" color:#999; font-weight:bold;">이름</span> <INPUT type=text maxLength=20 name="wr_name" itemname="이름" style="width:80px; height:16px; margin-right:5px;" required />
+		<span style=" color:#999; font-weight:bold;">비밀번호</span> <INPUT type=password maxLength=20 name="wr_password" itemname="비밀번호" style="width:135px; height:16px;" required />
+	</p>
+	</div>
+
+<div style=" position:absolute; top:27px; right:0; width:90px; ">
+<input type="submit" value="댓글등록" accesskey="s" class="button" style=" width:90px; height:45px; float:right;" />
+<a href="javascript:good_and_write()"><input type="submit" value="댓글+추천" accesskey="s" class="button" style=" width:90px; float:right; margin-top:2px;" /></a>
+</div>
+
+</form>
+</div>
+
+
+<script type="text/javascript">
+
+
+var save_before = '';
+var save_html = document.getElementById('comment_write').innerHTML;
+
+function good_and_write() 
+{ 
+    var f = document.fviewcomment; 
+    if(fviewcomment_submit(f)) 
+    { 
+        f.is_good.value = 1; 
+        f.submit(); 
+    } 
+    else 
+    { 
+        f.is_good.value = 0; 
+    } 
+} 
+
+function fviewcomment_submit(f)
+{
+    var pattern = /(^\s*)|(\s*$)/g; // \s 공백 문자
+
+    f.is_good.value = 0;
+
+    var subject = "";
+    var content = "";
+    $.ajax({
+        url: "../skin/board/basic/ajax.filter.php",
+        type: "POST",
+        data: {
+            "subject": "",
+            "content": f.wr_content.value
+        },
+        dataType: "json",
+        async: false,
+        cache: false,
+        success: function(data, textStatus) {
+            subject = data.subject;
+            content = data.content;
+        }
+    });
+
+    if (content) {
+        alert("내용에 금지단어('"+content+"')가 포함되어있습니다");
+        f.wr_content.focus();
+        return false;
+    }
+
+    // 양쪽 공백 없애기
+    var pattern = /(^\s*)|(\s*$)/g; // \s 공백 문자
+    document.getElementById('wr_content').value = document.getElementById('wr_content').value.replace(pattern, "");
+    if (char_min > 0 || char_max > 0)
+    {
+        check_byte('wr_content', 'char_count');
+        var cnt = parseInt(document.getElementById('char_count').innerHTML);
+        if (char_min > 0 && char_min > cnt)
+        {
+            alert("코멘트는 "+char_min+"글자 이상 쓰셔야 합니다.");
+            return false;
+        } else if (char_max > 0 && char_max < cnt)
+        {
+            alert("코멘트는 "+char_max+"글자 이하로 쓰셔야 합니다.");
+            return false;
+        }
+    }
+    else if (!document.getElementById('wr_content').value)
+    {
+        alert("코멘트를 입력하여 주십시오.");
+        return false;
+    }
+
+    if (typeof(f.wr_name) != 'undefined')
+    {
+        f.wr_name.value = f.wr_name.value.replace(pattern, "");
+        if (f.wr_name.value == '')
+        {
+            alert('이름이 입력되지 않았습니다.');
+            f.wr_name.focus();
+            return false;
+        }
+    }
+
+    if (typeof(f.wr_password) != 'undefined')
+    {
+        f.wr_password.value = f.wr_password.value.replace(pattern, "");
+        if (f.wr_password.value == '')
+        {
+            alert('패스워드가 입력되지 않았습니다.');
+            f.wr_password.focus();
+            return false;
+        }
+    }
+
+    if (!check_kcaptcha(f.wr_key)) {
+        return false;
+    }
+
+    return true;
+}
+
+
+function comment_box(comment_id, work)
+{
+    var el_id;
+    // 코멘트 아이디가 넘어오면 답변, 수정
+    if (comment_id)
+    {
+        if (work == 'c')
+            el_id = 'reply_' + comment_id;
+        else
+            el_id = 'edit_' + comment_id;
+    }
+    else
+        el_id = 'comment_write';
+
+    if (save_before != el_id)
+    {
+        if (save_before)
+        {
+            document.getElementById(save_before).style.display = 'none';
+            document.getElementById(save_before).innerHTML = '';
+        }
+
+        document.getElementById(el_id).style.display = '';
+        document.getElementById(el_id).innerHTML = save_html;
+        // 코멘트 수정
+        if (work == 'cu')
+        {
+            document.getElementById('wr_content').value = document.getElementById('save_comment_' + comment_id).value;
+            if (typeof char_count != 'undefined')
+                check_byte('wr_content', 'char_count');
+            if (document.getElementById('secret_comment_'+comment_id).value)
+                document.getElementById('wr_secret').checked = true;
+            else
+                document.getElementById('wr_secret').checked = false;
+        }
+
+        document.getElementById('comment_id').value = comment_id;
+        document.getElementById('w').value = work;
+
+        save_before = el_id;
+    }
+
+    if (typeof(wrestInitialized) != 'undefined')
+        wrestInitialized();
+
+    //jQuery(this).kcaptcha_load();
+    if (comment_id && work == 'c')
+        $.kcaptcha_run();
+}
+
+function comment_delete(url)
+{
+    if (confirm("이 코멘트를 삭제하시겠습니까?")) location.href = url;
+}
+
+comment_box('', 'c'); // 코멘트 입력폼이 보이도록 처리하기위해서 추가 (root님)
+</script>
+</div>
+
+<!-- 이전글 다음글 -->
+<div class="nextprev">
+		</div>
+</div>
+<script type="text/javascript">
+function file_download(link, file) {
+      document.location.href=link;
+}
+</script>
+
+<script type="text/javascript">
+window.onload=function() {
+    resizeBoardImage(600);
+    drawFont();
+}
+</script>
+<!-- 게시글 보기 끝 -->
+<style>
+.board_top { clear:both; }
+
+.board_list { clear:both; width:100%; table-layout:fixed; margin:0 0 0 0; }
+.board_list th { font-weight:bold; font-size:12px; } 
+.board_list th { background:#f8f8f8; } 
+.board_list th { white-space:nowrap; height:30px; overflow:hidden; text-align:center; } 
+.board_list th { border-top:2px solid #836ec9; border-bottom:1px solid #dcdcdc; } 
+
+.board_list tr.bg0 { background-color:#fafafa; } 
+.board_list tr.bg1 { background-color:#ffffff; } 
+
+.board_list td { padding:.5em; }
+.board_list td { border-bottom:1px solid #ddd; } 
+.board_list td.num { color:#999999; text-align:center; }
+.board_list td.checkbox { text-align:center; }
+.board_list td.subject { overflow:hidden; }
+.board_list td.name { padding:0px; }
+.board_list td.datetime { font:normal 11px tahoma; color:#BABABA; text-align:center; }
+.board_list td.hit { font:normal 11px tahoma; color:#BABABA; text-align:center; }
+.board_list td.good { font:normal 11px tahoma; color:#BABABA; text-align:center; }
+.board_list td.nogood { font:normal 11px tahoma; color:#BABABA; text-align:center; }
+
+.board_list .notice { font-weight:normal; }
+.board_list .current { font:bold 11px tahoma; color:#E15916; }
+.board_list .comment {font-size:10px; color:#c70752; font-weight:bold; line-height:13px; font-family:Verdana, Tahoma, dotum, gulim, AppleGothic, sans-serif;}
+
+.board_button { clear:both; margin:10px 0 0 0; }
+
+.board_page { clear:both; text-align:center; margin-top:30px;}
+.board_page a:link        { color:#777777; font-size:11px; text-decoration:none; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_page a:visited     { color:#999999; font-size:11px; text-decoration:none; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_page a:hover       { color:#1992af; font-size:11px; text-decoration:none; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+
+.board_page .pagingpre { color:#ed454d; font-size:11px; font-weight:bold; text-decoration:underline; font-family:Verdana, Tahoma, AppleGothic, sans-serif;}
+.board_page .pagingimg { margin-top:5px;}
+
+.board_search { clear:both; width:100%; text-align:center; margin:50px 0 0 0; padding:8px 0px 8px 0px; background:#f5f5f5; }
+.board_search .stx { height:21px; border:1px solid #9A9A9A; border-right:1px solid #D8D8D8; border-bottom:1px solid #D8D8D8; }
+</style>
+
+<!-- 게시판 목록 시작 -->
+<table width='100%' align='center' cellpadding='0' cellspacing='0' class='board_list'>
+
+    <!-- 분류 셀렉트 박스, 게시물 몇건, 관리자화면 링크 -->
+    <div class="board_top">
+        <div style="float:left;">
+            <form name="fcategory" method="get" style="margin:0px;">
+                        </form>
+        </div>
+        <div style="float:right;">
+            <img src="../skin/board/basic/img/icon_total.gif" align="absmiddle" border='0'>
+            <span style="color:#888888; font-weight:bold;">Total 244</span>
+                                </div>
+    </div>
+
+    <!-- 제목 -->
+    <form name="fboardlist" method="post">
+    <input type='hidden' name='bo_table' value='qna01'>
+    <input type='hidden' name='sfl'  value=''>
+    <input type='hidden' name='stx'  value=''>
+    <input type='hidden' name='spt'  value=''>
+    <input type='hidden' name='page' value='5'>
+    <input type='hidden' name='sw'   value=''>
+
+ <table width='100%' align='center' cellpadding='0' cellspacing='0' class='board_list'>
+    <col width="50" />
+        <col />
+    <col width="110" />
+    <col width="40" />
+    <col width="50" />
+           <tr>
+        <th align="center" valign="middle">번호</th>
+                <th align="center" valign="middle">제&nbsp;&nbsp;&nbsp;목</th>
+        <th align="center" valign="middle">글쓴이</th>
+        <th align="center" valign="middle"><a href='board.php@bo_table=qna01&amp;sop=and&amp;sst=wr_datetime&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=5.html'>날짜</a></th>
+        <th align="center" valign="middle"><a href='board.php@bo_table=qna01&amp;sop=and&amp;sst=wr_hit&amp;sod=desc&amp;sfl=&amp;stx=&amp;page=5.html'>조회</a></th>
+                    </tr>
+
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            164        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=86&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 오토베이스 SMS문자전송을 할때 사용되는 장비는 어떤것…</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">01-19</td>
+        <td align="center" valign="middle" class="hit">3555</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            163        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=87&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>정품등록하려는데...</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>지상호</span></td>
+        <td align="center" valign="middle" class="datetime">01-28</td>
+        <td align="center" valign="middle" class="hit">2669</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            162        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=88&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 정품등록하려는데...</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">01-29</td>
+        <td align="center" valign="middle" class="hit">2634</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            161        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=89&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>그래픽에 대한 질문입니다.</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>김기술</span></td>
+        <td align="center" valign="middle" class="datetime">02-19</td>
+        <td align="center" valign="middle" class="hit">2483</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            160        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=90&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 그래픽에 대한 질문입니다.</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">02-20</td>
+        <td align="center" valign="middle" class="hit">2891</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            159        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=91&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>수치를 데이터베이스에 저장해서 트렌드로 보는기능이 있나…</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>정종일</span></td>
+        <td align="center" valign="middle" class="datetime">02-24</td>
+        <td align="center" valign="middle" class="hit">2600</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            158        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=92&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 수치를 데이터베이스에 저장해서 트렌드로 보는기능이 …</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">02-24</td>
+        <td align="center" valign="middle" class="hit">2652</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            157        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=93&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>윈도우비스타에 오토베이스 8버전으로 설치해도 문제없나요</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>서일</span></td>
+        <td align="center" valign="middle" class="datetime">03-03</td>
+        <td align="center" valign="middle" class="hit">3049</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            156        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=94&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 윈도우비스타에 오토베이스 8버전으로 설치해도 문제없…</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">03-04</td>
+        <td align="center" valign="middle" class="hit">2756</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            155        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=95&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>전압,전류태그로 전력량을 어떻게 구하는가요?</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>정진우</span></td>
+        <td align="center" valign="middle" class="datetime">03-17</td>
+        <td align="center" valign="middle" class="hit">2620</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            154        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=96&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 전압,전류태그로 전력량을 어떻게 구하는가요?</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">03-17</td>
+        <td align="center" valign="middle" class="hit">2881</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            153        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=97&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>tms관련 질문</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>양용웅</span></td>
+        <td align="center" valign="middle" class="datetime">03-20</td>
+        <td align="center" valign="middle" class="hit">2507</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            152        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=98&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] tms관련 질문</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">03-23</td>
+        <td align="center" valign="middle" class="hit">2817</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            151        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=99&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>오토베이스에서 통신에러가 발생시 확인 메세지를 띄우고 …</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>권의정</span></td>
+        <td align="center" valign="middle" class="datetime">03-24</td>
+        <td align="center" valign="middle" class="hit">2953</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            150        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=100&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 오토베이스에서 통신에러가 발생시 확인 메세지를 띄우…</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">03-24</td>
+        <td align="center" valign="middle" class="hit">3067</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            <span class='current'>149</span>        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>통신버퍼 주소 설정을 어떻게 하죠?</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>이정복</span></td>
+        <td align="center" valign="middle" class="datetime">04-27</td>
+        <td align="center" valign="middle" class="hit">2702</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            148        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=102&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 통신버퍼 주소 설정을 어떻게 하죠?</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">04-29</td>
+        <td align="center" valign="middle" class="hit">2716</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            147        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=103&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>오토베이스에서 HTTP로 제공되는 html화일에서 데이터를 얻는…</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>권진만</span></td>
+        <td align="center" valign="middle" class="datetime">05-09</td>
+        <td align="center" valign="middle" class="hit">2500</td>
+                    </tr>
+    
+    <tr class="bg1"> 
+        <td align="center" valign="middle" class="num">
+            146        </td>
+                <td align="left" valign="middle" class="subject">
+             &nbsp;&nbsp; <img src='../skin/board/basic/img/icon_reply.gif' align='absmiddle'><a href='board.php@bo_table=qna01&amp;wr_id=104&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>[re] 오토베이스에서 HTTP로 제공되는 html화일에서 데이터를 …</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='member'>오토하이테크</span></td>
+        <td align="center" valign="middle" class="datetime">05-13</td>
+        <td align="center" valign="middle" class="hit">3465</td>
+                    </tr>
+    
+    <tr class="bg0"> 
+        <td align="center" valign="middle" class="num">
+            145        </td>
+                <td align="left" valign="middle" class="subject">
+            <a href='board.php@bo_table=qna01&amp;wr_id=105&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html'>오토베이스 웹서버가 윈도우 xp 64BIT에서도 지원되나요?</a>    <img src='../skin/board/basic/img/icon_hot.gif' align='absmiddle'>         </td>
+        <td align="center" valign="middle" class="name"><span class='guest'>권진만</span></td>
+        <td align="center" valign="middle" class="datetime">05-21</td>
+        <td align="center" valign="middle" class="hit">2591</td>
+                    </tr>
+    
+    
+    </table>
+    </form>
+
+    <div class="board_button">
+        <div style="float:left;">
+                        </div>
+
+        <div style="float:right;">
+                </div>
+    </div>
+
+    <!-- 페이지 -->
+    <div class="board_page">
+                        <a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=1.html'><img src='../skin/board/basic/img/page_begin.gif' border='0' class='pagingimg' title='처음'></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=1.html'><span>1</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=2.html'><span>2</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=3.html'><span>3</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=4.html'><span>4</span></a> &nbsp;<span class='pagingpre'>5</span>  &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=6.html'><span>6</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=7.html'><span>7</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=8.html'><span>8</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=9.html'><span>9</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=10.html'><span>10</span></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=11.html'><img src='../skin/board/basic/img/page_next.gif' border='0' class='pagingimg' title='다음'></a> &nbsp;<a href='board.php@bo_table=qna01&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5&amp;page=13.html'><img src='../skin/board/basic/img/page_end.gif' border='0' class='pagingimg' title='맨끝'></a>            </div>
+
+    <!-- 검색 -->
+    <div class="board_search">
+        <form name="fsearch" method="get">
+        <input type="hidden" name="bo_table" value="qna01">
+        <input type="hidden" name="sca"      value="">
+        <input type="hidden" name="sop"      value="and">
+        <select name="sfl">
+            <option value="wr_subject">제목</option>
+            <option value="wr_content">내용</option>
+            <option value="wr_subject||wr_content">제목+내용</option>
+            <option value="mb_id,1">회원아이디</option>
+            <option value="mb_id,0">회원아이디(코)</option>
+            <option value="wr_name,1">글쓴이</option>
+            <option value="wr_name,0">글쓴이(코)</option>
+        </select>
+        <input name="stx" maxlength="15" itemname="검색어" required value='' style="width:200px; height:18px;">
+		<input type="image" src="../skin/board/basic/img/btn_search.gif" border='0' align="absmiddle">
+        </form>
+    </div>
+
+</td></tr></table>
+
+<!-- 게시판 목록 끝 -->
+
+
+</div>
+<!-- //contentWrap -->
+</div>
+<!-- //container -->
+</div>
+<!-- //contWrap -->
+</div>
+<!-- //ContentWrap -->
+</div>
+<!-- //Container -->
+</div>
+<!-- //Container Wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="copybox">
+    <div class="copymenu">
+      <ul>
+        <li><a href="../company/greeting01.html@sugNum=1.html"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="220,28,345,40" href="http://www.cohomepage.com" target="_blank" alt="홈페이지제작" title="홈페이지제작" />
+</map>
+<!-- //Footer -->
+
+<div id="quickR">
+  <p><a href="board.php@bo_table=qna01&amp;wr_id=101&amp;sfl=&amp;stx=&amp;sst=wr_datetime&amp;sod=asc&amp;sop=and&amp;page=5.html#"><img src="../img/btn_top01.gif" class="ovup" /></a></p>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40879538-1', 'autohitech.co.kr');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/g4.core.js@v=1773323804"></script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+
+
+
+
+<!-- 사용스킨 : basic -->

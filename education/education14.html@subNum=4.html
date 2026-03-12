@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOBASE</title>
+<link rel="shortcut icon" href="http://localhost:8000/img/favicon.ico" />
+<link rel="stylesheet" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="../js/autotech.bundle.js@v=1773323804"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "home";
+var g4_bbs_img   = "img";
+var g4_url       = "http://localhost:8000";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+</script>
+</head>
+<body >
+<a name="g4_head"></a>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<header id="headerWrap">
+  <div id="header">
+  <!-- TopMenu Wrap -->
+  <div id="topMenuWrap">
+    <p id="logo"><a href="../index.html"><img src="../img/logo01.png" alt="Autohitech" /></a></p>
+	<!-- Top Menu -->
+	<div id="topMenu">
+	<!-- Top Home -->
+      <div class="tophome" style="float:right; width:auto; margin-top:10px;">
+       <form name="fsearchbox" method="get" action="http://localhost:8000/home/search.php" onSubmit="return fsearchbox_submit(this);">
+          <input type="hidden" name="sfl" value="wr_subject||wr_content||wr_3">
+		  <input type="hidden" name="sop" value="and">
+		  <fieldset style="border:0; margin:0; padding:0;">
+        <ul style="display:flex; align-items:center; list-style:none; margin:0; padding:0;">
+          <li style="height:17px;"><a href="../index.html"><img src="../img/top_home01.gif" alt="home" class="ovup" /></a></li>
+		  <li style="padding:0 5px;"><img src="../img/top_dot01.gif" /></li>
+          <li style="height:17px;"><a href="../adm.html"><img src="../img/top_staff01.gif" alt="staff" class="ovup" /></a></li>
+		  <li class="searchL" style="margin-left:15px; width:5px; height:17px; background:url('../img/bg_searchL01.gif') no-repeat;"></li>
+          <li class="searchM" style="width:100px; height:17px; background:url('../img/bg_searchM01.gif') repeat-x;"><input type="text" name="stx" tabindex="1" class="searchTt" style="width:100px; height:17px; border:0; background:transparent; font-size:11px; font-weight:bold; padding:0 2px; line-height:17px;" /></li>
+          <li style="height:17px;"><input type="image" src="../img/bg_searchR01.gif" alt="검색" style="width:20px; height:17px; display:block;" /></li>
+          </ul></fieldset>
+		  </form>
+      </div>
+	  <!-- //Top Home -->
+	<div class="menuT">
+      <ul id="topnav">
+	    <!-- menu01 -->
+        <li class="m01"><a href="../company/greeting01.html@subNum=1.html"><img src="../img/menu01.gif" alt="회사소개" class="sovup" /></a>
+		  <span>
+            <div class="subS01">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../company/greeting01.html@subNum=1.html"><img src="../img/sub01_01.gif" alt="CEO인사말" class="ovsub" /></a></li>
+			    <li><a href="../company/history01.html@subNum=2.html"><img src="../img/sub01_02.gif" alt="연혁 및 사업분야" class="ovsub" /></a></li>
+			    <li><a href="../company/organization01.html@subNum=3.html"><img src="../img/sub01_03.gif" alt="조직도" class="ovsub" /></a></li>
+			    <li><a href="../company/location01.html@subNum=4.html"><img src="../img/sub01_04.gif" alt="오시는 길" class="ovsub" /></a></li>
+			    <li><a href="../company/perform01.html@subNum=5.html"><img src="../img/sub01_07.gif" alt="수행실적" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/sub01_05.gif" alt="협력업체" class="ovsub" /></a></li>
+                <li><a href="../home/board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/sub01_06.gif" alt="고객사" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+			</div>
+		  </span>
+        </li>
+        <li class="m02"><a href="../controller/controller00_01.html@subNum=1.html"><img src="../img/menu04.gif" alt="CONTROLLER" class="sovup" /></a>
+        </li>
+        <!-- menu03 -->
+        <li class="m03"><a href="../touch/touch01_02.html@subNum=2.html"><img src="../img/menu03.gif" alt="TOUCH" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS03">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../touch/touch01_01.html?subNum=1"><img src="../img/sub03_01.gif" alt="SCADA" class="ovsub" /></a></li>
+                <li><a href="../touch/touch01_02.html?subNum=2"><img src="../img/sub03_02.gif" alt="Touch" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu04 -->
+        <li class="m04"><a href="../system/system01.html@subNum=1.html"><img src="../img/menu05.gif" alt="시스템구축" class="sovup" /></a>
+		  <span>
+            <div class="subS04">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../system/system01.html@subNum=1.html"><img src="../img/sub05_01.gif" alt="시스템 구축 안내" class="ovsub" /></a></li>
+			    <li><a href="../system/system02.html@subNum=2.html"><img src="../img/sub05_02.gif" alt="구축 사례" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+        <!-- menu05 -->
+        <li class="m05"><a href="education11.html@subNum=1.html"><img src="../img/menu06.gif" alt="교육" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS05">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../education/education11.html?subNum=1"><img src="../img/sub06_01.gif" alt="교육과정" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu06 -->
+        <li class="m06"><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/menu07.gif" alt="다운로드" class="sovup" /></a>
+		  <span style="margin-left:-175px;">
+            <div class="subS06">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/sub07_05.gif" alt="Smart IoT Controller 자료" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down02&amp;subNum=2.html"><img src="../img/sub07_02.gif" alt="카달로그/인증서" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down03&amp;subNum=3.html"><img src="../img/sub07_03.gif" alt="작업 예제" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=down04&amp;subNum=4.html"><img src="../img/sub07_04.gif" alt="일반 자료" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+		<!-- menu07 -->
+        <li class="m07"><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menu08.gif" alt="고객지원" class="sovup" /></a>
+		  <span style="margin-left:-20px;">
+            <div class="subS07">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/sub08_01.gif" alt="공지사항" class="ovsub" /></a></li>
+			    <li><a href="../home/board.php@bo_table=qna01&amp;subNum=3.html"><img src="../img/sub08_03.gif" alt="Q&A" class="ovsub" /></a></li>
+                <li><a href="../customer/customer01.html@subNum=4.html"><img src="../img/sub08_04.gif" alt="원격지원요청" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //Top Menu -->
+</div>
+<!-- //TopMenu Wrap -->
+</header>
+<!-- Container Wrap -->
+<div id="contWrap">
+
+<!-- Sub Visual -->
+<div id="subWrap">
+<div id="subvisual">
+<img src="../img/s_txt_education01.png" class="s_txtT" style="display:none;" />
+<img src="../img/s_txt_fix01.png" class="s_txtB" style="display:none;" />
+<img src="../img/s_img_fix01.png" class="s_imgL" style="display:none;" />
+<img src="../img/s_img_education01.png" class="s_imgR" style="display:none;" />
+</div>
+</div>
+<!-- //Sub Visual -->
+
+<!-- Container -->
+<div id="container">﻿<!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_education01.gif" alt="교육과정" /></div>
+<ul>
+<li><img src="../img/menuL06_10.gif" alt="Smart IoT Controller"></a></li>
+<li><a href="education11.html@subNum=1.html"><img src="../img/menuL06_11.gif" alt="교육과정"  class="gexchange" /></a></li>
+<li><a href="education12.html@subNum=2.html"><img src="../img/menuL06_12.gif" alt="교육내용"  class="gexchange" /></a></li>
+<li><a href="education13.html@subNum=3.html"><img src="../img/menuL06_13.gif" alt="교육일정표"  class="gexchange" /></a></li>
+<li><a href="education14.html@subNum=4.html"><img src="../img/menuL06_14.gif" alt="교육신청" selected='gSelected' class="gexchange" /></a></li>
+<!-----
+<img src="../img/menuL03_line.gif" >
+<li><img src="../img/menuL06_00.gif" alt="오토베이스 (autobase10)"></a></li>
+<li><a href="../education/education01.html?subNum=5"><img src="../img/menuL06_01.gif" alt="교육과정"  class="gexchange" /></a></li>
+<li><a href="../education/education02.html?subNum=6"><img src="../img/menuL06_02.gif" alt="교육내용"  class="gexchange" /></a></li>
+<li><a href="../education/education03.html?subNum=7"><img src="../img/menuL06_03.gif" alt="교육일정표"  class="gexchange" /></a></li>
+----->
+
+</ul>
+
+<!-- Banner -->
+<div id="bannerWrap">
+<a href="../home/board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/bn_tel.gif" alt="고객센터" /></a>
+</div>
+<!-- //Banner -->
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">
+
+
+<script language="javascript">
+
+function doChangePart() {
+	var mForm = document.mForm;
+	var t_gugun = mForm.h_gugun;
+	var CodeSelected = 0;
+
+	while(mForm.h_part.options[CodeSelected].selected == false) CodeSelected++;
+
+	t_gugun.options[0].value = '';
+	t_gugun.options[0].text = '교육일자';
+	t_gugun.options[0].selected = true;
+
+	if(mForm.h_part.options[CodeSelected].value == '') t_gugun.options.length = 1;
+	else t_gugun.options.length = 50;
+
+	if(mForm.h_part.options[CodeSelected].value == '세미나') {
+
+
+		t_gugun.options[1].value = '[제1교육센터 : 서울] 2020년 01월 14일';
+		t_gugun.options[1].text = '[제1교육센터 : 서울] 2020년 01월 14일';
+
+		t_gugun.options[2].value = '[제2교육센터 : 부산] 2020년 01월 15일';
+		t_gugun.options[2].text = '[제2교육센터 : 부산] 2020년 01월 15일';
+
+		t_gugun.options[3].value = '[제1교육센터 : 서울] 2020년 02월 11일';
+		t_gugun.options[3].text = '[제1교육센터 : 서울] 2020년 02월 11일';
+
+		t_gugun.options[4].value = '[제2교육센터 : 부산] 2020년 02월 12일';
+		t_gugun.options[4].text = '[제2교육센터 : 부산] 2020년 02월 12일';
+
+		t_gugun.options[5].value = '[제1교육센터 : 서울] 2020년 03월 10일';
+		t_gugun.options[5].text = '[제1교육센터 : 서울] 2020년 03월 10일';
+
+		t_gugun.options[6].value = '[제2교육센터 : 부산] 2020년 03월 11일';
+		t_gugun.options[6].text = '[제2교육센터 : 부산] 2020년 03월 11일';
+
+		t_gugun.options[7].value = '[제1교육센터 : 서울] 2020년 04월 14일';
+		t_gugun.options[7].text = '[제1교육센터 : 서울] 2020년 04월 14일';
+
+		t_gugun.options[8].value = '[제2교육센터 : 부산] 2020년 04월 15일';
+		t_gugun.options[8].text = '[제2교육센터 : 부산] 2020년 04월 15일';
+
+		t_gugun.options[9].value = '[제1교육센터 : 서울] 2020년 05월 12일';
+		t_gugun.options[9].text = '[제1교육센터 : 서울] 2020년 05월 12일';
+
+		t_gugun.options[10].value = '[제2교육센터 : 부산] 2020년 05월 13일';
+		t_gugun.options[10].text = '[제2교육센터 : 부산] 2020년 05월 13일';
+
+		t_gugun.options[11].value = '[제1교육센터 : 서울] 2020년 06월 16일';
+		t_gugun.options[11].text = '[제1교육센터 : 서울] 2020년 06월 16일';
+
+		t_gugun.options[12].value = '[제2교육센터 : 부산] 2020년 06월 17일';
+		t_gugun.options[12].text = '[제2교육센터 : 부산] 2020년 06월 17일';
+
+		t_gugun.options[13].value = '[제1교육센터 : 서울] 2020년 07월 14일';
+		t_gugun.options[13].text = '[제1교육센터 : 서울] 2020년 07월 14일';
+
+		t_gugun.options[14].value = '[제2교육센터 : 부산] 2020년 07월 15일';
+		t_gugun.options[14].text = '[제2교육센터 : 부산] 2020년 07월 15일';
+
+		t_gugun.options[15].value = '[제1교육센터 : 서울] 2020년 08월 18일';
+		t_gugun.options[15].text = '[제1교육센터 : 서울] 2020년 08월 18일';
+
+		t_gugun.options[16].value = '[제2교육센터 : 부산] 2020년 08월 19일';
+		t_gugun.options[16].text = '[제2교육센터 : 부산] 2020년 08월 19일';
+
+		t_gugun.options[17].value = '[제1교육센터 : 서울] 2020년 09월 15일';
+		t_gugun.options[17].text = '[제1교육센터 : 서울] 2020년 09월 15일';
+
+		t_gugun.options[18].value = '[제2교육센터 : 부산] 2020년 09월 16일';
+		t_gugun.options[18].text = '[제2교육센터 : 부산] 2020년 09월 16일';
+
+		t_gugun.options[19].value = '[제1교육센터 : 서울] 2020년 10월 13일';
+		t_gugun.options[19].text = '[제1교육센터 : 서울] 2020년 10월 13일';
+
+		t_gugun.options[20].value = '[제2교육센터 : 부산] 2020년 10월 14일';
+		t_gugun.options[20].text = '[제2교육센터 : 부산] 2020년 10월 14일';
+
+		t_gugun.options[21].value = '[제1교육센터 : 서울] 2020년 11월 17일';
+		t_gugun.options[21].text = '[제1교육센터 : 서울] 2020년 11월 17일';
+
+		t_gugun.options[22].value = '[제2교육센터 : 부산] 2020년 11월 18일';
+		t_gugun.options[22].text = '[제2교육센터 : 부산] 2020년 11월 18일';
+
+		t_gugun.options[23].value = '[제1교육센터 : 서울] 2020년 12월 15일';
+		t_gugun.options[23].text = '[제1교육센터 : 서울] 2020년 12월 15일';
+
+		t_gugun.options[24].value = '[제2교육센터 : 부산] 2020년 12월 16일';
+		t_gugun.options[24].text = '[제2교육센터 : 부산] 2020년 12월 16일';
+
+
+		t_gugun.options.length = 25;
+	}
+
+	if(mForm.h_part.options[CodeSelected].value == '기본교육') {
+
+		t_gugun.options[1].value = '[제1교육센터 : 서울] 2020년 01월 16일';
+		t_gugun.options[1].text = '[제1교육센터 : 서울] 2020년 01월 16일';
+
+		t_gugun.options[2].value = '[제2교육센터 : 부산] 2020년 01월 17일';
+		t_gugun.options[2].text = '[제2교육센터 : 부산] 2020년 01월 17일';
+
+		t_gugun.options[3].value = '[제1교육센터 : 서울] 2020년 02월 13일';
+		t_gugun.options[3].text = '[제1교육센터 : 서울] 2020년 02월 13일';
+
+		t_gugun.options[4].value = '[제2교육센터 : 부산] 2020년 02월 14일';
+		t_gugun.options[4].text = '[제2교육센터 : 부산] 2020년 02월 14일';
+
+		t_gugun.options[5].value = '[제1교육센터 : 서울] 2020년 03월 12일';
+		t_gugun.options[5].text = '[제1교육센터 : 서울] 2020년 03월 12일';
+
+		t_gugun.options[6].value = '[제2교육센터 : 부산] 2020년 03월 14일';
+		t_gugun.options[6].text = '[제2교육센터 : 부산] 2020년 03월 14일';
+
+		t_gugun.options[7].value = '[제1교육센터 : 서울] 2020년 04월 16일';
+		t_gugun.options[7].text = '[제1교육센터 : 서울] 2020년 04월 16일';
+
+		t_gugun.options[8].value = '[제2교육센터 : 부산] 2020년 04월 17일';
+		t_gugun.options[8].text = '[제2교육센터 : 부산] 2020년 04월 17일';
+
+		t_gugun.options[9].value = '[제1교육센터 : 서울] 2020년 05월 14일';
+		t_gugun.options[9].text = '[제1교육센터 : 서울] 2020년 05월 14일';
+
+		t_gugun.options[10].value = '[제2교육센터 : 부산] 2020년 05월 15일';
+		t_gugun.options[10].text = '[제2교육센터 : 부산] 2020년 05월 15일';
+
+		t_gugun.options[11].value = '[제1교육센터 : 서울] 2020년 06월 18일';
+		t_gugun.options[11].text = '[제1교육센터 : 서울] 2020년 06월 18일';
+
+		t_gugun.options[12].value = '[제2교육센터 : 부산] 2020년 06월 19일';
+		t_gugun.options[12].text = '[제2교육센터 : 부산] 2020년 06월 19일';
+
+		t_gugun.options[13].value = '[제1교육센터 : 서울] 2020년 07월 16일';
+		t_gugun.options[13].text = '[제1교육센터 : 서울] 2020년 07월 16일';
+
+		t_gugun.options[14].value = '[제2교육센터 : 부산] 2020년 07월 17일';
+		t_gugun.options[14].text = '[제2교육센터 : 부산] 2020년 07월 17일';
+
+		t_gugun.options[15].value = '[제1교육센터 : 서울] 2020년 08월 20일';
+		t_gugun.options[15].text = '[제1교육센터 : 서울] 2020년 08월 20일';
+
+		t_gugun.options[16].value = '[제2교육센터 : 부산] 2020년 08월 21일';
+		t_gugun.options[16].text = '[제2교육센터 : 부산] 2020년 08월 21일';
+
+		t_gugun.options[17].value = '[제1교육센터 : 서울] 2020년 09월 17일';
+		t_gugun.options[17].text = '[제1교육센터 : 서울] 2020년 09월 17일';
+
+		t_gugun.options[18].value = '[제2교육센터 : 부산] 2020년 09월 18일';
+		t_gugun.options[18].text = '[제2교육센터 : 부산] 2020년 09월 18일';
+
+		t_gugun.options[19].value = '[제1교육센터 : 서울] 2020년 10월 15일';
+		t_gugun.options[19].text = '[제1교육센터 : 서울] 2020년 10월 15일';
+
+		t_gugun.options[20].value = '[제2교육센터 : 부산] 2020년 10월 16일';
+		t_gugun.options[20].text = '[제2교육센터 : 부산] 2020년 10월 16일';
+
+		t_gugun.options[21].value = '[제1교육센터 : 서울] 2020년 11월 19일';
+		t_gugun.options[21].text = '[제1교육센터 : 서울] 2020년 11월 19일';
+
+		t_gugun.options[22].value = '[제2교육센터 : 부산] 2020년 11월 20일';
+		t_gugun.options[22].text = '[제2교육센터 : 부산] 2020년 11월 20일';
+
+		t_gugun.options[23].value = '[제1교육센터 : 서울] 2020년 12월 17일';
+		t_gugun.options[23].text = '[제1교육센터 : 서울] 2020년 12월 17일';
+
+		t_gugun.options[24].value = '[제2교육센터 : 부산] 2020년 12월 18일';
+		t_gugun.options[24].text = '[제2교육센터 : 부산] 2020년 12월 18일';
+
+
+		t_gugun.options.length = 25;
+}
+
+}
+
+</script>
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src="../img/title_edu04.gif" /></div>
+<div class="navi"><ul><li class="home">홈</li><li>교육</li><li class="location">교육신청</li></ul></div><!-- -->
+<div class="b_font">
+<ul><li><a href="education14.html@subNum=4.html#" class="increaseFont"><img src='../img/btn_plus01.gif' alt="크게보기" class="ovup" /></a></li>
+<li><a href="education14.html@subNum=4.html#" class="decreaseFont"><img src='../img/btn_minus01.gif' alt="작게보기" class="ovup" /></a></li>
+<li><a href="education14.html@subNum=4.html#" class="resetFont"><img src='../img/btn_refresh01.gif' alt="초기화" class="ovup" /></a></li>
+</div>
+<!-- --></div>
+<!-- //Title -->
+
+
+<!-- Content -->
+<div class="content">
+
+<!-- Estimate -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script language='javascript'>
+      function form_check(sun) {
+          if (sun.Company.value == '') {
+          alert('회사명을 입력하세요.'); sun.Company.focus(); return false;
+        } else if (sun.Tel.value == '') {
+            alert('전화번호를 입력하세요.'); sun.Tel.focus(); return false;
+        } else if ((sun.email.value=='') || (sun.email.value.search(/(\S+)@(\S+)\.(\S+)/) == -1)) {
+          alert('E-mail을 바르게 입력하세요.'); sun.email.focus(); return false;
+        } else if (sun.Name.value == '') {
+          alert('담당자명을 입력하세요.'); sun.Name.focus(); return false;
+
+
+        }
+
+        return true;
+      }
+    </script>
+
+<form name=mForm method="post" action="http://localhost:8000/education/inquiry2.php?subNum=1"  enctype='multipart/form-data' onsubmit='return form_check(this)'>
+<input type=hidden name="subject" value="Autohitech-Inquiry">
+<input type=hidden name="text_color" value="#000000">
+<input type=hidden name="required" value="Company,Name,email,Tel">
+    <tr>
+      <td align="left" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="25" align="left" valign="top" class="es_Tt01"><img src="img/icon01.gif" />&nbsp;아래 <img src="img/icon_starR.gif" style="padding-top:5px;" />표시된 부분은 필수 입력사항입니다. 반드시 입력해 주세요.</td>
+        </tr>
+        <tr>
+          <td height="4" align="left" valign="top" background="img/lineW.gif"></td>
+        </tr>
+        <tr>
+          <td height="5" align="left" valign="top">
+		  <!--교육신청 폼-->
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="es_con">
+            <tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />회사명</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Company' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />전화번호</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle" class="PD_R01"><input name='Tel' type='text' style='width:100%; height:18px;' /></td>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />담당이메일</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle"><input name='email' type='text' style='width:100%; height:18px;' /></td>
+            </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starR.gif" style="padding-top:5px;" />담당자명</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td width="230" align="left" valign="middle" class="PD_R01"><input name='Name' type='text' style='width:100%; height:18px;' /></td>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />부서</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td width="230" align="left" valign="middle"><input name='Part' type='text' style='width:100%; height:18px;' /></td>
+            </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />회사주소</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Address' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<!--tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />홈페이지주소</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4"><input name='Homepage' type='text' style='width:100%; height:18px;' /></td>
+              </tr>
+			<tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+                                                         </tr-->
+
+            <tr>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />핸드폰번호</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle" class="PD_R01"><input name='HP' type='text' style='width:100%; height:18px;' /></td>
+              <td align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />팩스번호</td>
+              <td width="10" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" valign="middle"><input name='Fax' type='text' style='width:100%; height:18px;' /></td>
+            </tr>
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+			<tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01 es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;" />교육 선택</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td colspan="4" style="padding:10px 0px 10px 0px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="left" valign="middle">구 분</td>
+                 <td align="left" valign="middle"><select name='h_part' style='font_size:12px; width: 100px' onchange='doChangePart();'>
+                      <option value="">구분</option>
+                      <option value="세미나">세미나</option>
+                      <option value="기본교육">기본교육</option>
+                  </select></td>
+                  <td align="left" valign="middle">교육일자</td>
+                  <td align="left" valign="middle"><select name='h_gugun' style='font_size:12px; width: 150px'>
+                      <option value="">교육일자</option>
+                  </select></td>
+                  <td  align="left" valign="middle">인원</td>
+                  <td align="left" valign="middle"><select name="select"style='font_size:12px; width: 120px'>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                  </select></td>
+	</tr>
+	</table></td>
+
+			</tr>
+			  <tr>
+              <td height='1' colspan="6" align="left" valign="middle" bgcolor="#dfdccf"></td>
+            </tr>
+            <tr>
+              <td width="115" align="left" valign="middle" bgcolor="f9f8f5" class="PD_L01es_txt"><img src="img/icon_starG.gif" style="padding-top:5px;"/>문의 사항</td>
+              <td width="15" align="left" valign="top"><img src='img/lineH.gif' /></td>
+              <td align="left" colspan="4" valign="middle" style="padding:10px 0px 10px 0px;"><textarea name='System_setting' rows='18' cols='78' style="width:100%;"></textarea></td>
+            </tr>
+
+            <tr>
+              <td height='2' colspan="6" bgcolor="#dfdccf"></td>
+            </tr>
+          </table>
+
+		  <!--//교육신청 폼-->
+          <br />
+          <br />
+          <!--버튼테이블-->
+          <table width="100%" height="70" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="50" align="center" valign="top"><input name="image" type=image src="img/btn_confirm.gif">
+                &nbsp; <a href='javascript:location.reload()'><img src="img/btn_cancel.gif" border="0"></a></td>
+            </tr>
+          </table>
+        <!--//버튼테이블-->
+		  </td>
+        </tr>
+
+      </table>
+
+      </td>
+    </tr>
+  </form>
+</table>
+<!-- //Estimate -->
+
+</div>
+<!-- //Content -->
+
+
+
+</div>
+<!-- //contentWrap -->
+</div>
+<!-- //container -->
+</div>
+<!-- //contWrap -->
+</div>
+<!-- //ContentWrap -->
+</div>
+<!-- //Container -->
+</div>
+<!-- //Container Wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="copybox">
+    <div class="copymenu">
+      <ul>
+        <li><a href="../company/greeting01.html@sugNum=1.html"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="220,28,345,40" href="http://www.cohomepage.com" target="_blank" alt="홈페이지제작" title="홈페이지제작" />
+</map>
+<!-- //Footer -->
+
+<div id="quickR">
+  <p><a href="education14.html@subNum=4.html#"><img src="../img/btn_top01.gif" class="ovup" /></a></p>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40879538-1', 'autohitech.co.kr');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/g4.core.js@v=1773323804"></script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+
+
+
+

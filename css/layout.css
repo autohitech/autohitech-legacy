@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* ★Layout / Start★ */
+/***** Function / Start *****/
+.AL   {float:left;}
+.AR   {float:right;}
+.num  {font-family:Verdana, Tahoma, dotum, gulim, AppleGothic, sans-serif; font-size:11px;}
+.bold {font-weight:bold;}
+/***** Function / End *****/
+/***** Header / Start *****/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#headerWrap {
+    flex-shrink: 0;
+    overflow:visible;
+    position:relative;
+    margin-bottom:-30px;
+    width:100%;
+    height:110px;
+    background:url('../img/bg_menu01.png') left top repeat-x;
+    z-index:1000;
+}
+header #header {
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    height:80px;
+    overflow:visible;
+}
+#logo {float:left; width:230px; padding-top:30px;}
+.tophome {float:right; margin-top:10px; width:auto; height:20px;}
+.tophome li {height:20px; float:left; overflow:hidden; display:flex; align-items:center;}
+.searchL  {width:5px; height:17px; background:url('../img/bg_searchL01.gif') left center no-repeat;}
+.searchM  {width:100px; height:17px; background:url('../img/bg_searchM01.gif') left center repeat-x;}
+.searchR  {width:20px; height:17px; }
+.searchTt {width:100px; height:17px; background-color:transparent; color:#333; font-size:11px; line-height:17px; font-weight:bold; border:0; margin:0; padding:0 2px; vertical-align:middle; font-family:돋움, Dotum, 굴림, Gulim, Verdana, Arial, Tahoma, Helvetica, sans-serif;}
+/***** Header / End *****/
+/***** Top Menu / Start *****/
+/* Top Menu */
+ul#topnav {list-style:none; margin:0; padding:0; height:40px;}
+ul#topnav li              {float:left; position:relative; overflow:visible; height:40px;}
+ul#topnav li a            {text-decoration:none; display:block; height:100%;}
+ul#topnav li span         {display:none; position:absolute; left:0; top:40px; z-index:9999; white-space:nowrap;}
+ul#topnav li span a:hover {text-decoration:underline;}
+
+#topMenuWrap {
+    width:980px;
+    margin:0 auto;
+    height:80px;
+    overflow:visible;
+}
+#topMenu              {float:left; width:750px; height:80px; overflow:visible;}
+#topMenu .menuT       {float:left; margin:15px 0px 0px 70px; width:750px; overflow:visible; position:relative;}
+
+/* Sub Menu Containers - Removed white background/border per request */
+#topMenu .subS01, #topMenu .subS02, #topMenu .subS03, #topMenu .subS04, 
+#topMenu .subS05, #topMenu .subS06, #topMenu .subS07, #topMenu .subS08 {
+    display:block;
+    padding:0;
+    margin:0;
+}
+#topMenu .menuT ul li span ul {list-style:none; margin:0; padding:0; display:flex;}
+#topMenu .menuT ul li span ul li {float:left; overflow:visible; height:30px;}
+
+/***** Top Menu / End *****/
+/***** Sub Layout / Start *****/
+/***** Sub Visual / Start *****/
+#subWrap {
+    flex-shrink: 0;
+    position:relative;
+    width:100%;
+    height:155px;
+    margin:0 auto;
+    background:url('../img/bg_sub01.jpg') center top repeat-x;
+    z-index:900;
+}
+#subvisual {
+    position:relative;
+    width:980px;
+    height:155px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.crop    {position:relative; overflow:hidden; height:130px;}
+/***** Sub Visual / End *****/
+/***** Left Menu / Start *****/
+#menuWrap {
+    float:left;
+    margin-left:-15px;
+    width:245px;
+}
+.menuL       {float:left; width:230px;}
+.menuL .mtit {height:65px; padding-left:15px;}
+.menuL li    {overflow:hidden; height:30px}
+/***** Left Menu / End *****/
+/***** Content / Start *****/
+#contWrap {
+    flex-grow: 1;
+    position:relative;
+    padding-bottom:0px;
+    width:100%;
+}
+#container {
+    position:relative;
+    margin:0 auto;
+    width:980px;
+}
+#container:after {clear:both; content:""; display:block;}
+#contentWrap {
+    float:left;
+    padding-bottom:150px;
+    width:750px;
+}
+.content  {width:750px; background:#fff;}
+.contentM {width:750px; background:#fff; padding-top:50px;} /* 회원가입만 이용 */
+#confixWrap {
+    overflow:hidden;
+    position:relative;
+    width:750px;
+    height:48px;
+margin-bottom:47px;}
+/*autobase*/
+div.description {
+    font-family: 맑은 고딕;
+    font-size: 10pt;
+    line-height: 24px;
+    color: #444;
+    width: 520px;
+    margin-top: 15px;
+}
+div.description01 {
+    font-family: 맑은 고딕;
+    font-size: 10pt;
+    text-align: left;
+    line-height: 24px;
+    color: #444;
+    width: 730px;
+    margin-top: 20px;
+    margin-left:10px;
+    margin-bottom:30px;
+    float: left;
+}
+div.dev {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+div.bar_bk {
+    font-family: 맑은 고딕;
+    font-size: 14px;
+    line-height: 35px;
+    color: #fff;
+    background-image: url(http://www.autohitech.co.kr/touch/img/bar_bk.png);
+    width: 750px;
+    height: 35px;
+    float : left;
+}
+/***** Content / End *****/
+/***** Title / Start *****/
+#titleWrap {
+    margin-bottom:34px;
+    width:750px;
+    height:39px;
+    border-bottom:1px solid #e3e3e3;
+}
+.tit {float:left;}
+.txt {padding-top:13px;}
+/***** Title / End *****/
+/***** Location / Start *****/
+.navi       {position:absolute; top:8px; right:68px; height:18px; color:#a3a3a3; font-size:11px;}
+.navi li    {float:left; text-align:left; padding-left:13px; background:url('../img/navi_icon01.gif') 0 0 no-repeat;}
+.navi .home     {padding-left:15px; background:url('../img/navi_home01.gif') 0 0 no-repeat;}
+.navi .location {font-weight:bold;}
+.b_font     {position:absolute; top:8px; right:0px;}
+.b_font li  {float:left; overflow:hidden; padding-left:3px; height:18px;}
+/***** Location / End *****/
+/***** Sub Layout / End *****/
+/***** Footer / Start *****/
+#footer {
+    flex-shrink: 0;
+    position:relative;
+    width:100%;
+    height:100px;
+    margin:0 auto;
+    background:url('../img/bg_copy01.gif') center top repeat-x;
+    z-index:200;
+}
+.copybox      {margin:0 auto; padding:20px 0px 20px 0px; width:980px;}
+.copyboxM     {margin:0 auto; padding:20px 0px 20px 0px; width:980px; background:url('../img/bg_copy02.gif') center top repeat-x;} /* 메인 */
+.copymenu    {padding-bottom:10px; width:173px; height:10px;}
+.copymenu li {float:left; overflow:hidden; height:10px;}
+.copyaddress {}
+/***** Footer / End *****/
+/***** Quick / Start *****/
+#quickR {
+    position: absolute;
+    right: 20px;
+    top: 400px;
+    width: 25px;
+    height: 97px;
+    background: url('../img/bg_quick01.gif') center top repeat-x;
+    z-index: 10000;
+}
+#quickR:hover {
+    opacity: 0.8;
+}
+#quickR p {
+    overflow: hidden;
+    margin-top: 35px;
+    height: 54px; /* Adjusting for top button height */
+    text-align: center;
+}
+/***** Quick / End *****/
+.b_font a { cursor: pointer; }
+/* ★Layout / End★ */

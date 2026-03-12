@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고객지원 > Q&A > 글답변</title>
+<link rel="shortcut icon" href="http://localhost:8000/img/favicon.ico" />
+<link rel="stylesheet" href="../css/common.css">
+<script type="text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.14.1.min.js"></script>
+<script type="text/javascript" src="../js/autotech.bundle.js@v=1773323804"></script>
+<script type="text/javascript">
+// Modernized Popup Function
+function G4_Popup(url, winname, width, height, left, top, scrollbars) {
+    if (!width) width = 720;
+    if (!height) height = 615;
+    
+    // Centering if left/top not provided
+    if (left === undefined || left === null || left === "" || left === 0) {
+        left = (screen.width - width) / 2;
+    }
+    if (top === undefined || top === null || top === "" || top === 0) {
+        top = (screen.height - height) / 2;
+    }
+    
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+    features += ",scrollbars=" + (scrollbars ? "yes" : "no");
+    features += ",resizable=yes,status=no,toolbar=no,menubar=no,location=no";
+    
+    var win = window.open(url, winname, features);
+    if (win) win.focus();
+    return win;
+}
+
+// MM_openBrWindow (Dreamweaver Legacy)
+function MM_openBrWindow(theURL, winName, features) {
+    var width = 720;
+    var height = 615;
+    var scrollbars = "no";
+    
+    if (features) {
+        var wMatch = features.match(/width=([0-9]+)/);
+        if (wMatch) width = wMatch[1];
+        var hMatch = features.match(/height=([0-9]+)/);
+        if (hMatch) height = hMatch[1];
+        if (features.indexOf("scrollbars=yes") > -1) scrollbars = "yes";
+    }
+    
+    return G4_Popup(theURL, winName, width, height, null, null, (scrollbars === "yes"));
+}
+</script>
+<script language="javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var g4_path      = "..";
+var g4_bbs       = "home";
+var g4_bbs_img   = "img";
+var g4_url       = "http://localhost:8000";
+var g4_is_member = "";
+var g4_is_admin  = "";
+var g4_bo_table  = "qna01";
+var g4_sca       = "";
+var g4_charset   = "utf-8";
+var g4_cookie_domain = "";
+</script>
+</head>
+<body >
+<a name="g4_head"></a>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<header id="headerWrap">
+  <div id="header">
+  <!-- TopMenu Wrap -->
+  <div id="topMenuWrap">
+    <p id="logo"><a href="../index.html"><img src="../img/logo01.png" alt="Autohitech" /></a></p>
+	<!-- Top Menu -->
+	<div id="topMenu">
+	<!-- Top Home -->
+      <div class="tophome" style="float:right; width:auto; margin-top:10px;">
+       <form name="fsearchbox" method="get" action="http://localhost:8000/home/search.php" onSubmit="return fsearchbox_submit(this);">
+          <input type="hidden" name="sfl" value="wr_subject||wr_content||wr_3">
+		  <input type="hidden" name="sop" value="and">
+		  <fieldset style="border:0; margin:0; padding:0;">
+        <ul style="display:flex; align-items:center; list-style:none; margin:0; padding:0;">
+          <li style="height:17px;"><a href="../index.html"><img src="../img/top_home01.gif" alt="home" class="ovup" /></a></li>
+		  <li style="padding:0 5px;"><img src="../img/top_dot01.gif" /></li>
+          <li style="height:17px;"><a href="../adm.html"><img src="../img/top_staff01.gif" alt="staff" class="ovup" /></a></li>
+		  <li class="searchL" style="margin-left:15px; width:5px; height:17px; background:url('../img/bg_searchL01.gif') no-repeat;"></li>
+          <li class="searchM" style="width:100px; height:17px; background:url('../img/bg_searchM01.gif') repeat-x;"><input type="text" name="stx" tabindex="1" class="searchTt" style="width:100px; height:17px; border:0; background:transparent; font-size:11px; font-weight:bold; padding:0 2px; line-height:17px;" /></li>
+          <li style="height:17px;"><input type="image" src="../img/bg_searchR01.gif" alt="검색" style="width:20px; height:17px; display:block;" /></li>
+          </ul></fieldset>
+		  </form>
+      </div>
+	  <!-- //Top Home -->
+	<div class="menuT">
+      <ul id="topnav">
+	    <!-- menu01 -->
+        <li class="m01"><a href="../company/greeting01.html@subNum=1.html"><img src="../img/menu01.gif" alt="회사소개" class="sovup" /></a>
+		  <span>
+            <div class="subS01">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../company/greeting01.html@subNum=1.html"><img src="../img/sub01_01.gif" alt="CEO인사말" class="ovsub" /></a></li>
+			    <li><a href="../company/history01.html@subNum=2.html"><img src="../img/sub01_02.gif" alt="연혁 및 사업분야" class="ovsub" /></a></li>
+			    <li><a href="../company/organization01.html@subNum=3.html"><img src="../img/sub01_03.gif" alt="조직도" class="ovsub" /></a></li>
+			    <li><a href="../company/location01.html@subNum=4.html"><img src="../img/sub01_04.gif" alt="오시는 길" class="ovsub" /></a></li>
+			    <li><a href="../company/perform01.html@subNum=5.html"><img src="../img/sub01_07.gif" alt="수행실적" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=com01&amp;subNum=6.html"><img src="../img/sub01_05.gif" alt="협력업체" class="ovsub" /></a></li>
+                <li><a href="board.php@bo_table=com02&amp;subNum=7.html"><img src="../img/sub01_06.gif" alt="고객사" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+			</div>
+		  </span>
+        </li>
+        <li class="m02"><a href="../controller/controller00_01.html@subNum=1.html"><img src="../img/menu04.gif" alt="CONTROLLER" class="sovup" /></a>
+        </li>
+        <!-- menu03 -->
+        <li class="m03"><a href="../touch/touch01_02.html@subNum=2.html"><img src="../img/menu03.gif" alt="TOUCH" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS03">
+              <ul>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+                <li><a href="../touch/touch01_01.html?subNum=1"><img src="../img/sub03_01.gif" alt="SCADA" class="ovsub" /></a></li>
+                <li><a href="../touch/touch01_02.html?subNum=2"><img src="../img/sub03_02.gif" alt="Touch" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu04 -->
+        <li class="m04"><a href="../system/system01.html@subNum=1.html"><img src="../img/menu05.gif" alt="시스템구축" class="sovup" /></a>
+		  <span>
+            <div class="subS04">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../system/system01.html@subNum=1.html"><img src="../img/sub05_01.gif" alt="시스템 구축 안내" class="ovsub" /></a></li>
+			    <li><a href="../system/system02.html@subNum=2.html"><img src="../img/sub05_02.gif" alt="구축 사례" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+        <!-- menu05 -->
+        <li class="m05"><a href="../education/education11.html@subNum=1.html"><img src="../img/menu06.gif" alt="교육" class="sovup" /></a>
+          <!-- <span>
+            <div class="subS05">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="../education/education11.html?subNum=1"><img src="../img/sub06_01.gif" alt="교육과정" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+          </span> -->
+        </li>
+		<!-- menu06 -->
+        <li class="m06"><a href="board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/menu07.gif" alt="다운로드" class="sovup" /></a>
+		  <span style="margin-left:-175px;">
+            <div class="subS06">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="board.php@bo_table=down05&amp;subNum=1.html"><img src="../img/sub07_05.gif" alt="Smart IoT Controller 자료" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down02&amp;subNum=2.html"><img src="../img/sub07_02.gif" alt="카달로그/인증서" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down03&amp;subNum=3.html"><img src="../img/sub07_03.gif" alt="작업 예제" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=down04&amp;subNum=4.html"><img src="../img/sub07_04.gif" alt="일반 자료" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+		<!-- menu07 -->
+        <li class="m07"><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menu08.gif" alt="고객지원" class="sovup" /></a>
+		  <span style="margin-left:-20px;">
+            <div class="subS07">
+              <ul>
+                <li><img src="../img/bg_bar01.gif" /></li>
+			    <li><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/sub08_01.gif" alt="공지사항" class="ovsub" /></a></li>
+			    <li><a href="board.php@bo_table=qna01&amp;subNum=3.html"><img src="../img/sub08_03.gif" alt="Q&A" class="ovsub" /></a></li>
+                <li><a href="../customer/customer01.html@subNum=4.html"><img src="../img/sub08_04.gif" alt="원격지원요청" class="ovsub" /></a></li>
+			    <li><img src="../img/bg_bar01.gif" /></li>
+              </ul>
+            </div>
+		  </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //Top Menu -->
+</div>
+<!-- //TopMenu Wrap -->
+</header>
+<!-- Container Wrap -->
+<div id="contWrap">
+
+<!-- Sub Visual -->
+<div id="subWrap">
+<div id="subvisual">
+<img src="../img/s_txt_customer01.png" class="s_txtT" style="display:none;" />
+<img src="../img/s_txt_fix01.png" class="s_txtB" style="display:none;" />
+<img src="../img/s_img_fix01.png" class="s_imgL" style="display:none;" />
+<img src="../img/s_img_customer01.png" class="s_imgR" style="display:none;" />
+</div>
+</div>
+<!-- //Sub Visual -->
+
+<!-- Container -->
+<div id="container"><!-- Left Menu -->
+<div id="menuWrap">
+<div class="menuL">
+<div class="mtit"><img src="../img/lm_customer01.gif" alt="고객지원" /></div>
+<ul>
+<li><a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/menuL08_01.gif" alt="공지사항"  class="gexchange" /></a></li>
+<li><a href="board.php@bo_table=qna01&amp;subNum=2.html"><img src="../img/menuL08_03.gif" alt="Q&A" selected='gSelected' class="gexchange" /></a></li>
+<li><a href="../customer/customer01.html@subNum=3.html"><img src="../img/menuL08_04.gif" alt="원격지원요청"  class="gexchange" /></a></li>
+</ul>
+
+<!-- Banner -->
+<div id="bannerWrap">
+<a href="board.php@bo_table=cus01&amp;subNum=1.html"><img src="../img/bn_tel.gif" alt="고객센터" /></a>
+</div>
+<!-- //Banner -->
+</div>
+</div>
+<!-- //Left Menu -->
+
+<!-- ContentWrap -->
+<div id="contentWrap">
+
+<!-- Title -->
+<div id="titleWrap">
+<div class="tit"><img src='../img/title_qna01.gif'></div>
+<div class="navi"><ul><li class="home">홈</li><li>고객지원</li><li class="location">Q&A</li></ul></div><!-- -->
+<div class="b_font">
+<ul><li><a href="write.php@w=r&amp;bo_table=qna01&amp;wr_id=29&amp;sfl=&amp;stx=&amp;sst=wr_hit&amp;sod=desc&amp;sop=and&amp;page=2.html#" class="increaseFont"><img src='../img/btn_plus01.gif' alt="크게보기" class="ovup" /></a></li>
+<li><a href="write.php@w=r&amp;bo_table=qna01&amp;wr_id=29&amp;sfl=&amp;stx=&amp;sst=wr_hit&amp;sod=desc&amp;sop=and&amp;page=2.html#" class="decreaseFont"><img src='../img/btn_minus01.gif' alt="작게보기" class="ovup" /></a></li>
+<li><a href="write.php@w=r&amp;bo_table=qna01&amp;wr_id=29&amp;sfl=&amp;stx=&amp;sst=wr_hit&amp;sod=desc&amp;sop=and&amp;page=2.html#" class="resetFont"><img src='../img/btn_refresh01.gif' alt="초기화" class="ovup" /></a></li>
+</div>
+<!-- --></div>
+<!-- //Title -->
+
+<script type='text/javascript'> var md5_norobot_key = 'd41d8cd98f00b204e9800998ecf8427e'; </script>﻿<script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/classic/ckeditor.js"></script>
+<style type="text/css">
+.board_list { clear:both; width:100%; table-layout:fixed; margin:5px 0 0 0; }
+.write_head { width:130px; height:35px; text-align:center; font-weight:bold; background:#f5f5f5;}
+.field { border:1px solid #ccc; }
+.tip { padding-left:25px; margin-left:1px; color:#666;  background:url(../skin/board/basic/img/btn_tip.gif) no-repeat;}
+</style>
+
+<script language="javascript">
+// 글자수 제한
+var char_min = parseInt(0); // 최소
+var char_max = parseInt(0); // 최대
+</script>
+
+<form name="fwrite" method="post" onsubmit="return fwrite_submit(this);" enctype="multipart/form-data" style="margin:0px;">
+<input type=hidden name=null> 
+<input type=hidden name=w        value="r">
+<input type=hidden name=bo_table value="qna01">
+<input type=hidden name=wr_id    value="29">
+<input type=hidden name=sca      value="">
+<input type=hidden name=sfl      value="">
+<input type=hidden name=stx      value="">
+<input type=hidden name=spt      value="">
+<input type=hidden name=sst      value="wr_hit">
+<input type=hidden name=sod      value="desc">
+<input type=hidden name=page     value="2">
+
+<table width='100%' align='center' cellpadding='0' cellspacing='0'>
+<tr>
+<td>
+<div style="border:1px solid #ddd; height:34px; background:url(../skin/board/basic/img/title_bg.gif) repeat-x;">
+<div style="margin:7px 0 0 0; text-align:center; width:130px; font-weight:bold; font-size:14px;">:: 글답변 ::</div>
+</div>
+<div style="height:15px;"></div>
+
+<table width='100%' align='center' cellpadding='0' cellspacing='0'>
+<tr><td colspan=2 height=2 bgcolor=#4d4f53></td></tr>
+
+<tr>
+    <td align="center" valign="middle" class=write_head>이름</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input class='ed' maxlength=20 style='width:98%; height:15px;' name=wr_name itemname="이름" required value=""></td>
+	</tr>
+	
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+
+<tr>
+    <td align="center" valign="middle" class=write_head>패스워드</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input class='ed' type=password maxlength=20 style='width:98%; height:15px;' name=wr_password itemname="패스워드" required></td>
+	</tr>
+	
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+
+<tr>
+    <td align="center" valign="middle" class=write_head>이메일</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input class='ed' maxlength=100 style='width:98%; height:15px;' name=wr_email email itemname="이메일" value=""></td>
+	</tr>
+	
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+
+<tr>
+    <td align="center" valign="middle" class=write_head>홈페이지</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input class='ed' style='width:98%; height:15px;' name=wr_homepage itemname="홈페이지" value=""></td>
+	</tr>
+	
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+
+<input type=hidden value='html1' name='html'>
+
+<tr>
+    <td align="center" valign="middle" class=write_head>제목</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input class='ed' style='width:98%; height:15px;' name=wr_subject id="wr_subject" itemname="제목" required value="[re] 하나의 팝업화면으로 여러곳에서 같이 사용하려고 합니다."></td>
+	</tr>
+
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+<tr>
+			<td align="left" valign="top" class="content" colspan='2' style="padding:10px 0px 10px 0px;"><div class="ck-editor-wrapper" style="width:100%;"><textarea name="wr_content" id="wr_content" style="display:none;"></textarea></div>
+    <script type='text/javascript'>
+    (function() {
+        const editorElement = document.querySelector('#wr_content');
+        if (!editorElement) return;
+
+        ClassicEditor
+            .create(editorElement, {
+                language: 'ko',
+                toolbar: [
+                    'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 
+                    '|', 'outdent', 'indent', '|', 'uploadImage', 'blockQuote', 'insertTable', 'mediaEmbed', 
+                    'undo', 'redo'
+                ],
+                simpleUpload: {
+                    // The URL that the images will be uploaded to.
+                    uploadUrl: '/home/ckeditor5_upload.php'
+                }
+            })
+            .then(editor => {
+                // Attach to window object for global access (syncing etc.)
+                window['editor_' + 'wr_content'] = editor;
+                
+                // Set height via view change
+                editor.editing.view.change(writer => {
+                    writer.setStyle('min-height', '300px', editor.editing.view.document.getRoot());
+                });
+            })
+            .catch(error => {
+                console.error('CKEditor 5 Error:', error);
+            });
+    })();
+    </script></td>
+		</td>
+</tr>
+
+<tr><td colspan=2 height=1 bgcolor=#dddddd></td></tr>
+
+<tr>
+    <td  align="center" valign="middle" class=write_head>링크 #1</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input type='text' class='ed' name='wr_link1' itemname='링크 #1' value='' style='width:98%; height:15px;'></td>
+</tr>
+
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+<tr>
+    <td  align="center" valign="middle" class=write_head>링크 #2</td>
+    <td align='left' valign='middle' style='padding-left:15px;'><input type='text' class='ed' name='wr_link2' itemname='링크 #2' value='' style='width:98%; height:15px;'></td>
+</tr>
+
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+
+
+
+<tr height="70">
+    <td align="center" valign="middle"><img id="kcaptcha_image" border="0" width="120" height="60" onclick="imageClick();" style="cursor:pointer" title="글자가 잘안보이는 경우 클릭하시면 새로운 글자가 나옵니다."></td>
+	<td align='left' valign='middle' style='padding-left:15px;'><input type=input name=wr_key style='border:1px solid; width:180px; height:57px; text-align:center; line-height:57px; background-color:#ffffff;' class="mem_auto" itemname="자동등록방지" required> 
+    <span class="tip">왼쪽의 글자를 입력하세요.이미지를 클릭하시면 새로 출력됩니다.</span></td>
+</tr>
+
+<tr><td colspan=2 height=1 bgcolor=#e0e0e0></td></tr>
+</table>
+
+<table width='100%' align='center' cellpadding='0' cellspacing='0'>
+<tr>
+    <td width="100%" align="center" valign="top" style="padding-top:30px;">
+        <input type=image id="btn_submit" src="../skin/board/basic/img/btn_write.gif" accesskey='s'>&nbsp;
+        <a href="board.php@bo_table=qna01.html"><img id="btn_list" src="../skin/board/basic/img/btn_list.gif" border='0' /></a></td>
+</tr>
+</table>
+
+</td></tr></table>
+</form>
+<script type="text/javascript">
+
+with (document.fwrite) 
+{
+    if (typeof(wr_name) != "undefined")
+        wr_name.focus();
+    else if (typeof(wr_subject) != "undefined")
+        wr_subject.focus();
+    else if (typeof(wr_content) != "undefined")
+        wr_content.focus();
+
+    if (typeof(ca_name) != "undefined")
+        if (w.value == "u")
+            ca_name.value = "일반";
+}
+
+function html_auto_br(obj) 
+{
+    if (obj.checked) {
+        result = confirm("자동 줄바꿈을 하시겠습니까?\n\n자동 줄바꿈은 게시물 내용중 줄바뀐 곳을<br>태그로 변환하는 기능입니다.");
+        if (result)
+            obj.value = "html2";
+        else
+            obj.value = "html1";
+    }
+    else
+        obj.value = "";
+}
+
+function fwrite_submit(f) 
+{
+    if (window['editor_' + 'wr_content']) { document.querySelector('#wr_content').value = window['editor_' + 'wr_content'].getData(); }    /*
+    var s = "";
+    if (s = word_filter_check(f.wr_subject.value)) {
+        alert("제목에 금지단어('"+s+"')가 포함되어있습니다");
+        return false;
+    }
+
+    if (s = word_filter_check(f.wr_content.value)) {
+        alert("내용에 금지단어('"+s+"')가 포함되어있습니다");
+        return false;
+    }
+    */
+
+    if (document.getElementById('char_count')) {
+        if (char_min > 0 || char_max > 0) {
+            var cnt = parseInt(document.getElementById('char_count').innerHTML);
+            if (char_min > 0 && char_min > cnt) {
+                alert("내용은 "+char_min+"글자 이상 쓰셔야 합니다.");
+                return false;
+            } 
+            else if (char_max > 0 && char_max < cnt) {
+                alert("내용은 "+char_max+"글자 이하로 쓰셔야 합니다.");
+                return false;
+            }
+        }
+    }
+
+    if (document.getElementById('tx_wr_content')) {
+        if (!ed_wr_content.outputBodyText()) { 
+            alert('내용을 입력하십시오.'); 
+            ed_wr_content.returnFalse();
+            return false;
+        }
+    }
+
+    var subject = "";
+    var content = "";
+    $.ajax({
+        url: "../skin/board/basic/ajax.filter.php",
+        type: "POST",
+        data: {
+            "subject": f.wr_subject.value,
+            "content": f.wr_content.value
+        },
+        dataType: "json",
+        async: false,
+        cache: false,
+        success: function(data, textStatus) {
+            subject = data.subject;
+
+        }
+    });
+
+    if (subject) {
+        alert("제목에 금지단어('"+subject+"')가 포함되어있습니다");
+        f.wr_subject.focus();
+        return false;
+    }
+
+    if (content) {
+        alert("내용에 금지단어('"+content+"')가 포함되어있습니다");
+        if (typeof(ed_wr_content) != "undefined") 
+            ed_wr_content.returnFalse();
+        else 
+            f.wr_content.focus();
+        return false;
+    }
+
+    if (!check_kcaptcha(f.wr_key)) {
+        return false;
+    }
+
+    document.getElementById('btn_submit').disabled = true;
+    document.getElementById('btn_list').disabled = true;
+
+    f.action = './write_update.php';    
+    return true;
+}
+</script>
+
+<script type="text/javascript"> window.onload=function() { drawFont(); } </script><script language='javascript'> var g4_cf_filter = '18아,18놈,18새끼,18년,18뇬,18노,18것,18넘,개년,개놈,개뇬,개새,개색끼,개세끼,개세이,개쉐이,개쉑,개쉽,개시키,개자식,개좆,게색기,게색끼,광뇬,뇬,눈깔,뉘미럴,니귀미,니기미,니미,도촬,되질래,뒈져라,뒈진다,디져라,디진다,디질래,병쉰,병신,뻐큐,뻑큐,뽁큐,삐리넷,새꺄,쉬발,쉬밸,쉬팔,쉽알,스패킹,스팽,시벌,시부랄,시부럴,시부리,시불,시브랄,시팍,시팔,시펄,실밸,십8,십쌔,십창,싶알,쌉년,썅놈,쌔끼,쌩쑈,썅,써벌,썩을년,쎄꺄,쎄엑,쓰바,쓰발,쓰벌,쓰팔,씨8,씨댕,씨바,씨발,씨뱅,씨봉알,씨부랄,씨부럴,씨부렁,씨부리,씨불,씨브랄,씨빠,씨빨,씨뽀랄,씨팍,씨팔,씨펄,씹,아가리,아갈이,엄창,접년,잡놈,재랄,저주글,조까,조빠,조쟁이,조지냐,조진다,조질래,존나,존니,좀물,좁년,좃,좆,좇,쥐랄,쥐롤,쥬디,지랄,지럴,지롤,지미랄,쫍빱,凸,퍽큐,뻑큐,빠큐,ㅅㅂㄹㅁ                                                                         '; </script>
+
+
+</div>
+<!-- //contentWrap -->
+</div>
+<!-- //container -->
+</div>
+<!-- //contWrap -->
+</div>
+<!-- //ContentWrap -->
+</div>
+<!-- //Container -->
+</div>
+<!-- //Container Wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="copybox">
+    <div class="copymenu">
+      <ul>
+        <li><a href="../company/greeting01.html@sugNum=1.html"><img src="../img/copy_menu01.gif" alt="회사소개" class="ovup" /></a></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu02.gif" alt="이용약관" onClick="G4_Popup('../company/provision.html','provision',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+        <li><img src="../img/copy_dot01.gif" /></li>
+        <li><img src="../img/copy_menu03.gif" alt="개인정보취급방침" onClick="G4_Popup('../company/privacy.html','privacy',720,615)" style="cursor:pointer;" class="ovup" link="no" /></li>
+      </ul>
+    </div>
+    <div class="copyaddress">
+      <ul>
+        <li><img src="../img/copy_add01.gif" alt="서울시 금천구 가산동 60-44번지 이앤씨드림타워 7차 1309호" border="0" usemap="#Map_copy01" /></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<map name="Map_copy01" id="Map_copy01">
+  <area shape="rect" coords="515,0,705,15" href="mailto:auto@autohitech.co.kr" title="메일보내기" />
+  <area shape="rect" coords="220,28,345,40" href="http://www.cohomepage.com" target="_blank" alt="홈페이지제작" title="홈페이지제작" />
+</map>
+<!-- //Footer -->
+
+<div id="quickR">
+  <p><a href="write.php@w=r&amp;bo_table=qna01&amp;wr_id=29&amp;sfl=&amp;stx=&amp;sst=wr_hit&amp;sod=desc&amp;sop=and&amp;page=2.html#"><img src="../img/btn_top01.gif" class="ovup" /></a></p>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40879538-1', 'autohitech.co.kr');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<script type="text/javascript" src="../js/g4.core.js@v=1773323804"></script>
+<!-- 새창 대신 사용하는 iframe -->
+<iframe width=0 height=0 name='hiddenframe' style='display:none;'></iframe>
+
+
+
